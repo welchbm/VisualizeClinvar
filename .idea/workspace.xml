@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5716b40f-1eb7-464e-a32c-cbeddb6e77f1" name="Default" comment="another test">
+    <list default="true" id="5716b40f-1eb7-464e-a32c-cbeddb6e77f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VisualizeClinvar.iws" />
@@ -369,7 +369,11 @@
       <created>1396591564009</created>
       <updated>1396591564009</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="another test">
+      <created>1396593758351</created>
+      <updated>1396593758352</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
