@@ -37,6 +37,7 @@ else:
     file=open(filename, "a")
     file.write("\n"+latest_release)
     file.close()
+# ss
 
 
 
