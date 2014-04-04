@@ -20,9 +20,6 @@ all_rel= soup.p.string
 search=re.compile(r"""[A-Z][a-z]{2,2}\s{1,2}[0-9]{1,2}\s{1,2}[0-9]{1,2}:[0-9]{1,2}""")
 latest_release = search.findall(all_rel)[0]
 
-#print url+'ClinVarFullRelease_00-latest.xml.gz'
-#urllib2.urlopen(url+'ClinVarFullRelease_00-latest.xml.gz')
-
 print last_download
 print latest_release
 
