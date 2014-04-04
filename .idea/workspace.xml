@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5716b40f-1eb7-464e-a32c-cbeddb6e77f1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/data-model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/django/web-content" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VisualizeClinvar.iws" />
@@ -37,13 +39,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="check.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/check-clinvar/check.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3630363" vertical-offset="0" max-vertical-offset="909">
+            <state line="22" column="0" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data-model" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/data-model">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web-content" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django/web-content">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="51" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,6 +97,8 @@
       <list>
         <option value="$PROJECT_DIR$/check-clinvar/history.txt" />
         <option value="$PROJECT_DIR$/check-clinvar/check.py" />
+        <option value="$PROJECT_DIR$/database/data-model" />
+        <option value="$PROJECT_DIR$/django/web-content" />
       </list>
     </option>
   </component>
@@ -128,6 +150,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="VisualizeClinvar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VisualizeClinvar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VisualizeClinvar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VisualizeClinvar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VisualizeClinvar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,7 +423,11 @@
       <created>1396593758351</created>
       <updated>1396593758352</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="another test">
+      <created>1396593774622</created>
+      <updated>1396593774622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -451,6 +505,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/check-clinvar/check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/data-model">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/check-clinvar/history.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="12" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="150">
@@ -458,12 +528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/check-clinvar/check.py">
+    <entry file="file://$PROJECT_DIR$/django/web-content">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="500" selection-end="500" vertical-scroll-proportion="0.3630363" vertical-offset="0" max-vertical-offset="909">
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
+        <state line="0" column="51" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
         </state>
       </provider>
     </entry>
