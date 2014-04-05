@@ -1,0 +1,220 @@
+https://www.ncbi.nlm.nih.gov/clinvar/RCV000034773/
+
+<ClinVarSet ID="1319464">
+  <RecordStatus>current</RecordStatus>
+  <Title>RET:c.2611G&gt;A (p.Val871Ile) AND not provided</Title>
+  <ReferenceClinVarAssertion DateCreated="2013-04-09" DateLastUpdated="2014-03-05" ID="99099">
+    <ClinVarAccession Acc="RCV000034773" Version="2" Type="RCV" DateUpdated="2014-03-06"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2013-10-24">
+      <ReviewStatus>classified by multiple submitters</ReviewStatus>
+      <Description>Uncertain significance</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>no</AffectedStatus>
+        <NumberTested>564</NumberTested>
+      </Sample>
+      <Method>
+        <NamePlatform>Illumina GAIIx</NamePlatform>
+        <Purpose>Discovery</Purpose>
+        <MethodType>research</MethodType>
+      </Method>
+      <ObservedData ID="1029889">
+        <Attribute integerValue="1" Type="VariantAlleles"/>
+      </ObservedData>
+    </ObservedIn>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>unknown</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>clinical testing</MethodType>
+      </Method>
+      <ObservedData ID="1029890">
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant" ID="41842">
+      <Measure Type="single nucleotide variant" ID="50281">
+        <Name>
+          <ElementValue Type="Preferred">RET:c.2611G&gt;A (p.Val871Ile)</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="HGVS, coding, RefSeq" Change="c.2611G&gt;A">NM_020975.4:c.2611G&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, coding, RefSeq" Change="c.2611G&gt;A">NM_020630.4:c.2611G&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, RefSeqGene" Change="g.48016G&gt;A">NG_007489.1:g.48016G&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, top level" Change="g.43615532G&gt;A">NC_000010.10:g.43615532G&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein, RefSeq" Change="p.Val871Ile">NP_065681.1:p.Val871Ile</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein, RefSeq" Change="p.Val871Ile">NP_066124.1:p.Val871Ile</Attribute>
+          <XRef ID="15455" DB="Emory Genetics Laboratory"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="Location">NM_020975.4:Ex15</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">V871I</Attribute>
+        </AttributeSet>
+        <CytogeneticLocation>10q11.2</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh37" Chr="10" Accession="NC_000010.10" start="43615532" stop="43615532"/>
+        <MeasureRelationship Type="variant in gene">
+          <Name>
+            <ElementValue Type="Preferred">ret proto-oncogene</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">RET</ElementValue>
+          </Symbol>
+          <SequenceLocation Assembly="GRCh37" Chr="10" Accession="NC_000010.10" start="43572516" stop="43625798" Strand="+"/>
+          <XRef ID="5979" DB="Gene"/>
+          <XRef Type="MIM" ID="164761" DB="OMIM"/>
+        </MeasureRelationship>
+        <XRef Type="rs" ID="145170911" DB="dbSNP"/>
+      </Measure>
+      <Name>
+        <ElementValue Type="preferred name">RET:c.2611G&gt;A (p.Val871Ile)</ElementValue>
+      </Name>
+    </MeasureSet>
+    <TraitSet Type="Disease" ID="9460">
+      <Trait ID="17556" Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">not provided</ElementValue>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">not provided</ElementValue>
+        </Name>
+      </Trait>
+    </TraitSet>
+  </ReferenceClinVarAssertion>
+  <ClinVarAssertion ID="98673">
+    <ClinVarSubmissionID localKey="NM_020630.4:c.2611G&gt;A|not provided" submitter="Biesecker Laboratory - ClinSeq Project, NHGRI"/>
+    <ClinVarAccession Acc="SCV000043478" Version="1" Type="SCV" OrgID="500064" DateUpdated="2014-03-06"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2012-07-13">
+      <ReviewStatus>classified by single submitter</ReviewStatus>
+      <Description>variant of unknown significance</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>no</AffectedStatus>
+        <NumberTested>564</NumberTested>
+      </Sample>
+      <Method>
+        <NamePlatform>Illumina GAIIx</NamePlatform>
+        <TypePlatform>High-Throughput DNA Sequencing</TypePlatform>
+        <Purpose>discovery</Purpose>
+        <Software name="Eland" purpose="alignment"/>
+        <Software name="Most Probable Genotype" purpose="variant calls"/>
+        <MethodType>research</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="VariantAlleles" integerValue="1"/>
+      </ObservedData>
+      <Comment>The study set was not selected for affection status in relation to any cancer. Pathogenicity categories were based on literature curation. See Pubmed ID:22703879 for details.</Comment>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <Name>
+          <ElementValue Type="Alternate">p.Val871Ile</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="HGVS">NM_020630.4:c.2611G&gt;A</Attribute>
+        </AttributeSet>
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">RET</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">not provided</ElementValue>
+        </Name>
+      </Trait>
+    </TraitSet>
+    <Citation Type="general">
+      <ID Source="PubMed">22703879</ID>
+    </Citation>
+    <StudyName>ClinSeq</StudyName>
+  </ClinVarAssertion>
+  <ClinVarAssertion ID="196102">
+    <ClinVarSubmissionID localKey="15455" submitterDate="2013-11-21" submitter="Emory Genetics Laboratory"/>
+    <ClinVarAccession Acc="SCV000113991" Version="1" Type="SCV" OrgID="500060" DateUpdated="2014-03-06"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2013-10-24">
+      <ReviewStatus>classified by single submitter</ReviewStatus>
+      <Description>Uncertain significance</Description>
+      <Citation>
+        <URL>http://genetics.emory.edu/egl/emvclass/emvclass.php?approved_symbol=RET</URL>
+      </Citation>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ExternalID URL="http://genetics.emory.edu/egl/emvclass/emvclass.php?approved_symbol=RET" DB="Emory Genetics Laboratory" ID="15455"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>unknown</AffectedStatus>
+        <Gender>mixed</Gender>
+      </Sample>
+      <Method>
+        <Citation>
+          <URL>http://genetics.emory.edu/egl/tests/view.php?testid=280</URL>
+        </Citation>
+        <XRef DB="GTR" ID="GTR000501433"/>
+        <MethodType>clinical testing</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <Name>
+          <ElementValue Type="Alternate">NP_066124.1:p.Val871Ile</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="Location">NM_020975.4:Ex15</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS">NM_020975.4:c.2611G&gt;A</Attribute>
+        </AttributeSet>
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">RET</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+        <XRef DB="dbSNP" ID="145170911" Type="rsNumber"/>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">not provided</ElementValue>
+        </Name>
+      </Trait>
+    </TraitSet>
+    <Citation Type="general">
+      <ID Source="PubMed">23757202</ID>
+    </Citation>
+  </ClinVarAssertion>
+</ClinVarSet>

@@ -1,0 +1,238 @@
+indel example
+>-- where there is a (del) and an (ins) --<
+https://www.ncbi.nlm.nih.gov/clinvar/RCV000013499/
+
+<ClinVarSet ID="1287550">
+  <RecordStatus>current</RecordStatus>
+  <Title>PRKAR1A:c.786_787delGGinsCT (p.Trp262_Glu263delinsCysTer) AND Carney complex, type 1</Title>
+  <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2014-03-05" ID="71002">
+    <ClinVarAccession Acc="RCV000013499" Version="23" Type="RCV" DateUpdated="2014-03-06"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2013-09-17">
+      <ReviewStatus>classified by multiple submitters</ReviewStatus>
+      <Description>Pathogenic</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>not provided</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>literature only</MethodType>
+      </Method>
+      <ObservedData ID="1054350">
+        <Attribute Type="Description">In affected members of a family with Carney complex (160980), Kirschner et al. (2000) identified a heterozygous 889GG-CT change in exon 8 of the PRKAR1A gene, leading to premature termination after residue 204 and truncation of the N terminus at the second cAMP binding domain.</Attribute>
+        <Citation Type="general">
+          <ID Source="PubMed">10973256</ID>
+        </Citation>
+      </ObservedData>
+    </ObservedIn>
+    <ObservedIn>
+      <Sample>
+        <Origin>not provided</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>not provided</AffectedStatus>
+      </Sample>
+      <Method>
+        <Purpose>assert pathogenicity</Purpose>
+        <MethodType>literature only</MethodType>
+      </Method>
+      <ObservedData ID="1078551">
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant" ID="12663">
+      <Measure Type="Indel" ID="27702">
+        <Name>
+          <ElementValue Type="Preferred">PRKAR1A:c.786_787delGGinsCT (p.Trp262_Glu263delinsCysTer)</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="HGVS, coding, RefSeq" Change="c.786_787delGGinsCT">NM_002734.4:c.786_787delGGinsCT</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, coding, RefSeq" Change="c.786_787delGGinsCT">NM_212472.2:c.786_787delGGinsCT</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, RefSeqGene" Change="g.120264_120265delGGinsCT">NG_007093.3:g.120264_120265delGGinsCT</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, top level" Change="g.66525027_66525028delGGinsCT">NC_000017.10:g.66525027_66525028delGGinsCT</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, non-validated">NG_007093.2:g.21918_21917delGGinsCT</Attribute>
+          <Citation Type="general">
+            <ID Source="PubMed">10973256</ID>
+          </Citation>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, previous" Change="c.786_787delGGinsCT">NM_212472.1:c.786_787delGGinsCT</Attribute>
+          <XRef ID="NBK1286" DB="GeneReviews"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, previous" Change="c.786_787delGGinsCT">NM_002734.3:c.786_787delGGinsCT</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, previous" Change="g.21918_21919delGGinsCT">NG_007093.2:g.21918_21919delGGinsCT</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein, RefSeq" Change="p.Trp262_Glu263delinsCysTer">NP_002725.1:p.Trp262_Glu263delinsCysTer</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein, RefSeq" Change="p.Trp262_Glu263delinsCysTer">NP_997637.1:p.Trp262_Glu263delinsCysTer</Attribute>
+        </AttributeSet>
+        <CytogeneticLocation>17q24</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh37" Chr="17" Accession="NC_000017.10" start="66525027" stop="66525028"/>
+        <MeasureRelationship Type="variant in gene">
+          <Name>
+            <ElementValue Type="Preferred">protein kinase, cAMP-dependent, regulatory, type I, alpha</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">PRKAR1A</ElementValue>
+          </Symbol>
+          <SequenceLocation Assembly="GRCh37" Chr="17" Accession="NC_000017.10" start="66508109" stop="66528910" Strand="+"/>
+          <XRef ID="5573" DB="Gene"/>
+          <XRef Type="MIM" ID="188830" DB="OMIM"/>
+        </MeasureRelationship>
+        <XRef ID="NBK1286" DB="GeneReviews"/>
+        <XRef Type="Allelic variant" ID="188830.0002" DB="OMIM"/>
+        <XRef Type="rs" ID="281864785" DB="dbSNP"/>
+      </Measure>
+      <Name>
+        <ElementValue Type="preferred name">PRKAR1A:c.786_787delGGinsCT (p.Trp262_Glu263delinsCysTer)</ElementValue>
+      </Name>
+    </MeasureSet>
+    <TraitSet Type="Disease" ID="3443">
+      <Trait ID="1315" Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">Carney complex, type 1</ElementValue>
+          <XRef ID="Carney+complex%2C+type+1/7902" DB="Genetic Alliance"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">Carney complex, type 1</ElementValue>
+          <XRef Type="MIM" ID="160980" DB="OMIM"/>
+        </Name>
+        <Symbol>
+          <ElementValue Type="Preferred">CNC1</ElementValue>
+          <XRef Type="MIM" ID="160980" DB="OMIM"/>
+          <XRef ID="1119" DB="Office of Rare Diseases"/>
+        </Symbol>
+        <AttributeSet>
+          <Attribute Type="public definition">Carney complex (CNC) is characterized by skin pigmentary abnormalities, myxomas, endocrine tumors or overactivity, and schwannomas. Pale brown to black lentigines are the most common presenting feature of CNC and typically increase in number at puberty. Cardiac myxomas occur at a young age, may occur in any or all cardiac chambers, and manifest as intracardiac obstruction of blood flow, embolic phenomena, and/or heart failure. Other sites for myxomas include the skin, breast, oropharynx, and female genital tract. Primary pigmented nodular adrenocortical disease (PPNAD), which causes Cushing syndrome, is the most frequently observed endocrine tumor in CNC, occurring in approximately 25% of affected individuals. Large-cell calcifying Sertoli cell tumors (LCCSCTs) are observed in one third of affected males within the first decade and in almost all adult males. Up to 75% of individuals with CNC have multiple thyroid nodules, most of which are thyroid follicular adenomas. Clinically evident acromegaly from a growth hormone (GH)-producing adenoma is evident in approximately 10% of adults. Psammomatous melanotic schwannoma (PMS), a rare tumor of the nerve sheath, occurs in an estimated 10% of affected individuals. The median age of diagnosis is 20 years.</Attribute>
+          <XRef ID="NBK1286" DB="GeneReviews"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance" integerValue="262">Autosomal dominant inheritance</Attribute>
+          <XRef ID="GTR000500469" DB="DNA Diagnostics Laboratory,Academic Medical Centre, University of Amsterdam"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="age of onset">Neonatal/infancy</Attribute>
+          <XRef ID="1359" DB="Orphanet"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="prevalence">&lt;1 / 1 000 000</Attribute>
+          <XRef ID="1359" DB="Orphanet"/>
+        </AttributeSet>
+        <Citation Type="review" Abbrev="GeneReviews">
+          <ID Source="PubMed">20301463</ID>
+        </Citation>
+        <XRef ID="NBK1286" DB="GeneReviews"/>
+        <XRef ID="C2607929" DB="MedGen"/>
+        <XRef ID="1359" DB="Orphanet"/>
+        <XRef Type="MIM" ID="160980" DB="OMIM"/>
+      </Trait>
+    </TraitSet>
+  </ReferenceClinVarAssertion>
+  <ClinVarAssertion ID="33746">
+    <ClinVarSubmissionID localKey="188830.0002_CARNEY COMPLEX, TYPE 1" title="PRKAR1A, 889GG-CT _CARNEY COMPLEX, TYPE 1" submitterDate="2012-09-14" submitter="OMIM"/>
+    <ClinVarAccession Acc="SCV000033746" Version="1" Type="SCV" OrgID="3" DateUpdated="2014-03-06"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2013-09-17">
+      <Description>Pathogenic</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ExternalID DB="OMIM" Type="Allelic variant" ID="188830.0002"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species>human</Species>
+        <AffectedStatus>not provided</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>literature only</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="Description">In affected members of a family with Carney complex (160980), Kirschner et al. (2000) identified a heterozygous 889GG-CT change in exon 8 of the PRKAR1A gene, leading to premature termination after residue 204 and truncation of the N terminus at the second cAMP binding domain.</Attribute>
+        <Citation>
+          <ID Source="PubMed">10973256</ID>
+        </Citation>
+        <XRef DB="OMIM" Type="MIM" ID="160980"/>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <Name>
+          <ElementValue Type="Preferred">PRKAR1A, 889GG-CT </ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="NonHGVS">889GG-CT</Attribute>
+        </AttributeSet>
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">PRKAR1A</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+        <XRef DB="OMIM" Type="Allelic variant" ID="188830.0002"/>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">CARNEY COMPLEX, TYPE 1</ElementValue>
+        </Name>
+      </Trait>
+    </TraitSet>
+  </ClinVarAssertion>
+  <ClinVarAssertion ID="97519">
+    <ClinVarSubmissionID title="NM_212472.1:c.786_787delGGinsCT and Carney Complex" localKey="NM_212472.1:c.786_787delGGinsCT_NBK1286" submitterDate="2013-03-26" submitter="GeneReviews"/>
+    <ClinVarAccession Acc="SCV000058244" Version="2" Type="SCV" OrgID="500062" DateUpdated="2014-03-06"/>
+    <RecordStatus>replaced</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2012-09-20">
+      <Description>pathologic</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ExternalID DB="GeneReviews" ID="NBK1286"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>not provided</Origin>
+        <Species>human</Species>
+        <AffectedStatus>not provided</AffectedStatus>
+      </Sample>
+      <Method>
+        <Purpose>Assert pathogenicity</Purpose>
+        <MethodType>literature only</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <AttributeSet>
+          <Attribute Type="HGVS">NM_212472.1:c.786_787delGGinsCT</Attribute>
+        </AttributeSet>
+        <XRef DB="dbSNP" ID="281864785"/>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">Carney Complex</ElementValue>
+        </Name>
+        <XRef DB="GeneReviews" ID="NBK1286"/>
+        <XRef DB="OMIM" Type="MIM" ID="160980"/>
+      </Trait>
+    </TraitSet>
+  </ClinVarAssertion>
+</ClinVarSet>
