@@ -7,7 +7,7 @@ Can get most of the information from the very beginning of the XML records
 
 <ClinVarSet ID="1311340"> <----- CLINVARSET_ID 
   <RecordStatus>current</RecordStatus>
-  <Title>MEN1:c.1064+9C&gt;T AND Multiple endocrine neoplasia, type 1</Title> <------GENE and VAR_TYPE and SNP_TYPE
+  <Title>MEN1:c.1064+9C&gt;T AND Multiple endocrine neoplasia, type 1</Title> <------GENE and VAR_TYPE and SNP_TYPE (NO- This is not always the case)
   <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2014-03-05" ID="87695"> <------- DATE_CREATED and DATE_UPDATED
     <ClinVarAccession Acc="RCV000030192" Version="1" Type="RCV" DateUpdated="2014-03-06"/>
     <RecordStatus>current</RecordStatus>
@@ -27,7 +27,7 @@ Can get most of the information from the very beginning of the XML records
 	Each ClinVarAssertion ID is a submission on the allele
 
 To clarify for GENE and VAR_TYPE and SNP_TYPE:
-<Title>RET:c.1867G&gt;A (p.Glu623Lys) AND No MEN2 disease</Title> <------GENE and VAR_TYPE and SNP_TYPE
+<Title>RET:c.1867G&gt;A (p.Glu623Lys) AND No MEN2 disease</Title> <------GENE and VAR_TYPE and SNP_TYPE (NO- This is not always the case)
 You will be parsing the HGVS notation found in above
 You can verify GENE NAME in below in Symbol/ElementValue Type=”Preferred”/HUGO_GENE_NAME
         <MeasureRelationship Type="variant in gene">
@@ -45,10 +45,10 @@ CREATE TABLE DSPCLINVA(
 		GENE	VARCHAR(20) NOT NULL,
 		DATE_CREATED	DATE NOT NULL,
 		DATE_UPDATED	DATE NOT NULL,
-		PHENOTYPE	TEXT,
+		PHENOTYPE	TEXT,  <--There are multiple phenotypes, i only pulled out preferred value
 		VAR_TYPE	VARCHAR(30) NOT NULL,
-		SNP_TYPE	VARCHAR(10) NOT NULL,
-		INTERPRETATON_STARNUM	INT NOT NULL,
+		SNP_TYPE	VARCHAR(10) NOT NULL, <--WE'll need to think about how to do this, may need to import variant then regex it
+		INTERPRETATON_STARNUM	INT NOT NULL,  <--I just imported the text for now, we can create a replace.function() to convert text to int in the future
 		INTERPRETATON_SIGNIFICANCE	VARCHAR(30) NOT NULL,
 		SUBMISION_TYPE	TEXT,
 		SUBMITTER	TEXT,
@@ -65,6 +65,6 @@ CREATE TABLE DSPCLINVA(
 		SNP_TYPE	identifier for kind of SNP change. We could use a two character CHAR instead.
 		INTERPRETATON_STARNUM	number of stars see document
 		INTERPRETATON_SIGNIFICANCE structured ClinGen Vocabulary for significance
-		SUBMISION_TYPE	what type of submission
+		SUBMISION_TYPE	what type of submission  <--what do you mean?
 		SUBMITTER	who submitted
 		BATCHID creation date of the CliinVar curated XML
