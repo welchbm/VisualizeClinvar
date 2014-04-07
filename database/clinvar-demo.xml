@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<ReleaseSet> <!--test-->
+  
+  <ClinVarSet ID="176987">
+    <RecordStatus>current</RecordStatus>
+    <Title>Single allele AND Benign familial neonatal seizures 1</Title>
+    <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2013-05-06" ID="78465">
+      <ClinVarAccession Acc="RCV000020962" Version="1" Type="RCV" DateUpdated="2013-05-06"/>
+      <RecordStatus>current</RecordStatus>
+      <ClinicalSignificance DateLastEvaluated="2010-04-27">
+        <ReviewStatus>classified by single submitter</ReviewStatus>
+        <Description>pathogenic</Description>
+      </ClinicalSignificance>
+      <Assertion Type="variation to disease"/>
+      <ObservedIn>
+        <Sample>
+          <Origin>not provided</Origin>
+          <Species TaxonomyId="9606">human</Species>
+          <AffectedStatus>not provided</AffectedStatus>
+        </Sample>
+        <Method>
+          <Purpose>assert pathogenicity</Purpose>
+          <MethodType>curation</MethodType>
+        </Method>
+        <ObservedData ID="296230">
+          <Attribute Type="Description">not provided</Attribute>
+        </ObservedData>
+      </ObservedIn>
+    <MeasureSet Type="Variant" ID="39097">
+        <Measure Type="Variation" ID="47703">
+          <AttributeSet>
+            <Attribute Type="HGVS, coding, RefSeq" Change="g.60550dupA">variant_1_test</Attribute> <!--  -->
+
+            <XRef ID="NBK32534" DB="GeneReviews"/>
+          </AttributeSet>
+          <AttributeSet>
+
+            <Attribute Type="HGVS, coding, RefSeq" Change="g.60550dupA">NG_012772.3:g.60550dupA</Attribute> <!--  -->
+
+            <XRef ID="NBK32534" DB="GeneReviews"/>
+          </AttributeSet>
+          <AttributeSet>
+
+            <Attribute Type="HGVS, coding, RefSeq" Change="g.60550dupA">variant_3</Attribute><!--  -->
+            <XRef ID="NBK32534" DB="GeneReviews"/>
+          </AttributeSet>
+         <MeasureRelationship Type="variant in gene">
+            <Name>
+              <ElementValue Type="Preferred">breast cancer 2, early onset</ElementValue>
+            </Name>
+            <Symbol>
+              <ElementValue Type="Preferred">BRCA</ElementValue> 
+            </Symbol>
+            <XRef ID="675" DB="Gene"/>
+            <XRef ID="600185" DB="OMIM" Type="MIM"/>
+          </MeasureRelationship>
+          
+          
+        </Measure>
+      </MeasureSet> 
+      
+
+      
+      <TraitSet Type="Disease" ID="2010">
+        <Trait ID="5025" Type="Disease">
+          <Name>
+            <ElementValue Type="Preferred">Benign familial neonatal seizures 1</ElementValue>
+          </Name>
+          <Name>
+            <ElementValue Type="Alternate">KCNQ2-Related Disorders</ElementValue>
+            <XRef ID="NBK32534" DB="GeneReviews"/>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">BFNS1</ElementValue>
+            <XRef Type="MIM" ID="121200" DB="OMIM"/>
+          </Symbol>
+          <AttributeSet>
+            <Attribute Type="public definition">KCNQ2-related disorders represent a continuum of overlapping neonatal epileptic phenotypes caused by a heterozygous mutation in KCNQ2. The clinical features of KCNQ2-related disorders range from KCNQ2-related benign familial neonatal epilepsy (KCNQ2-BFNE) at the mild end to KCNQ2-related epileptic encephalopathy (KCNQ2-NEE) at the severe end. KCNQ2-BFNE is characterized by a wide spectrum of seizure types (tonic or apneic episodes, focal clonic activity, or autonomic changes) that start in otherwise healthy infants between the second and eighth day of life and spontaneously disappear between the first and the sixth to 12th month of life. Motor activity may be confined to one body part, migrate to other body regions, or generalize. Seizures are generally brief, lasting one to two minutes. Rarely, KCNQ2-BFNE may evolve into status epilepticus. About 10%-15% of individuals with BFNS develop epileptic seizures later in life. KCNQ2-NEE is characterized by multiple daily seizures beginning in the first week of life that are mostly tonic, with motor and autonomic features. Seizures cease between ages nine months and four years. At onset, EEG shows a burst-suppression pattern or multifocal epileptiform activity; early brain MRI shows basal ganglia and thalamic hyperintensities that later resolved. Most affected individuals are profoundly intellectually impaired and have axial hypotonia and/or spastic quadriplegia.</Attribute>
+            <XRef ID="NBK32534" DB="GeneReviews"/>
+          </AttributeSet>
+          <AttributeSet>
+            <Attribute Type="age of onset">Neonatal/infancy</Attribute>
+          </AttributeSet>
+          <Citation Type="review" Abbrev="GeneReviews">
+            <ID Source="PubMed">20437616</ID>
+          </Citation>
+          <XRef ID="NBK32534" DB="GeneReviews"/>
+          <XRef ID="C1852587" DB="MedGen"/>
+          <XRef ID="1949" DB="Orphanet"/>
+          <XRef Type="MIM" ID="121200" DB="OMIM"/>
+        </Trait>
+      </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="41605">
+      <ClinVarSubmissionID title="NM_172107.2:c.(1480_1482)del13 and Benign Familial Neonatal Seizures" localKey="NM_172107.2:c.(1480_1482)del13_NBK32534" submitterDate="2013-01-08" submitter="GeneReviews"/>
+      <ClinVarAccession Acc="SCV000041605" Version="1" Type="SCV" OrgID="500062" DateUpdated="2013-05-06"/>
+      <RecordStatus>replaced</RecordStatus>
+      <ClinicalSignificance DateLastEvaluated="2010-04-27">
+        <Description>pathologic</Description>
+      </ClinicalSignificance>
+      <Assertion Type="variation to disease"/>
+      <ObservedIn>
+        <Sample>
+          <Origin>not provided</Origin>
+          <Species>human</Species>
+          <AffectedStatus>not provided</AffectedStatus>
+        </Sample>
+        <Method>
+          <Purpose>Assert pathogenicity</Purpose>
+          <MethodType>curation</MethodType>
+        </Method>
+        <ObservedData>
+          <Attribute Type="Description">not provided</Attribute>
+        </ObservedData>
+      </ObservedIn>
+      <MeasureSet Type="Variant">
+        <Measure Type="Variation">
+          <AttributeSet>
+            <Attribute Type="HGVS">NM_172107.2:c.(1480_1482)del13</Attribute>
+          </AttributeSet>
+        </Measure>
+      </MeasureSet>
+      <TraitSet Type="Disease">
+        <Trait Type="Disease">
+          <Name>
+            <ElementValue Type="Preferred">Benign Familial Neonatal Seizures</ElementValue>
+          </Name>
+          <XRef DB="GeneReviews" ID="NBK32534"/>
+          <XRef DB="OMIM" Type="MIM Number" ID="121200"/>
+        </Trait>
+      </TraitSet>
+    </ClinVarAssertion>
+  </ClinVarSet>
+  
+  <ClinVarSet ID="225144">
+    <RecordStatus>current</RecordStatus>
+    <Title>MYH11, ARG712GLN AND Aortic aneurysm, familial thoracic 4</Title>
+    <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2013-06-05" ID="72699">
+      <ClinVarAccession Acc="RCV000015196" Version="1" Type="RCV" DateUpdated="2013-06-05"/>
+      <RecordStatus>current</RecordStatus>
+      <ClinicalSignificance DateLastEvaluated="2013-04-12">
+        <ReviewStatus>classified by single submitter</ReviewStatus>
+        <Description>pathogenic</Description>
+      </ClinicalSignificance>
+      <Assertion Type="variation to disease"/>
+      <ObservedIn>
+        <Sample>
+          <Origin>germline</Origin>
+          <Species TaxonomyId="9606">human</Species>
+          <AffectedStatus>not provided</AffectedStatus>
+        </Sample>
+        <Method>
+          <MethodType>curation</MethodType>
+        </Method>
+        <ObservedData ID="333645">
+          <Attribute Type="Description">In affected members of a family with aortic aneurysm and patent ductus arteriosus (AAT4; 132900), Pannu et al. (2007) identified a 2153C-T transition in the MYH11 gene, resulting in an arg712-to-gln (R712Q) substitution in the ATPase head region. The proband's affected father also had acute myocardial infarction (MI) at age 47 years, and a mutation-positive brother died of MI at age 43 years.</Attribute>
+          <Citation Type="general">
+            <ID Source="PubMed">17666408</ID>
+          </Citation>
+        </ObservedData>
+      </ObservedIn>
+      <MeasureSet Type="Variant" ID="14135">
+        <Measure Type="single nucleotide variant" ID="29174">
+          <Name>
+            <ElementValue Type="Alternate">MYH11, ARG712GLN</ElementValue>
+            <XRef Type="Allelic variant" ID="160745.0005" DB="OMIM"/>
+          </Name>
+          <AttributeSet>
+            <Attribute Type="HGVS, genomic, top level" Change="g.15841949C&gt;T">NC_000016.9:g.15841949C&gt;T</Attribute>
+          </AttributeSet>
+          <AttributeSet>
+            <Attribute Type="ProteinChange1LetterCode">R712Q</Attribute>
+            <XRef Type="Allelic variant" ID="160745.0005" DB="OMIM"/>
+          </AttributeSet>
+          <AttributeSet>
+            <Attribute Type="ProteinChange3LetterCode">ARG712GLN</Attribute>
+            <XRef Type="Allelic variant" ID="160745.0005" DB="OMIM"/>
+          </AttributeSet>
+          <MeasureRelationship Type="variant in gene">
+            <Name>
+              <ElementValue Type="Preferred">myosin, heavy chain 11, smooth muscle</ElementValue>
+            </Name>
+            <Symbol>
+              <ElementValue Type="Preferred">MYH11</ElementValue>
+            </Symbol>
+            <XRef ID="4629" DB="Gene"/>
+            <XRef ID="160745" DB="OMIM" Type="MIM"/>
+          </MeasureRelationship>
+          <XRef Type="Allelic variant" ID="160745.0005" DB="OMIM"/>
+        </Measure>
+      </MeasureSet>
+      <TraitSet Type="Disease" ID="3900">
+        <Trait ID="420" Type="Disease">
+          <Name>
+            <ElementValue Type="Preferred">Aortic aneurysm, familial thoracic 4</ElementValue>
+            <XRef ID="9876" DB="Office of Rare Diseases"/>
+          </Name>
+          <Name>
+            <ElementValue Type="Alternate">Aortic aneurysm/aortic dissection and patent ductus arteriosus</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">AAT4</ElementValue>
+            <XRef Type="MIM" ID="132900" DB="OMIM"/>
+            <XRef ID="9876" DB="Office of Rare Diseases"/>
+          </Symbol>
+          <Symbol>
+            <ElementValue Type="Alternate">FAA4</ElementValue>
+            <XRef Type="MIM" ID="132900" DB="OMIM"/>
+            <XRef ID="9876" DB="Office of Rare Diseases"/>
+          </Symbol>
+          <AttributeSet>
+            <Attribute Type="public definition">The major cardiovascular manifestations of thoracic aortic aneurysms and aortic dissections (TAAD) include: (1) dilatation of the ascending thoracic aorta at the level of the sinuses of Valsalva or ascending aorta or both; and (2) dissections of the thoracic aorta involving either the ascending (Stanford type A dissections) or descending aorta (Stanford type B). Rarely an aneurysm involving the descending thoracic aorta is observed. Vascular manifestations can be the only findings. In the absence of surgical repair of the ascending aorta, affected individuals typically have progressive enlargement of the ascending aorta leading to an acute aortic dissection. The age of onset and presentation of the aortic disease are highly variable, as are the other vascular diseases and features associated with the aortic disease.</Attribute>
+            <XRef ID="NBK1120" DB="GeneReviews"/>
+          </AttributeSet>
+          <Citation Type="review" Abbrev="GeneReviews">
+            <ID Source="PubMed">20301299</ID>
+          </Citation>
+          <XRef ID="C1851504" DB="MedGen"/>
+          <XRef Type="MIM" ID="132900" DB="OMIM"/>
+        </Trait>
+      </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="35453">
+      <ClinVarSubmissionID localKey="160745.0005_AORTIC ANEURYSM, FAMILIAL THORACIC 4" title="MYH11, ARG712GLN _AORTIC ANEURYSM, FAMILIAL THORACIC 4" submitterDate="2013-04-12" submitter="OMIM"/>
+      <ClinVarAccession Acc="SCV000035453" Version="1" Type="SCV" OrgID="3" DateUpdated="2013-05-28"/>
+      <RecordStatus>current</RecordStatus>
+      <ClinicalSignificance DateLastEvaluated="2013-04-12">
+        <Description>pathogenic</Description>
+      </ClinicalSignificance>
+      <Assertion Type="variation to disease"/>
+      <ObservedIn>
+        <Sample>
+          <Origin>germline</Origin>
+          <Species>human</Species>
+          <AffectedStatus>not provided</AffectedStatus>
+        </Sample>
+        <Method>
+          <MethodType>curation</MethodType>
+        </Method>
+        <ObservedData>
+          <Attribute Type="Description">In affected members of a family with aortic aneurysm and patent ductus arteriosus (AAT4; 132900), Pannu et al. (2007) identified a 2153C-T transition in the MYH11 gene, resulting in an arg712-to-gln (R712Q) substitution in the ATPase head region. The proband's affected father also had acute myocardial infarction (MI) at age 47 years, and a mutation-positive brother died of MI at age 43 years.</Attribute>
+          <Citation>
+            <ID Source="PubMed">17666408</ID>
+          </Citation>
+          <XRef DB="OMIM" Type="MIM" ID="132900"/>
+        </ObservedData>
+      </ObservedIn>
+      <MeasureSet Type="Variant">
+        <Measure Type="Variation">
+          <Name>
+            <ElementValue Type="Preferred">MYH11, ARG712GLN </ElementValue>
+          </Name>
+          <AttributeSet>
+            <Attribute Type="NonHGVS">ARG712GLN</Attribute>
+          </AttributeSet>
+          <MeasureRelationship Type="variant in gene">
+            <Symbol>
+              <ElementValue Type="Preferred">MYH11</ElementValue>
+            </Symbol>
+          </MeasureRelationship>
+          <XRef DB="OMIM" Type="Allelic variant" ID="160745.0005"/>
+        </Measure>
+      </MeasureSet>
+      <TraitSet Type="Disease">
+        <Trait Type="Disease">
+          <Name>
+            <ElementValue Type="Preferred">AORTIC ANEURYSM, FAMILIAL THORACIC 4</ElementValue>
+          </Name>
+        </Trait>
+      </TraitSet>
+    </ClinVarAssertion>
+  </ClinVarSet>
+  
+  <ClinVarSet ID="331836"> 
+  <RecordStatus>current</RecordStatus>
+  <Title>NM_000059.3:c.8561dupA AND Familial cancer of breast</Title>
+    
+  <ReferenceClinVarAssertion DateCreated="2013-07-03" DateLastUpdated="2013-07-06" ID="127044">
+    <ClinVarAccession Acc="RCV000045557" Version="1" Type="RCV" DateUpdated="2013-07-06"/>
+    <RecordStatus>current</RecordStatus>
+    
+	<ClinicalSignificance DateLastEvaluated="2013-02-01">
+      <ReviewStatus>classified by single submitter</ReviewStatus>
+	  <Description>pathogenic</Description> <!-- interpretation -->
+    </ClinicalSignificance>
+   
+   <Assertion Type="variation to disease"/>
+   
+   <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>yes</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>curation</MethodType>
+      </Method>
+      <ObservedData ID="363115">
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+   
+   </ObservedIn>
+  
+
+  <MeasureSet Type="Variant" ID="52621">
+      <Measure Type="Duplication" ID="67289">
+        
+		<AttributeSet>
+		  <Attribute Type="HGVS, coding, RefSeq" Change="c.8561dupA">NM_000059.3:c.8561dupA</Attribute> <!-- nucleotide variant -->
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, RefSeqGene" Change="g.60550dupA">NG_012772.3:g.60550dupA</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, top level" Change="g.32945166dupA">NC_000013.10:g.32945166dupA</Attribute> 
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein, RefSeq" Change="p.Tyr2854delinsTerCysfs">NP_000050.2:p.Tyr2854delinsTerCysfs</Attribute> <!-- protein variant -->
+        </AttributeSet>
+      
+		<SequenceLocation Assembly="GRCh37" Chr="13" Accession="NC_000013.10" start="32945166" stop="32945166"/>
+        
+		<MeasureRelationship Type="variant in gene">
+          <Name>
+            <ElementValue Type="Preferred">breast cancer 2, early onset</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">BRCA2</ElementValue> <!-- gene name -->
+          </Symbol>
+          <XRef ID="675" DB="Gene"/>
+          <XRef ID="600185" DB="OMIM" Type="MIM"/>
+        </MeasureRelationship>
+      
+	  </Measure>
+    </MeasureSet>
+   
+   <TraitSet Type="Disease" ID="774">
+      <Trait ID="536" Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">Familial cancer of breast</ElementValue>
+          <XRef ID="Familial+cancer+of+breast/8375" DB="Genetic Alliance"/>
+          <XRef ID="254843006" DB="SNOMED CT"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">Breast cancer</ElementValue>
+          <XRef ID="GTR000500637" DB="Clinical Genetics Laboratory,Michigan State University"/>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="public definition">A germline mutation in BRCA1 or BRCA2 predisposes to breast and ovarian cancer as well as other cancers. The risk of developing cancer that is associated with a germline BRCA1 or BRCA2 mutation, which has been derived from families with multiple affected individuals, families with few affected individuals, and from population-based studies, appears to be variable within families. Prognosis for breast and ovarian cancer depends on the stage at which the cancer is diagnosed; however, studies on survival have revealed conflicting results for individuals with germline BRCA1 or BRCA2 mutations when compared to controls.</Attribute>
+          <XRef ID="NBK1247" DB="GeneReviews"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance" integerValue="262">Autosomal dominant inheritance</Attribute>
+          <XRef ID="GTR000325992" DB="Ambry Genetics,Ambry Genetics Corp"/>
+        </AttributeSet>
+        <Citation Type="practice guideline" Abbrev="NSGC, 2004">
+          <ID Source="PubMed">15604628</ID>
+        </Citation>
+        <Citation Type="practice guideline" Abbrev="NSGC, 2007">
+          <ID Source="PubMed">17508274</ID>
+        </Citation>
+        <Citation Type="review" Abbrev="Stratton and Rahman, 2008">
+          <ID Source="PubMed">18163131</ID>
+        </Citation>
+        <Citation Type="review" Abbrev="GeneReviews">
+          <ID Source="PubMed">20301425</ID>
+        </Citation>
+        <XRef ID="C0346153" DB="MedGen"/>
+        <XRef Type="MIM" ID="114480" DB="OMIM"/>
+      </Trait>
+    </TraitSet>
+ 
+
+ </ReferenceClinVarAssertion>
+ 
+ 
+ 
+ 
+
+ <ClinVarAssertion ID="121500">
+    <ClinVarSubmissionID localKey="NM_000059.3:c.8561dupA|MedGen:C0346153" submitterDate="2013-03-30" submitter="Invitae, Inc."/>
+    <ClinVarAccession Acc="SCV000073570" Version="1" Type="SCV" OrgID="500031" DateUpdated="2013-07-03"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2013-02-01">
+      <ReviewStatus>classified by single submitter</ReviewStatus>
+      <Description>pathogenic</Description>
+      <Citation>
+        <ID Source="PubMed">21702907</ID>
+      </Citation>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>yes</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>curation</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="Description">not provided</Attribute>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <AttributeSet>
+          <Attribute Type="HGVS">NM_000059.3:c.8561dupA</Attribute>
+        </AttributeSet>
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">BRCA2</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">Familial cancer of breast</ElementValue>
+        </Name>
+        <XRef DB="MedGen" ID="C0346153" Type="CUI"/>
+      </Trait>
+    </TraitSet>
+  </ClinVarAssertion>
+  
+  
+</ClinVarSet>
+
+  <ClinVarSet ID="385638">
+  <RecordStatus>current</RecordStatus>
+  <Title>NM_001128425.1:c.312C&gt;A (Y104*) AND MYH-associated polyposis</Title>
+  <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2013-08-03" ID="63120">
+    <ClinVarAccession Acc="RCV000005617" Version="1" Type="RCV" DateUpdated="2013-08-03"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2011-10-11">
+      <ReviewStatus>classified by single submitter</ReviewStatus>
+      <Description>pathogenic</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species TaxonomyId="9606">human</Species>
+        <AffectedStatus>not provided</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>curation</MethodType>
+      </Method>
+      <ObservedData ID="385001">
+        <Attribute Type="Description">In a Pakistani patient with multiple colorectal adenomas (608456), Jones et al. (2002) identified homozygosity for a 270C-A mutation in exon 3 of the MUTYH gene, resulting in a tyr90-to-ter (Y90X) substitution.</Attribute>
+        <Citation Type="general">
+          <ID Source="PubMed">12393807</ID>
+        </Citation>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant" ID="5296">
+      <Measure Type="single nucleotide variant" ID="20335">
+        <Name>
+          <ElementValue Type="Alternate">MUTYH, TYR90TER</ElementValue>
+          <XRef Type="Allelic variant" ID="604933.0004" DB="OMIM"/>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="GlobalMinorAlleleFrequency">0.0009</Attribute>
+          <XRef ID="121908380" DB="dbSNP"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="MolecularConsequence">STOP-GAIN</Attribute>
+          <XRef ID="121908380" DB="dbSNP"/>
+          <XRef ID="SO:0001587" DB="Sequence Ontology"/>
+          <XRef ID="NM_001128425.1:c.312C&gt;A" DB="RefSeq"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, coding, RefSeq" Change="c.312C&gt;A">NM_001128425.1:c.312C&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, RefSeqGene" Change="g.12022C&gt;A">NG_008189.1:g.12022C&gt;A</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, genomic, top level" Change="g.45799121G&gt;T">NC_000001.10:g.45799121G&gt;T</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="HGVS, protein" Change="p.Tyr104Ter">NP_001121897.1:p.Tyr104Ter</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">Y90*</Attribute>
+          <XRef Type="Allelic variant" ID="604933.0004" DB="OMIM"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange1LetterCode">Y104*</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ProteinChange3LetterCode">TYR90TER</Attribute>
+          <XRef Type="Allelic variant" ID="604933.0004" DB="OMIM"/>
+        </AttributeSet>
+        <SequenceLocation Assembly="GRCh37.p10" Chr="1" Accession="NC_000001.10" start="45799121" stop="45799121"/>
+        <MeasureRelationship Type="variant in gene">
+          <Name>
+            <ElementValue Type="Preferred">mutY homolog (E. coli)</ElementValue>
+          </Name>
+          <Symbol>
+            <ElementValue Type="Preferred">MUTYH</ElementValue>
+          </Symbol>
+          <XRef ID="4595" DB="Gene"/>
+          <XRef Type="MIM" ID="604933" DB="OMIM"/>
+        </MeasureRelationship>
+        <XRef Type="Allelic variant" ID="604933.0004" DB="OMIM"/>
+        <XRef Type="rs" ID="121908380" DB="dbSNP"/>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease" ID="1473">
+      <Trait ID="1532" Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">MYH-associated polyposis</ElementValue>
+          <Citation Type="review" Abbrev="Lindor, 2011">
+            <ID Source="PubMed">21325953</ID>
+          </Citation>
+          <XRef ID="MYH-associated+polyposis/8937" DB="Genetic Alliance"/>
+          <XRef ID="familial-adenomatous-polyposis" DB="Genetics Home Reference"/>
+          <XRef Type="MIM" ID="608456" DB="OMIM"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">MUTYH-Associated Polyposis</ElementValue>
+          <XRef ID="NBK107219" DB="GeneReviews"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">FAMILIAL ADENOMATOUS POLYPOSIS, 2</ElementValue>
+          <XRef Type="MIM" ID="608456" DB="OMIM"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">COLORECTAL ADENOMATOUS POLYPOSIS, AUTOSOMAL RECESSIVE</ElementValue>
+          <XRef Type="MIM" ID="608456" DB="OMIM"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">ADENOMAS, MULTIPLE COLORECTAL, AUTOSOMAL RECESSIVE</ElementValue>
+          <XRef Type="MIM" ID="608456" DB="OMIM"/>
+        </Name>
+        <Name>
+          <ElementValue Type="Alternate">FAP type 2</ElementValue>
+        </Name>
+        <Symbol>
+          <ElementValue Type="Preferred">FAP2</ElementValue>
+          <XRef Type="MIM" ID="608456" DB="OMIM"/>
+        </Symbol>
+        <Symbol>
+          <ElementValue Type="Alternate">MUTYH-associated Polyposis</ElementValue>
+          <XRef ID="GTR000323833" DB="Department of Molecular Medicine,Aarhus University Hospital "/>
+        </Symbol>
+        <AttributeSet>
+          <Attribute Type="public definition">MUTYH-associated polyposis (MAP), caused by biallelic mutations in MUTYH, is characterized by a greatly increased lifetime risk of colorectal cancer (CRC) (43% to almost 100% in the absence of timely surveillance). Although typically associated with ten to a few hundred colonic adenomatous polyps that are evident at a mean age of about 50 years, colonic cancer develops in some individuals with biallelic MUTYH mutations in the absence of polyposis. Duodenal adenomas are found in 17%-25% of individuals with MAP; the lifetime risk of duodenal cancer is about 4%. Also noted are a modestly increased risk for rather late-onset malignancies of the ovary, bladder, and skin, and some evidence for an increased risk for breast and endometrial cancer. More recently, thyroid abnormalities (multinodular goiter, single nodules, and papillary thyroid cancer) have been reported in some studies. Some affected individuals develop sebaceous gland tumors.</Attribute>
+          <XRef ID="NBK107219" DB="GeneReviews"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance" integerValue="262">Autosomal dominant inheritance</Attribute>
+          <XRef ID="GTR000325194" DB="Ambry Genetics"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance" integerValue="263">Autosomal recessive inheritance</Attribute>
+          <XRef ID="GTR000500600" DB="DNA Diagnostics Laboratory,Academic Medical Centre, University of Amsterdam"/>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="age of onset">Adulthood</Attribute>
+          <XRef ID="220460" DB="Orphanet"/>
+        </AttributeSet>
+        <Citation Type="Translational/Evidence-based" Abbrev="EuroGenetest, 2010">
+          <ID Source="pmc">2987420</ID>
+        </Citation>
+        <Citation Type="review" Abbrev="GeneReviews">
+          <ID Source="PubMed">23035301</ID>
+        </Citation>
+        <Citation Type="Recommendation" Abbrev="ACMG, 2013">
+          <ID Source="PubMed">23788249</ID>
+        </Citation>
+        <XRef ID="NBK107219" DB="GeneReviews"/>
+        <XRef ID="C1837991" DB="MedGen"/>
+        <XRef ID="220460" DB="Orphanet"/>
+        <XRef Type="MIM" ID="608456" DB="OMIM"/>
+      </Trait>
+    </TraitSet>
+  </ReferenceClinVarAssertion>
+  <ClinVarAssertion ID="25799">
+    <ClinVarSubmissionID localKey="604933.0004_FAMILIAL ADENOMATOUS POLYPOSIS 2" title="MUTYH, TYR90TER_FAMILIAL ADENOMATOUS POLYPOSIS 2" submitterDate="2011-10-11" submitter="OMIM"/>
+    <ClinVarAccession Acc="SCV000025799" OrgID="3" Version="1" Type="SCV" DateUpdated="2013-04-08"/>
+    <RecordStatus>current</RecordStatus>
+    <ClinicalSignificance DateLastEvaluated="2011-10-11">
+      <Description>pathogenic</Description>
+    </ClinicalSignificance>
+    <Assertion Type="variation to disease"/>
+    <ObservedIn>
+      <Sample>
+        <Origin>germline</Origin>
+        <Species>human</Species>
+        <AffectedStatus>not provided</AffectedStatus>
+      </Sample>
+      <Method>
+        <MethodType>curation</MethodType>
+      </Method>
+      <ObservedData>
+        <Attribute Type="Description">In a Pakistani patient with multiple colorectal adenomas (608456), Jones et al. (2002) identified homozygosity for a 270C-A mutation in exon 3 of the MUTYH gene, resulting in a tyr90-to-ter (Y90X) substitution.</Attribute>
+        <Citation>
+          <ID Source="PubMed">12393807</ID>
+        </Citation>
+        <XRef DB="OMIM" Type="MIM" ID="608456"/>
+      </ObservedData>
+    </ObservedIn>
+    <MeasureSet Type="Variant">
+      <Measure Type="Variation">
+        <Name>
+          <ElementValue Type="Preferred">MUTYH, TYR90TER</ElementValue>
+        </Name>
+        <AttributeSet>
+          <Attribute Type="NonHGVS">TYR90TER</Attribute>
+        </AttributeSet>
+        <MeasureRelationship Type="variant in gene">
+          <Symbol>
+            <ElementValue Type="Preferred">MUTYH</ElementValue>
+          </Symbol>
+        </MeasureRelationship>
+        <XRef DB="OMIM" Type="Allelic variant" ID="604933.0004"/>
+      </Measure>
+    </MeasureSet>
+    <TraitSet Type="Disease">
+      <Trait Type="Disease">
+        <Name>
+          <ElementValue Type="Preferred">FAMILIAL ADENOMATOUS POLYPOSIS 2</ElementValue>
+        </Name>
+      </Trait>
+    </TraitSet>
+  </ClinVarAssertion>
+  </ClinVarSet>
+
+</ReleaseSet>
