@@ -48,7 +48,7 @@ CREATE TABLE DSPCLINVA(
 		PHENOTYPE	TEXT,  <--There are multiple phenotypes, i only pulled out preferred value
 		VAR_TYPE	VARCHAR(30) NOT NULL,
 		SNP_TYPE	VARCHAR(10) NOT NULL, <--WE'll need to think about how to do this, may need to import variant then regex it
-		INTERPRETATON_STARNUM	INT NOT NULL,
+		INTERPRETATON_STARNUM	INT NOT NULL,  <--I just imported the text for now, we can create a replace.function() to convert text to int in the future
 		INTERPRETATON_SIGNIFICANCE	VARCHAR(30) NOT NULL,
 		SUBMISION_TYPE	TEXT,
 		SUBMITTER	TEXT,
