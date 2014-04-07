@@ -65,6 +65,6 @@ CREATE TABLE DSPCLINVA(
 		SNP_TYPE	identifier for kind of SNP change. We could use a two character CHAR instead.
 		INTERPRETATON_STARNUM	number of stars see document
 		INTERPRETATON_SIGNIFICANCE structured ClinGen Vocabulary for significance
-		SUBMISION_TYPE	what type of submission
+		SUBMISION_TYPE	what type of submission  <--what do you mean?
 		SUBMITTER	who submitted
 		BATCHID creation date of the CliinVar curated XML
