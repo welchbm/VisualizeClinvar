@@ -37,7 +37,7 @@ else:
     print "Downloading"
     os.system("""wget -P %s -O clinvar-downloads/%s.xml.gz %s""" %(file_loc,new_name,cv))
     os.system("""gunzip %s%s.xml.gz""" %(file_loc,new_name))
-    #subprocess.call(xsltproc downloaded file)
+    #subprocess.call("""xsltproc -o [output_file.xml] [xform.xslt] [downloaded_file.xml]""")
 
     file=open(filename, "a")
     file.write("\n"+latest_release)
