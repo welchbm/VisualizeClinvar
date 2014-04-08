@@ -37,8 +37,9 @@ else:
     print "Downloading"
     os.system("""wget -P %s -O clinvar-downloads/%s.xml.gz %s""" %(file_loc,new_name,cv))
     os.system("""gunzip %s%s.xml.gz""" %(file_loc,new_name))
-    #subprocess.call("""xsltproc -o [output_file.xml] [xform.xslt] [downloaded_file.xml]""")
-
+    print "Converting"
+    os.system("""xsltproc -o ../database/vid-clvr-db/%s-transformed.xml ../database/clinvarXform.xsl %s%s.xml"""%(new_name, file_loc,new_name))
+    print "File ready"
     file=open(filename, "a")
     file.write("\n"+latest_release)
     file.close()
