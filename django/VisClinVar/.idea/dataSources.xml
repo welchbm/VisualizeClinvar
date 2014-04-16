@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3457715070">
-    <data-source source="LOCAL" name="Django default" uuid="b77736c9-c706-428e-9375-070ccce7c89c">
+  <component name="DataSourceManagerImpl" format="xml" hash="1481621737">
+    <data-source source="LOCAL" name="Django default" uuid="b98f2d66-01ee-4f20-8316-18107ea0b0d0">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1:3306/vcdb</jdbc-url>

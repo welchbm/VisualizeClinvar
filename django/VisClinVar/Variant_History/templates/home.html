@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Visualize ClinVar</title>
+</head>
+<body bgcolor="#f0ffff">
+{%  load staticfiles %}
+<p></p><img src ="{% static "ClinVar.jpg" %}" alt="ClinVar"/></p>
+
+<h1>Welcome to Visualize ClinVar</h1>
+
+<h4>ClinVar currently has {{ output.gene }} unique genes associated with {{ output.phenotype }} phenotypes</h4>
+
+<ul>
+  <li><a href="{% url 'history' %}">Variant History</a></li>
+  <li><a href="{% url 'varType' %}">Variant Type</a></li>
+  <li><a href="{% url 'varInterpret' %}">Variant Interpretation</a></li>
+</ul>
+
+
+
+</body>
+</html>
+
+
