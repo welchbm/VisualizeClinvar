@@ -16,9 +16,9 @@ Using fk_BMK with separate data tables gives us flexibility to add/remove or alt
 Table Phenotypes
 	fk_BMK (associates data with BMK in tracking for Reference CLINVARID that owns the evidence CLINVARID)
 	PHENOTYPETEXT (a place to store information on phenotypes beyond basics covered in other columns- needs to be discussed) 
-	INTERPRETATION (a place to put molecular effects interpretation information such as 'change in coding sequence')
+	####REMOVED####interpretation (a place to put molecular effects interpretation information such as 'change in coding sequence')####REMOVED####
 	DISEASENAME (name of an associated disease if any)
-	SIGNIFICANCE (interpretation of the significance of the variation, i.e. pathogenic, benign, unknown)
+	INTERPRETATION (interpretation of the significance of the variation, i.e. pathogenic, benign, unknown)
 	STARNUM (measure of strength of evidence)
 	Active
 	IsReferenceID
