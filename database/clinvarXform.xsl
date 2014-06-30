@@ -14,20 +14,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<field name='BATCHDATE'>enter the batchid date here</field>
 			<field name='CLINVARSET_ID'><xsl:value-of select="@ID"/></field> <!--new -->
 			<field name='DATE_CREATED'><xsl:value-of select="ReferenceClinVarAssertion/@DateCreated"/></field>
-			<field name='DATE_UPDATED'><xsl:value-of select="ReferenceClinVarAssertion/@DateLastUpdated"/></field>			
-			<xsl:if test="ReferenceClinVarAssertion/TraitSet/Trait/Name/ElementValue/@Type='Preferred'">
-				<field name='PHENOTYPE'><xsl:value-of select="ReferenceClinVarAssertion/TraitSet/Trait/Name/ElementValue"/></field>
-			</xsl:if>
+			<field name='DATE_LAST_UPDATED'><xsl:value-of select="ReferenceClinVarAssertion/@DateLastUpdated"/></field>
+			<field name='REF_ASSERTION_ID'><xsl:value-of select="ReferenceClinVarAssertion/@ID"/></field>				
+			<field name='PHENOTYPE'><xsl:if test="ReferenceClinVarAssertion/TraitSet/Trait/Name/ElementValue/@Type='Preferred'">
+				<xsl:value-of select="ReferenceClinVarAssertion/TraitSet/Trait/Name/ElementValue"/>
+			</xsl:if></field>
+			<field name='SNOMED_CODE'><xsl:for-each select="ReferenceClinVarAssertion/TraitSet/Trait/Name/XRef[@DB='SNOMED CT']">
+				<xsl:value-of select="@ID"/>
+			</xsl:for-each></field>
 			<field name='GENE'><xsl:value-of select="ReferenceClinVarAssertion/MeasureSet/Measure/MeasureRelationship/Symbol/ElementValue"/></field>
-			<xsl:for-each select="ReferenceClinVarAssertion/MeasureSet/Measure/AttributeSet/Attribute[@Type='HGVS, coding, RefSeq']">
-				<field name='HGVS_CODING'><xsl:value-of select="@Change"/></field>
-			</xsl:for-each>
-			<xsl:for-each select="ReferenceClinVarAssertion/MeasureSet/Measure/AttributeSet/Attribute[@Type='HGVS, genomic, RefSeqGene']">
-				<field name='HGVS_GENOMIC'><xsl:value-of select="@Change"/></field>
-			</xsl:for-each>
-			<xsl:for-each select="ReferenceClinVarAssertion/MeasureSet/Measure/AttributeSet/Attribute[@Type='HGVS, protein']">
-				<field name='HGVS_PROTEIN'><xsl:value-of select="@Change"/></field>
-			</xsl:for-each>
+			<field name='HGVS_CODING'><xsl:for-each select="ReferenceClinVarAssertion/MeasureSet/Measure/AttributeSet/Attribute[@Type='HGVS, coding, RefSeq']">
+				<xsl:value-of select="@Change"/>
+			</xsl:for-each></field>
+			<field name='HGVS_GENOMIC'><xsl:for-each select="ReferenceClinVarAssertion/MeasureSet/Measure/AttributeSet/Attribute[@Type='HGVS, genomic, RefSeqGene']">
+				<xsl:value-of select="@Change"/>
+			</xsl:for-each></field>
+			<field name='HGVS_PROTEIN'><xsl:for-each select="ReferenceClinVarAssertion/MeasureSet/Measure/AttributeSet/Attribute[@Type='HGVS, protein']">
+				<xsl:value-of select="@Change"/>
+			</xsl:for-each></field>
 			<field name='ASSEMBLY'><xsl:value-of select="ReferenceClinVarAssertion/MeasureSet/Measure/SequenceLocation/@Assembly"/></field>
 			<field name='CHR'><xsl:value-of select="ReferenceClinVarAssertion/MeasureSet/Measure/SequenceLocation/@Chr"/></field>
 			<field name='ACCESSION'><xsl:value-of select="ReferenceClinVarAssertion/MeasureSet/Measure/SequenceLocation/@Accession"/></field>
