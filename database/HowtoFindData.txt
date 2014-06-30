@@ -9,7 +9,7 @@
     <RecordStatus>current</RecordStatus>
     <ClinicalSignificance DateLastEvaluated="2011-08-18">
       <ReviewStatus>classified by single submitter</ReviewStatus>  <----- STARNUM is determined from here using rules in document NumStars.txt
-      <Description>Uncertain significance</Description> <------- INTERPRETATON_SIGNIFICANCE
+      <Description>Uncertain significance</Description> <------- INTERPRETATION
 	 ....
       <Measure Type="Indel" ID="27702"> <--- TYPE is here 
         <Name>
