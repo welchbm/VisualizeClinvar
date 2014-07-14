@@ -1,0 +1,15 @@
+This is a list of the distinc var_types in the clinvar excerpt created July 7 2014
+# VAR_TYPE
+'Deletion'
+'Insertion'
+'single nucleotide variant'
+'Indel'
+'Duplication'
+'Variation'
+'copy number gain'
+'copy number loss'
+'Microsatellite'
+'protein only'
+'inversion'
+'Structural variant'
+'fusion'
