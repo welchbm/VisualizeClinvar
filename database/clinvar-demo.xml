@@ -471,16 +471,16 @@
           <XRef ID="NM_001128425.1:c.312C&gt;A" DB="RefSeq"/>
         </AttributeSet>
         <AttributeSet>
-          <Attribute Type="HGVS, coding, RefSeq" Change="c.312C&gt;A">NM_001128425.1:c.312C&gt;A</Attribute>
+          <Attribute Type="HGVS, coding, RefSeq">NM_001128425.1:c.312C&gt;xxxxxxCODING_TESTxxxxxxxxx</Attribute>
         </AttributeSet>
         <AttributeSet>
-          <Attribute Type="HGVS, genomic, RefSeqGene" Change="g.12022C&gt;A">NG_008189.1:g.12022C&gt;A</Attribute>
+          <Attribute Type="HGVS, genomic, RefSeqGene" Change="c.8561dupA">NG_008189.1:g.12022C&gt;AxxxxxxGENOME_TESTxxxxxxxxx</Attribute>
         </AttributeSet>
         <AttributeSet>
           <Attribute Type="HGVS, genomic, top level" Change="g.45799121G&gt;T">NC_000001.10:g.45799121G&gt;T</Attribute>
         </AttributeSet>
         <AttributeSet>
-          <Attribute Type="HGVS, protein" Change="p.Tyr104Ter">NP_001121897.1:p.Tyr104Ter</Attribute>
+          <Attribute Type="HGVS, protein">NP_001121897.1:p.Tyr104Ter</Attribute>
         </AttributeSet>
         <AttributeSet>
           <Attribute Type="ProteinChange1LetterCode">Y90*</Attribute>
@@ -628,5 +628,255 @@
     </TraitSet>
   </ClinVarAssertion>
   </ClinVarSet>
+       
+  <ClinVarSet ID="1738113">
+      <RecordStatus>current</RecordStatus>
+      <Title>p.Thr3542Ser AND Cardiomyopathy</Title>
+      <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2014-04-18" ID="86822">
+        <ClinVarAccession Acc="RCV000029319" Version="1" Type="RCV" DateUpdated="2014-04-19"/>
+        <RecordStatus>current</RecordStatus>
+        <ClinicalSignificance DateLastEvaluated="2011-08-18">
+          <ReviewStatus>classified by single submitter</ReviewStatus>
+          <Description>Likely pathogenic</Description>
+        </ClinicalSignificance>
+        <Assertion Type="variation to disease"/>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance" integerValue="483">Autosomal unknown</Attribute>
+        </AttributeSet>
+        <ObservedIn>
+          <Sample>
+            <Origin>germline</Origin>
+            <Species TaxonomyId="9606">human</Species>
+            <AffectedStatus>yes</AffectedStatus>
+          </Sample>
+          <Method>
+            <Purpose>assert pathogenicity</Purpose>
+            <MethodType>literature only</MethodType>
+          </Method>
+          <ObservedData ID="1560440">
+            <Attribute integerValue="1" Type="VariantAlleles"/>
+          </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant" ID="35671">
+          <Measure Type="single nucleotide variant" ID="44336">
+            <Name>
+              <ElementValue Type="preferred name">p.Thr3542Ser</ElementValue>
+            </Name>
+            <AttributeSet>
+              <Attribute Type="HGVS, coding" Change="coding works">p.Thr3542Ser</Attribute>
+            </AttributeSet>
+            <AttributeSet>
+              <Attribute Type="HGVS, genomic" Change="genomic works">p.Thr3542Ser</Attribute>
+            </AttributeSet>
+            <AttributeSet>
+              <Attribute Type="HGVS, protein" Change="protein works">p.Thr3542Ser</Attribute>
+            </AttributeSet>
+            <AttributeSet>
+              <Attribute Type="MolecularConsequence" integerValue="482">missense_variant</Attribute>
+            </AttributeSet>
+            <MeasureRelationship Type="variant in gene">
+              <Name>
+                <ElementValue Type="Preferred">Alstrom syndrome 1</ElementValue>
+              </Name>
+              <Symbol>
+                <ElementValue Type="Preferred">ALMS1</ElementValue>
+              </Symbol>
+              <SequenceLocation Assembly="GRCh37" Chr="2" Accession="NC_000002.11" start="73612885" stop="73837045" Strand="+"/>
+              <SequenceLocation Assembly="GRCh38" Chr="2" Accession="NC_000002.12" start="73385757" stop="73609918" Strand="+"/>
+              <XRef ID="7840" DB="Gene"/>
+              <XRef Type="MIM" ID="606844" DB="OMIM"/>
+            </MeasureRelationship>
+          </Measure>
+          <Name>
+            <ElementValue Type="preferred name">p.Thr3542Ser</ElementValue>
+          </Name>
+        </MeasureSet>
+        <TraitSet Type="Disease" ID="8589">
+          <Trait ID="16502" Type="Disease">
+            <Name>
+              <ElementValue Type="Preferred">Cardiomyopathy</ElementValue>
+              <XRef ID="Cardiomyopathy/1090" DB="Genetic Alliance"/>
+              <XRef ID="HP:0001638" DB="Human Phenotype Ontology"/>
+              <XRef ID="85898001" DB="SNOMED CT"/>
+            </Name>
+            <Symbol>
+              <ElementValue Type="Preferred">CMYO</ElementValue>
+            </Symbol>
+            <AttributeSet>
+              <Attribute Type="mode of inheritance">Various modes of inheritance</Attribute>
+              <XRef ID="GTR000500688" DB="Ambry Genetics"/>
+          </AttributeSet>
+          <XRef ID="C0878544" DB="MedGen"/>
+          </Trait>
+        </TraitSet>
+      </ReferenceClinVarAssertion>
+      <ClinVarAssertion ID="56115">
+        <ClinVarSubmissionID title="ALMS1:c.10625C&gt;G and Cardiomyopathy" localKey="ALMS1_10625C_G_092010" submitter="LabCorp"/>
+        <ClinVarAccession Acc="SCV000051965" Version="1" Type="SCV" OrgID="500026" DateUpdated="2014-04-19"/>
+        <RecordStatus>current</RecordStatus>
+        <ClinicalSignificance DateLastEvaluated="2011-08-18">
+          <ReviewStatus>classified by single submitter</ReviewStatus>
+          <Description>likely pathogenic</Description>
+        </ClinicalSignificance>
+        <CustomAssertionScore Type="QOD" Value="-1"/>
+        <CustomAssertionScore Type="aFXN" Value="NA"/>
+        <CustomAssertionScore Type="pFXN" Value="-1"/>
+        <CustomAssertionScore Type="pbGP" Value="NA"/>
+        <CustomAssertionScore Type="tbGP" Value="NA"/>
+        <Assertion Type="variation to disease"/>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance">autosomal unknown</Attribute>
+        </AttributeSet>
+        <ObservedIn>
+          <Sample>
+            <Origin>germline</Origin>
+            <Tissue>Blood</Tissue>
+            <Species TaxonomyId="9606">human</Species>
+            <AffectedStatus>yes</AffectedStatus>
+          </Sample>
+          <Method>
+            <Purpose>assert pathogenicity</Purpose>
+            <MethodType>literature only</MethodType>
+          </Method>
+          <ObservedData>
+            <Attribute Type="VariantAlleles">1</Attribute>
+          </ObservedData>
+        </ObservedIn>
+        <MeasureSet Type="Variant">
+          <Measure Type="single nucleotide variant">
+            <AttributeSet>
+              <Attribute Type="HGVS"/>
+            </AttributeSet>
+            <AttributeSet>
+              <Attribute Type="HGVS">p.Thr3542Ser</Attribute>
+            </AttributeSet>
+            <AttributeSet>
+              <Attribute Type="MolecularConsequence">missense mutation</Attribute>
+              <XRef DB="Sequence Ontology" ID="SO:0001783"/>
+            </AttributeSet>
+            <MeasureRelationship Type="variant in gene">
+              <Symbol>
+                <ElementValue Type="Preferred">ALMS1</ElementValue>
+              </Symbol>
+            </MeasureRelationship>
+          </Measure>
+        </MeasureSet>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <Name>
+              <ElementValue Type="Preferred">Cardiomyopathy</ElementValue>
+            </Name>
+            <Symbol>
+              <ElementValue Type="Preferred">CMYO</ElementValue>
+            </Symbol>
+          </Trait>
+        </TraitSet>
+      </ClinVarAssertion>
+    </ClinVarSet>
+
+  <ClinVarSet ID="1733576">
+    <RecordStatus>current</RecordStatus>
+    <Title>nsv491528 AND Simvastatin response</Title>
+    <ReferenceClinVarAssertion DateCreated="2012-08-13" DateLastUpdated="2014-04-18" ID="78585">
+      <ClinVarAccession Acc="RCV000021082" Version="1" Type="RCV" DateUpdated="2014-04-19"/>
+      <RecordStatus>current</RecordStatus>
+      <ClinicalSignificance DateLastEvaluated="2011-05-13">
+        <ReviewStatus>classified by single submitter</ReviewStatus>
+        <Description>Pathogenic</Description>
+      </ClinicalSignificance>
+      <Assertion Type="variation to disease"/>
+      <ObservedIn>
+        <Sample>
+          <Origin>germline</Origin>
+          <Species TaxonomyId="9606">human</Species>
+          <AffectedStatus>yes</AffectedStatus>
+        </Sample>
+        <Method>
+          <MethodType>literature only</MethodType>
+        </Method>
+        <ObservedData ID="1500309">
+          <Attribute Type="Description">not provided
+          </Attribute>
+        </ObservedData>
+      </ObservedIn>
+      <MeasureSet Type="Variant" ID="21869">
+        <Measure Type="Deletion" ID="34722">
+          <Name>
+            <ElementValue Type="preferred name">nsv491528</ElementValue>
+          </Name>
+          <XRef ID="nsv491528--NOOOOOOOOOOOOO" DB="dbSNP"/>
+          <XRef ID="nsv491528--YESSSSSSSSSSSS" DB="dbVar"/>
+        </Measure>
+        <Name>
+          <ElementValue Type="preferred name">nsv491528</ElementValue>
+        </Name>
+      </MeasureSet>
+      <TraitSet Type="Disease" ID="8151">
+        <Trait ID="17034" Type="DrugResponse">
+          <Name>
+            <ElementValue Type="Preferred">Simvastatin response</ElementValue>
+          </Name>
+          <Name>
+            <ElementValue Type="Alternate">Simvastatin response</ElementValue>
+          </Name>
+          <AttributeSet>
+            <Attribute Type="public definition">Statins are among the most commonly prescribed drugs in the world to treat hypercholesterolemia and prevent cardiovascular diseases. They effectively lower cholesterol levels by inhibiting the HMG-CoA reductase to reduce cholesterol synthesis. Though well tolerated in general, the most common statin side effect is muscle pain. The symptoms range from mild muscle pain to fatal rhabdomyolysis, especially when statins are administered at higher doses and with certain other medications.  A common coding SNP in the SLCO1B1 gene, rs4149056 or SLCO1B1*5, has been significantly associated with a marked increase in systemic exposure to simvastatin and risk of muscle toxicity. The overall effect size and significance of this association are striking for simvastatin compared to other statins. Patients with this specific variant in SLCO1B1 (a transporter of simvastatin) may require a lower simvastatin dose or consider an alternative statin as compared to patients who do not have this variant, and may consider routine creatine kinase (CK) surveillance. The Clinical Pharmacogenetics Implementation Consortium (CPIC) has published a clinical dosing guideline for SLCO1B1 genotype and simvastatin dosing in Clinical Pharmacology &amp; Therapeutics. This guideline is available on the PharmGKB website (http://pharmgkb.org/drug/PA451363).</Attribute>
+            <XRef ID="PA451363" DB="PharmGKB"/>
+          </AttributeSet>
+          <AttributeSet>
+            <Attribute Type="keyword">Zocor response</Attribute>
+          </AttributeSet>
+          <Citation Type="practice guideline" Abbrev="CPIC, 2012">
+            <ID Source="pmc">3384438</ID>
+          </Citation>
+          <Citation Type="practice guideline" Abbrev="DailyMed Drug Label, 2007">
+            <URL>http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=34b56f73-bea4-4265-8b2a-c57520cf8e70</URL>
+            <CitationText>DailyMed Drug Label, simvastatin, 2007</CitationText>
+          </Citation>
+          <XRef ID="CN128903" DB="MedGen"/>
+        </Trait>
+      </TraitSet>
+    </ReferenceClinVarAssertion>
+    <ClinVarAssertion ID="41748">
+      <ClinVarSubmissionID title="1q21.1 microdeletion and Radial aplasia-thrombocytopenia syndrome" localKey="1q21.1 del|NCBI" submitterDate="2011-05-13" submitter="dbVar"/>
+      <ClinVarAccession Acc="SCV000041748" Version="1" Type="SCV" OrgID="500102" DateUpdated="2014-04-19"/>
+      <RecordStatus>replaced</RecordStatus>
+      <ClinicalSignificance DateLastEvaluated="2011-05-13">
+        <ReviewStatus>classified by single submitter</ReviewStatus>
+        <Description>pathogenic</Description>
+      </ClinicalSignificance>
+      <Assertion Type="variation to disease"/>
+      <ObservedIn>
+        <Sample>
+          <Origin>germline</Origin>
+          <Species TaxonomyId="9606">human</Species>
+          <AffectedStatus>yes</AffectedStatus>
+        </Sample>
+        <Method>
+          <MethodType>literature only</MethodType>
+        </Method>
+        <ObservedData>
+          <Attribute Type="Description">not provided
+          </Attribute>
+        </ObservedData>
+      </ObservedIn>
+      <MeasureSet Type="Variant">
+        <Measure Type="Variation">
+          <Name>
+            <ElementValue Type="Preferred">1q21.1 microdeletion</ElementValue>
+          </Name>
+        </Measure>
+      </MeasureSet>
+      <TraitSet Type="Disease">
+        <Trait Type="Disease">
+          <Name>
+            <ElementValue Type="Preferred">Radial aplasia-thrombocytopenia syndrome</ElementValue>
+          </Name>
+        </Trait>
+      </TraitSet>
+    </ClinVarAssertion>
+  </ClinVarSet>
+  
+  
 
 </ReleaseSet>
