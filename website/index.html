@@ -118,11 +118,26 @@
               </a>
               <a class="list-group-item" href="#">
                 <h5 class="list-group-item-heading">Brandon Welch</h5>
-                <p class="list-group-item-text">https://www.linkedin.com/in/welchbm</p>
+                <p class="list-group-item-text">welchbm@musc.edu</p>
+				<p class="list-group-item-text">Project Lead, Genetics Domain Expert, Database design</p>				
+				<a class="list-group-item-text" href="https://www.linkedin.com/in/welchbm">https://www.linkedin.com/in/welchbm</a>
+              </a>
+			  <a class="list-group-item" href="#">
+                <h5 class="list-group-item-heading">Bret Heale</h5>
+                <p class="list-group-item-text">bret.heale@hsc.utah.edu</p>
+				<p class="list-group-item-text">Data-modeling, Genetics Domain Expert, D3-developer</p>
+				<a class="list-group-item-text" href="https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab">https://www.linkedin.com/pub/bret-heale-phd</a>
+				
+              </a>
+			  <a class="list-group-item" href="#">
+                <h5 class="list-group-item-heading">Lance Pflieger</h5>
+				<p class="list-group-item-text">lance.pflieger@gmail.com</p>
+                <p class="list-group-item-text">Programming, Genetics Domain Expert, D3-developer</p>
+				<a class="list-group-item-text" href="#"></a>
               </a>
               <a class="list-group-item" href="#">
                 <h5 class="list-group-item-heading">Andrew Cates</h5>
-                <p class="list-group-item-text">Information Technology Systems Architect @ BMIC</p>
+                <p class="list-group-item-text">Information Technology Systems Architect @ BMIC; Layout Design</p>
               </a>
             </div>
         </div>
@@ -142,7 +157,7 @@
        </div>
         <div class="col-md-4" id="varInterpGraphic">
           <h2>Total Interpretations</h2>
-          <script src="js/varInterp.js"></script>
+          <script src="js/varInterp2.js"></script>
         </div>
       </div>
       <div class="row">
@@ -158,14 +173,33 @@
           <script src="js/radialProgress.js"></script>
           <script src="js/radialGenerate.js"></script>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="varTypeIC">
           <h2>Variant Type</h2>
           <div id="pieChart"></div>
           <script src="js/varType.js"></script>
         </div>
       </div>
-
-      <hr>
+	  <div class="row">
+	    <div class="col-md-4" id="chromoCountIC">
+          <h2>Variants per Chromosome</h2>
+		  <script src="js/chromoCountIt.js"></script>
+        </div>
+		<div class="col-md-4" id="chromoRaceIC" style="width:450px;height:450px;">
+          <h2>Variants per Chromosome another Look</h2>
+		  <script src="js/chromoCountRaceIt.js"></script>
+        </div>
+        <div class="col-md-4" id="starNum">
+          <h2>StarNum History</h2>
+          <script src="js/starNum.js"></script>
+        </div>
+      </div>
+      <div class ="row">
+		<div class="col-md-4" id="starNumCurrentgraphic">
+		<h2>Current Star Num </h2>
+		<script src="js/starNumCurrent.js"></script>
+		</div>
+	  </div>	
+	  <hr>
 
       <footer>
         <p>&copy; Visualize ClinVar 2014</p>
@@ -197,7 +231,16 @@
         $('#about-us-section').toggle();
       });
     </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-55376044-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>
 

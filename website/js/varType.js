@@ -1,4 +1,43 @@
-var pie = new d3pie("pieChart", {
+//gives browser instruction to run on load and adds it as a procedure so that other scripts will also run
+if(window.onload) {
+        var curronload = window.onload;
+        var newonload = function() {
+            curronload();
+            varType();
+        };
+        window.onload = newonload;
+} else {
+    window.onload = varType();
+}
+//taken from http://stackoverflow.com/questions/641857/javascript-window-resize-event I apologize for complexity
+//
+var addEvent = function(elem, type, eventHandle) {
+    if (elem == null || typeof(elem) == 'undefined') return;
+    if ( elem.addEventListener ) {
+        elem.addEventListener( type, eventHandle, false );
+    } else if ( elem.attachEvent ) {
+        elem.attachEvent( "on" + type, eventHandle );
+    } else {
+        elem["on"+type]=eventHandle;
+    }
+};
+
+
+function varType() {
+
+var var_type_tsv = ["varType", pageName].join('') // this takes care of null pageName
+	d3.tsv("data/varType/"+var_type_tsv+".tsv", function(data) {
+		return {
+			label: data.label,
+			value: +data.value,
+			color: data.color
+		};
+		}, function(error, data) {
+		console.log(data);
+	//d3.tsv.parse("data/varType/"+var_interp_tsv+".tsv", function(error, data) { //pageName comes from the page: see html
+	//	console.log(data);
+	//	console.log("what is going on?");
+var pie = new d3pie("varTypeIC", {
   "header": {
       "subtitle": {
           "color": "#999999",
@@ -15,14 +54,12 @@ var pie = new d3pie("pieChart", {
   },
   "size": {
       "canvasWidth": 550,
-      "pieInnerRadius": "34%",
+      "pieInnerRadius": "40%",
       "pieOuterRadius": "90%"
   },
   "data": {
       "sortOrder": "value-desc",
-      "content": [
-      {"label": "protein only", "value": 77, "color": "#2482c1"},{"label": "inversion", "value": 3, "color": "#0c6197"},{"label": "Deletion", "value": 9942, "color": "#4daa4b"},{"label": "copy number gain", "value": 1927, "color": "#90c469"},{"label": "single nucleotide variant", "value": 93768, "color": "#daca61"},{"label": "Microsatellite", "value": 51, "color": "#e4a14b"},{"label": "copy number loss", "value": 2208, "color": "#e98125"},{"label": "Variation", "value": 528, "color": "#cb2121"},{"label": "Structural variant", "value": 1, "color": "#830909"},{"label": "fusion", "value": 8, "color": "#923e99"},{"label": "Indel", "value": 654, "color": "#ae83d5"},{"label": "Insertion", "value": 1437, "color": "#bf27e3"},{"label": "Duplication", "value": 2293, "color": "#ce2aeb"}
-      ]
+      "content": data
   },
   "labels": {
       "outer": {
@@ -59,4 +96,8 @@ var pie = new d3pie("pieChart", {
           "percentage": 100
       }
   }
-});
+})
+
+
+})
+}

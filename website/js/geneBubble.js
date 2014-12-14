@@ -1,3 +1,5 @@
+//person responsible for this D3 js design: Bret Heale reached at bheale@gmail.com
+//comments always welcome
 //gives browser instruction to run on load and adds it as a procedure so that other scripts will also run
 if(window.onload) {
         var curronload = window.onload;
@@ -27,15 +29,42 @@ function geneBubbleIt(){ //hugely important. defines scope of variables
 //d3.tsv("quickStats"+pageName+".tsv", type, function(error, data) {
 //d3.select("body").append("text").text("I wrote on your page");
 
-//d3.tsv("http://localhost:8080/geneBubble2.tsv",function(myData) {
-d3.tsv("data/geneBubble/geneBubble2.tsv",function(myData) {
+//d3.tsv("http://localhost:8080/geneBubbleBig.tsv",function(myData) {
+d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
+
 	var width = 300,
 		height = 250, 
 		margin = 50;
 
 	var svg=d3.select("#geneBubbleIc").append("svg").attr("width",width).attr("height",height);
 
-	d3.select("myData").filter(function(d) {if (+d.numVariant > 5) {return d;}});
+	
+	//dropdown for selecting CLinvar release
+	var uniqueDates = {};
+	var datesDropDown = [];
+	i = 0;
+	datesDropDown.push(myData[0].Date);
+	for( i in myData){
+		if( typeof(uniqueDates[myData[i].Date]) == "undefined"){
+			datesDropDown.push(myData[i].Date);
+		}
+		uniqueDates[myData[i].Date] = 0;
+	}
+	//datesDropDown.sort(function(a,b) {return b-a;});
+	d3.select("#geneBubbleIc").append("select").attr("id","geneBubblesDates").append("option").text("Please select a date");
+	//d3.select("body")
+		//.append("select")
+	d3.select("#geneBubblesDates")
+		.selectAll("option")
+		.data(datesDropDown)
+		.enter()
+		.append("option")
+    // Provide available text for the dropdown options
+		.attr("value",function(d) {return d;})
+		.text(function(d) {return d;});
+	
+	//myData = myData.filter(function(d) { return (+d.numVariant) > 500 ; });
+	
 	 // we sort the data to make it easier to have big circles in back and small ones overlaid in front
 	myData.sort(function(a,b) {return b.numVariant-a.numVariant;});
 	
@@ -53,9 +82,14 @@ d3.tsv("data/geneBubble/geneBubble2.tsv",function(myData) {
 	var minPhenotypes = d3.min(myData, function(d){return +d.numPhenotypes;});
   //for domain need max number variants in genes use it for max of range
 //biggest circle has range max
-	var r=d3.scale.linear().domain([minVariants,maxVariants]).range([2,100]);
+	var r=d3.scale.linear().domain([minVariants,maxVariants]).range([2,50]);
 	var o=d3.scale.linear().domain([minVariants,maxVariants]).range([.8,1]);
 
+	//nest by date, sort and rebuild myData
+	//use only the top 101
+//	var nestMyData = d3.nest().key(function(d) {return d.Date}).entries(myData);
+	//myData = myData.slice(0,100); //done here so that radius scaling as already been done
+	
 //PARSE myData.selectAll(MostFrequentInterpretation) for unique and put array below
 //also include legend somewhere for the Interpretation types
 	var uniqueInterpretations = {};
@@ -71,12 +105,17 @@ d3.tsv("data/geneBubble/geneBubble2.tsv",function(myData) {
 	var c=d3.scale.category20().domain(distinctInterpretations);//names to grab colors
 	
   //x and y for placement....hmmm
-	var x=d3.scale.linear().domain([1,maxPhenotypes]).range([margin,width-margin]);
+	var x=d3.scale.log().domain([1,maxPhenotypes]).range([margin,width-margin]);
 	var y=d3.scale.linear().domain([1,maxVariants]).range([height-margin,margin]);
 
+	var formatAxis = function(d){
+		var log = Math.log(d) / Math.LN10;
+        return Math.abs(Math.round(log) - log) < 1e-6 ? 10+"^"+log : '';
+	};
 	var xAxis = d3.svg.axis()
 	.scale(x)
 	.orient("bottom")
+	.tickFormat(formatAxis)
 	.ticks(4);
 
 	var yAxis = d3.svg.axis()
@@ -87,12 +126,24 @@ d3.tsv("data/geneBubble/geneBubble2.tsv",function(myData) {
 	svg.append("g")
 	.attr("class", "axis")
 	.attr("transform", "translate(0," + (height - margin) + ")")
-	.call(xAxis);
-
+	.call(xAxis)
+	.append("text")
+	.style("text-anchor", "middle")
+    .text("Number of Distinct Phenotypes")
+	.attr("x", x((maxPhenotypes/20)))
+	.attr("y",margin-15);
+	
 	svg.append("g")
 	.attr("class", "axis")
+	.attr("id","y-axis")
 	.attr("transform", "translate(" + margin + ",0)")
-	.call(yAxis);
+	.call(yAxis)
+	.append("text")
+	.style("text-anchor", "middle")
+	.text("Number of Variants")
+	.attr("transform","rotate(-90)") //changes x to y and y to x
+	.attr("x",-125)
+	.attr("y",-margin);
 
 	svg.selectAll(".h").data(d3.range(-8,10,2)).enter()
 	.append("line").classed("h",1)
@@ -114,82 +165,110 @@ d3.tsv("data/geneBubble/geneBubble2.tsv",function(myData) {
   // then we create the marks, which we put in an initial position
   //with radius Zero - you cannot see Zero. I think that is why some Greek's despised zero.
   //I think it is zen.
-  svg.selectAll("circle").data(myData) //this is the POWER of D3 select! The relevant data is now part of each circle! Holy Moley!
-    .enter() 
+  //myData = myData.filter(function(d) { return (+d.numVariant) > 500 ; });
+  var totalCircles = 110; //this variable limits the number of circles to display
+  svg.selectAll("circle").data(myData.slice(0,totalCircles)) //this is the POWER of D3 select! The relevant data is now part of each circle! Holy Moley!
+	//but we are actually cheating a bit here...see the control for what happens when the drop-down is used...
+    .enter()
+	.append("g")
+	.attr("id","circles")
+	.attr("transform", function(d) { return "translate("  +x(0)+ "," +y(0)+ ")"; })
+	
 	.append("circle")
-    .attr("cx",function(d) {return x(0);})
-    .attr("cy",function(d) {return y(0);})
+    //.attr("cx",function(d) {return x(0);}) you will learn something if you uncomment these two lines - everything is relative
+    //.attr("cy",function(d) {return y(0);})
     .attr("r",function(d) {return r(0);})
 	.attr("value",function(d) {return d.Date;})
     .style("fill",function(d) {
 		return c(d.MostFrequentInterpretation);}) //COLOR pulled in here
-    .style("opacity",function(d) {return o(+d.numVariant);})
-      .append("title")
-	  .append("text")
-		.attr("font-size","10px") //making the text smaller!
-		.text(function(d) {return " Gene: "+d.Gene;})
-	  .append("text")
-	  	.attr("font-size","10px") //making the text smaller!
-		.attr("dy","10px") //and here is where we can put it wherever want! control is good
-		.attr("dx","10px")
-		.text(function(d) {return ", Number of Variants is "+d.numVariant;})
-	  .append("text")
-	  	.attr("font-size","10px") //making the text smaller!
-		.attr("dy","10px") //and here is where we can put it wherever want! control is good
-		.attr("dx","10px")
-		.text(function(d) {return ", Most Frequent Phenotype is "+d.MostFrequentPhenotype;})
-
-	  .append("text")
-	  	.attr("font-size","10px") //making the text smaller!
-		.attr("dy","10px") //and here is where we can put it wherever want! control is good
-		.attr("dx","10px")
-		.text(function(d) {return ", Most Frequent Interpretation is "+d.MostFrequentInterpretation;})
-	//dropdown for selecting CLinvar release
-	var uniqueDates = {};
-	var datesDropDown = [];
-	i = 0;
-	datesDropDown.push(myData[0].Date);
-	for( i in myData){
-		if( typeof(uniqueDates[myData[i].Date]) == "undefined"){
-			datesDropDown.push(myData[i].Date);
-		}
-		uniqueDates[myData[i].Date] = 0;
-	}
-	//d3.select(myData).data(function(d) {return d.date;});
+    .style("opacity",function(d) {return o(+d.numVariant);});
 	
-	d3.select("#geneBubbleIc").append("select").attr("id","geneBubblesDates").append("option").text("Please select a date");
-	//d3.select("body")
-		//.append("select")
-	d3.select("#geneBubblesDates")
-		.selectAll("option")
-		.data(datesDropDown)
-		.enter()
-		.append("option")
-    // Provide available text for the dropdown options
-		.attr("value",function(d) {return d;})
-		.text(function(d) {return d;});
+	svg.selectAll("#circles").append("title")
+		.attr("font-size","10px") //making the text smaller!
+		.text(function(d) {return " Gene: "+d.Gene+", Number of Variants is "+d.numVariant+", Most Frequent Phenotype is "+d.MostFrequentPhenotype+", Most Frequent Interpretation is "+d.MostFrequentInterpretation;});
+	
+	
 	
 	//controls what happens when drop-down is used
 	d3.select('select')
       .on("change", function() {
 		var key = this.value;
-	  // now we initiate - moving the marks to their position
-		svg.selectAll("circle").transition().duration(4500)
-			.attr("cx",function(d) {return x(+d.numPhenotypes);})//number of phenotypes. SEE HOLY MOLE above!
-			.attr("cy",function(d) {return y(+d.numVariant);}) //numVariants
+	
+		graphData = myData.filter(function(d) { return d.Date == key ; });//current data to graph, a little trick
+		graphData.sort(function(a,b) {return b.numVariant-a.numVariant;});
+		//to explain. we have only totalCircles circles. so by filtering by date and sorting by numVariant we will only be displaying the top totalCircles of the date set
+		//we take advantage that function(d,i) has the index for #circles from 0 to totalCircles...he he. talk about obfuscation
+	
+		//while were at it lets do bubble sizes in relation to the size of the top totalCircles number of variants for the specific date
+		var maxVariants = d3.max(graphData.slice(0,100), function(d){return +d.numVariant;});
+		var minVariants = d3.min(graphData.slice(0,100), function(d){return +d.numVariant;});
+		r=d3.scale.linear().domain([minVariants,maxVariants]).range([2,40]);
+
+		//oh and lets do the y-axis too
+		y=d3.scale.linear().domain([1,maxVariants]).range([height-margin,margin]);
+		yAxisChange = d3.svg.axis()
+			.scale(y)
+			.orient("left")
+			.ticks(3);
+			
+		svg.select("#y-axis")
+		.attr("transform", "translate(" + margin + ",0)")
+		.call(yAxisChange);
+	
+		//change titles first
+		svg.selectAll("#circles").select("title").text(function(d,i) {return " Gene: "+graphData[i].Gene+", Number of Variants is "+graphData[i].numVariant+", Most Frequent Phenotype is "+graphData[i].MostFrequentPhenotype+", Most Frequent Interpretation is "+graphData[i].MostFrequentInterpretation;});
+		
+		svg.selectAll("#circles")
+			.transition().duration(4500)
+			.attr("transform", function(d,i) { return "translate(" + x(+graphData[i].numPhenotypes) + "," + y(+graphData[i].numVariant) + ")"; })//SEE HOLY MOLE above!
+			.select("circle")
 			.attr("r",function(d,i) { //index of circles matches index of myData array! isn't sorting cool...did I forget to mention that previously?
-			  //if (myData[i].Date == key) {
-			  if (d.Date == key) {//but this works too...see holy mole
+			  if (graphData[i].Date == key) {
+			  //if (d.Date == key) {//but this works too...see holy mole
 				if (myData.length == 1) { //when accessing non-Gene page
 					return 100;
 				}else {
-					return r(+myData[i].numVariant);//I couldn't help but use this alternate
+					return r(+graphData[i].numVariant);//I couldn't help but use this alternate
 				}
 			  }
 			  else{ return 0;}
 			})
+			.attr("value",function(d,i) {return graphData[i].Date;})
+			.style("fill",function(d,i) {
+				return c(graphData[i].MostFrequentInterpretation);}) //COLOR pulled in here
+			.style("opacity",function(d,i) {return o(+graphData[i].numVariant);});
+
+		
+			//we play a little hide and seek.
+			svg.selectAll(".geneNameText").style("visibility","hidden");			
+			svg.selectAll("#circles").append("text")
+			.attr("class","geneNameText")
+			.attr("dateId",key)
+			.attr("dy", ".3em")
+			.style("font-size",function(d,i) {return (1.6*(r(+graphData[i].numVariant)/50))+"em";})
+			.style("text-anchor", "middle")
+			.style("fill","Black")
+			.text(function(d,i) { return graphData[i].Gene; })
+			.style("visibility",function(d,i) { 
+			  if (graphData[i].Date == key) {//but this works too...see holy mole
+				if (myData.length == 1) { //when accessing non-Gene page
+					return "show";
+				}else {
+					return "show";//I couldn't help but use this alternate
+				}
+			  }
+			  else{ return "hidden";}
+			});			
 		//.on("click",function(){d3.select(this).style("opacity",0);});// PLAY WITH THIS LATER
 	  });	
+	 
+	svg.append("g")
+	.append("text")
+	.style("text-anchor", "middle")
+	.text("Colour indicates Interpretation")
+	.attr("transform","rotate(90)") //changes x to y and y to x
+	.attr("x",125)
+	.attr("y",-300);
 });
 
 }

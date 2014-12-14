@@ -54,7 +54,7 @@ var yAxis = d3.svg.axis()
 
 var line = d3.svg.line()
     .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
+    .y(function(d) { return y(d.number); });
 
 var svg = d3.select("#historyGraphic").append("svg")
 //.attr("viewBox",0 0 250 75)
@@ -69,11 +69,11 @@ var history_tsv = ["history", pageName].join('') // this takes care of null page
 d3.tsv("data/history/"+history_tsv+".tsv", function(error, data) {
   data.forEach(function(d) {
     d.date = parseDate(d.date);
-    d.close = +d.close;
+    d.number = +d.number;
   });
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain(d3.extent(data, function(d) { return d.close; }));
+  y.domain(d3.extent(data, function(d) { return d.number; }));
 
 
   svg.append("g")
