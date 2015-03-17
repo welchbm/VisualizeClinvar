@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -30,17 +31,17 @@
 
     <!--varInterpGraph dependencies-->
     <link rel="stylesheet" href="css/varInterp.css"/>
-    
+
     <!--radials dependencies-->
     <link rel="stylesheet" href="css/radials.css"/>
-    
-    <!-- autocomplete styles 
+
+    <!-- autocomplete styles
     <link rel="stylesheet" href="css/autocomplete.css"/>
     -->
 
     <!-- url parsing script -->
     <script src="js/url.min.js"></script>
-    <script language="javascript">  
+    <script language="javascript">
       var pageName = url('?viewing');
     </script>
 
@@ -48,15 +49,15 @@
     <script src="js/d3/d3.min.js"></script>
     <script src="js/d3pie.min.js"></script>
     <script src="js/autocomplete.js"></script>
-    
-    <link rel="stylesheet" href="css/default.css"/>
+
+    <link rel="stylesheet" href="css/default.css">
   </head>
 
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
-        <img src="images/logo_white.png"> 
+        <img src="images/logo_white.png">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -69,7 +70,9 @@
             <input id="viewing" type="text" placeholder="Phenotype or Gene" class="form-control">
             <button type="submit" class="btn btn-success" id="visualize-it">Visualize It</button>
             <button type="submit" class="btn btn-warning" id="visualize-it-clear">Reset</button>
+            <a class="btn btn-primary dropdown-menu-right shift-right" id="toggle-about-us" role="button">About Us &raquo;</a>
           </form>
+
           <!--
           <script language="javascript">
 
@@ -103,105 +106,119 @@
 
           </script>-->
         </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <p>ClinVar is a free variant knowledgebase service provided by the NCBI. We are just airing a different viewing of the data.</p>
-        <p><a class="btn btn-primary btn-lg" id="toggle-about-us" role="button">About Us &raquo;</a></p>
-        <div id="about-us-section">
-          <div class="list-group">
-              <a class="list-group-item active" href="#">
-                <h4 class="list-group-item-heading">Authors</h4>
-              </a>
-              <a class="list-group-item" href="#">
-                <h5 class="list-group-item-heading">Brandon Welch</h5>
-                <p class="list-group-item-text">welchbm@musc.edu</p>
-				<p class="list-group-item-text">Project Lead, Genetics Domain Expert, Database design</p>				
-				<a class="list-group-item-text" href="https://www.linkedin.com/in/welchbm">https://www.linkedin.com/in/welchbm</a>
-              </a>
-			  <a class="list-group-item" href="#">
-                <h5 class="list-group-item-heading">Bret Heale</h5>
-                <p class="list-group-item-text">bret.heale@hsc.utah.edu</p>
-				<p class="list-group-item-text">Data-modeling, Genetics Domain Expert, D3-developer</p>
-				<a class="list-group-item-text" href="https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab">https://www.linkedin.com/pub/bret-heale-phd</a>
-				
-              </a>
-			  <a class="list-group-item" href="#">
-                <h5 class="list-group-item-heading">Lance Pflieger</h5>
-				<p class="list-group-item-text">lance.pflieger@gmail.com</p>
-                <p class="list-group-item-text">Programming, Genetics Domain Expert, D3-developer</p>
-				<a class="list-group-item-text" href="#"></a>
-              </a>
-              <a class="list-group-item" href="#">
-                <h5 class="list-group-item-heading">Andrew Cates</h5>
-                <p class="list-group-item-text">Information Technology Systems Architect @ BMIC; Layout Design</p>
-              </a>
+        <div class="row">
+            <div class=".col-md-3 shift-right">
+                <p class="text-white shift-right">Visualizations based on ClinVar, a free variant knowledge base service provided by the NCBI.</p>
             </div>
         </div>
-      </div>
-    </div>
+      </div><!--/container -->
+    </div><!--/nagivation -->
 
-    <div class="container">
-      <!-- Example row of columns -->
+    <div class="modal fade" id="aboutUsModal" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header modal-header-primary">
+            <h3 class="modal-title">About the Authors of VisualizeClinvar</h3>
+          </div>
+          <div class="modal-body">
+          <div class="list-group">
+              <ul class="list-group-item">
+                <h5 class="list-group-item-heading">Brandon Welch</h5>
+                <p class="list-group-item-text">welchbm@musc.edu</p>
+                <p class="list-group-item-text">Project Lead, Genetics Domain Expert, Database design</p>
+                <a class="list-group-item-text" href="https://www.linkedin.com/in/welchbm">https://www.linkedin.com/in/welchbm</a>
+              </ul>
+              <ul class="list-group-item">
+                <h5 class="list-group-item-heading">Bret Heale</h5>
+                <p class="list-group-item-text">bret.heale@hsc.utah.edu</p>
+                <p class="list-group-item-text">Data-modeling, Genetics Domain Expert, D3-developer</p>
+                <a class="list-group-item-text" href="https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab">https://www.linkedin.com/pub/bret-heale-phd</a>
+              </ul>
+              <ul class="list-group-item">
+                <h5 class="list-group-item-heading">Lance Pflieger</h5>
+                <p class="list-group-item-text">lance.pflieger@gmail.com</p>
+                <p class="list-group-item-text">Programming, Genetics Domain Expert, D3-developer</p>
+              </ul>
+              <ul class="list-group-item">
+                <h5 class="list-group-item-heading">Andrew Cates</h5>
+                <p class="list-group-item-text">Information Technology Systems Architect @ BMIC; Layout Design</p>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="resetModal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4" id="historyGraphic">
-          <h2>Total Number of Variants</h2>
+        <div class="col-md-4">
+          <h2>Clinical Variants Visualizations</h2>
+          <p>These are the voyages of the Starship Enterprise. Its continuing mission, to explore strange new worlds,
+            to seek out new life and new civilizations, to boldly go where no one has gone before. We need to neutralize
+            the homing signal. Each unit has total environmental control, gravity, temperature, atmosphere, light, in a
+            protective field. Sensors show energy readings in your area. We had a forced chamber explosion in the resonator
+            coil. Field strength has increased by 3,000 percent.</p>
+        </div>
+        <div class="col-md-2" id="historyGraphic">
+          <h4>Total Number of Variants</h4>
           <script src="js/historyGraph.js"></script>
         </div>
-        <div class="col-md-4" id="quickStats">
-          <h2>Totals</h2>
+        <div class="col-md-2" id="quickStats">
+          <h4>Totals</h4>
           <script src="js/quickStats.js"></script>
        </div>
-        <div class="col-md-4" id="varInterpGraphic">
-          <h2>Total Interpretations</h2>
+        <div class="col-md-2" id="varInterpGraphic">
+          <h4>Total Interpretations</h4>
           <script src="js/varInterp2.js"></script>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-md-4" id="geneBubbleIc">
-          <h2>Gene Bubbles</h2>
+        <div class="col-md-2" id="geneBubbleIc">
+          <h4>Gene Bubbles</h4>
           <script src="js/geneBubble.js"></script>
         </div>
-		<div class="col-md-4" id="RadialsPhenoTermoIC" style="width:440px;height:440px">
-          <h2>Phenotype Terminology Radials</h2>
+        <div class="col-md-2" id="RadialsPhenoTermoIC" style="width:440px;height:440px">
+          <h4>Phenotype Terminology Radials</h4>
           <script src="js/radialProgressNew.js"></script>
           <script src="js/RadialsPhenoTermo.js"></script>
         </div>
-		<div class="col-md-4" id="RadialsGeneDBinfoIC" style="width:440px;height:440px">
-          <h2>Annotation of phenotype with Gene/database information</h2>
+        <div class="col-md-2" id="RadialsGeneDBinfoIC" style="width:440px;height:440px">
+          <h4>Annotation of phenotype with Gene/database information</h4>
           <script src="js/radialProgressNew.js"></script>
           <script src="js/RadialsGeneDBinfo.js"></script>
         </div>
-        <div class="col-md-4" id="varTypeIC">
-          <h2>Variant Type</h2>
+        <div class="col-md-2" id="varTypeIC">
+          <h4>Variant Type</h4>
           <div id="pieChart"></div>
           <script src="js/varType.js"></script>
         </div>
       </div>
-	  <div class="row">
-	    <div class="col-md-4" id="chromoCountIC">
-          <h2>Variants per Chromosome</h2>
-		  <script src="js/chromoCountIt.js"></script>
+
+      <div class="row">
+        <div class="col-md-2" id="chromoCountIC">
+          <h4>Variants per Chromosome</h4>
+          <script src="js/chromoCountIt.js"></script>
         </div>
-		<div class="col-md-4" id="chromoRaceIC" style="width:450px;height:450px;">
-          <h2>Variants per Chromosome another Look</h2>
-		  <script src="js/chromoCountRaceIt.js"></script>
+        <div class="col-md-2" id="chromoRaceIC" style="width:450px;height:450px;">
+          <h4>Variants per Chromosome another Look</h4>
+          <script src="js/chromoCountRaceIt.js"></script>
         </div>
-        <div class="col-md-4" id="starNum">
-          <h2>StarNum History</h2>
+        <div class="col-md-2" id="starNum">
+          <h4>StarNum History</h4>
           <script src="js/starNum.js"></script>
         </div>
       </div>
       <div class ="row">
-		<div class="col-md-4" id="starNumCurrentgraphic">
-		<h2>Current Star Num </h2>
-		<script src="js/starNumCurrent.js"></script>
-		</div>
-	  </div>	
-	  <hr>
+        <div class="col-md-2" id="starNumCurrentgraphic">
+        <h4>Current Star Num </h4>
+        <script src="js/starNumCurrent.js"></script>
+        </div>
+      </div>
+      <hr>
 
       <footer>
         <p>&copy; Visualize ClinVar 2014</p>
@@ -222,16 +239,23 @@
         var viewing = $('#viewing').val()
         window.location = [url('protocol'), "://", url('domain'), url('path'), "?viewing=", viewing].join('');
       });
-      
+
       $('#visualize-it-clear').click(function(event){
         event.preventDefault();
         window.location = [url('protocol'), "://", url('domain'), url('path')].join('');
       });
 
       $('#toggle-about-us').click(function(event){
-        console.log("I was clicked");
+        console.log("about-us was clicked");
         $('#about-us-section').toggle();
+        $('#aboutUsModal').modal('show');
       });
+
+      $('#resetModal').click(function(event){
+        console.log("modal close was clicked");
+        $('#aboutUsModal').modal('hide');
+      });
+
     </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -245,5 +269,3 @@
 </script>
   </body>
 </html>
-
-
