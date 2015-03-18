@@ -1,4 +1,4 @@
-//responsible person Bret bheale@gmail.com 
+//responsible person Bret bheale@gmail.com
 
 startRadialsPhenoTermo();
 
@@ -86,7 +86,7 @@ d3.csv('data/radials/stats.csv', function(error, data) {
   function isInPhenoTermoList (element) {
 	var dbToCheck = ['SNOMED_CODE',"MESH_CODE","HPO_CODE","ICD9_CODE"];
 	for( i = 0; i < dbToCheck.length; i++) {
-	
+
 		if (element == dbToCheck[i]) {
 			return true;
 		}
@@ -97,14 +97,17 @@ d3.csv('data/radials/stats.csv', function(error, data) {
 
 
   var diameterRadial = 80;
+  var width = parseInt(d3.select("#RadialsPhenoTermoIC").style("width"), 0) + "px";
+  var height = parseInt(0.70 * parseInt(d3.select("#RadialsPhenoTermoIC").style("width"), 0), 0) + "px";
 
- d3.select("#RadialsPhenoTermoIC").append("div").style("overflow","scroll").style("height","440px").style("width","440px").attr("class","RadialsInner");
+  d3.select("#RadialsPhenoTermoIC").append("div").style("overflow","hidden").style("height",height).style("width",width).attr("class","RadialsInner");
+
   for (var i = 0; i < headers.length; i++) { //iterates
-  
+
 	data[0][headers[i]] = +data[0][headers[i]];
 
 	if (!(isNaN(data[0][headers[i]]) )){
-		d3.select("#RadialsPhenoTermoIC").select(".RadialsInner").append("div").style("margin","10px").style("display","block").style("float","left").attr("id","radialPhenoTermo-div"+headers[i]).call(drag).call(zoom); //make target div
+		d3.select("#RadialsPhenoTermoIC").select(".RadialsInner").append("div").style("float","left").attr("id","radialPhenoTermo-div"+headers[i]).call(drag).call(zoom); //make target div
 		var rp1 = radialProgress(document.getElementById("radialPhenoTermo-div"+headers[i])) //radial baby
             .label(headers[i])
             //.onClick(onClick1)
@@ -115,5 +118,3 @@ d3.csv('data/radials/stats.csv', function(error, data) {
   }
 });
 }
-							 
-							

@@ -35,7 +35,7 @@ var star_Num_tsv = ["starNumCurrent", pageName].join('') // this takes care of n
 			color: data.color
 		};
 		}, function(error, data) {
-		
+
 var pie = new d3pie("starNumCurrentgraphic", {
   "header": {
       "subtitle": {
@@ -52,7 +52,8 @@ var pie = new d3pie("starNumCurrentgraphic", {
       "location": "bottom-left"
   },
   "size": {
-      "canvasWidth": 580,
+      "canvasWidth": parseInt(d3.select("#starNumCurrentgraphic").style("width"),0),
+      "canvasHeight": parseInt(d3.select("#starNumCurrentgraphic").style("width"),0), //want to be mostly square - works best based on width
       "pieInnerRadius": "70%",
       "pieOuterRadius": "80%"
   },

@@ -23,9 +23,17 @@ var addEvent = function(elem, type, eventHandle) {
 };
 
 function starNum() {
-var margin = {top: 20, right: 400, bottom: 30, left: 50},
-    width = 800 - margin.left - margin.right,
-    height = 250 - margin.top - margin.bottom;
+  var colwidth = parseInt(d3.select("#starNum").style("width"),0);
+  var margin = {top: parseInt(0.05 * colwidth, 0),
+                right: parseInt(0.8 * colwidth, 0),
+                bottom: parseInt(0.05 * colwidth, 0),
+                left: parseInt(0.1 * colwidth, 0)};
+  var width = parseInt(0.75 * colwidth, 0);
+  var height = parseInt(0.5 * colwidth, 0);
+  console.log("margin.top: " + margin.top);
+  console.log("margin.right: " + margin.right);
+  console.log("margin.left: " + margin.left);
+  console.log("margin.bottom: " + margin.bottom);
 
 var parseDate = d3.time.format("%y-%b-%d").parse,
     formatPercent = d3.format(".0%");
@@ -104,7 +112,7 @@ d3.tsv("data/starNum/starNum.tsv", function(error, data) {
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis);
-	  
+
 	var legend = svg.selectAll(".legend")
 		.data(color.domain())
 		.enter().append("g")

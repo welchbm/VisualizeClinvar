@@ -181,14 +181,13 @@
           <h4>Gene Bubbles</h4>
           <script src="js/geneBubble.js"></script>
         </div>
-        <div class="col-md-2" id="RadialsPhenoTermoIC" style="width:440px;height:440px">
+        <div class="col-md-2" id="RadialsPhenoTermoIC">
           <h4>Phenotype Terminology Radials</h4>
           <script src="js/radialProgressNew.js"></script>
           <script src="js/RadialsPhenoTermo.js"></script>
         </div>
-        <div class="col-md-2" id="RadialsGeneDBinfoIC" style="width:440px;height:440px">
+        <div class="col-md-2" id="RadialsGeneDBinfoIC">
           <h4>Annotation of phenotype with Gene/database information</h4>
-          <script src="js/radialProgressNew.js"></script>
           <script src="js/RadialsGeneDBinfo.js"></script>
         </div>
         <div class="col-md-2" id="varTypeIC">
@@ -196,25 +195,24 @@
           <div id="pieChart"></div>
           <script src="js/varType.js"></script>
         </div>
-      </div>
-
-      <div class="row">
         <div class="col-md-2" id="chromoCountIC">
           <h4>Variants per Chromosome</h4>
           <script src="js/chromoCountIt.js"></script>
         </div>
-        <div class="col-md-2" id="chromoRaceIC" style="width:450px;height:450px;">
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-2" id="chromoRaceIC">
           <h4>Variants per Chromosome another Look</h4>
           <script src="js/chromoCountRaceIt.js"></script>
         </div>
-        <div class="col-md-2" id="starNum">
+        <div class="col-md-5" id="starNum">
           <h4>StarNum History</h4>
           <script src="js/starNum.js"></script>
         </div>
-      </div>
-      <div class ="row">
         <div class="col-md-2" id="starNumCurrentgraphic">
-        <h4>Current Star Num </h4>
+        <h4>Current Star Num</h4>
         <script src="js/starNumCurrent.js"></script>
         </div>
       </div>
@@ -246,13 +244,11 @@
       });
 
       $('#toggle-about-us').click(function(event){
-        console.log("about-us was clicked");
         $('#about-us-section').toggle();
         $('#aboutUsModal').modal('show');
       });
 
       $('#resetModal').click(function(event){
-        console.log("modal close was clicked");
         $('#aboutUsModal').modal('hide');
       });
 

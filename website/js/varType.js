@@ -53,7 +53,8 @@ var pie = new d3pie("varTypeIC", {
       "location": "bottom-left"
   },
   "size": {
-      "canvasWidth": 550,
+      "canvasWidth": parseInt(d3.select("#varTypeIC").style("width"),0),
+      "canvasHeight": parseInt(d3.select("#varTypeIC").style("width"),0), //image should be square - use width to keep things better sized
       "pieInnerRadius": "40%",
       "pieOuterRadius": "90%"
   },
