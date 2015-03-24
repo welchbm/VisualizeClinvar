@@ -11,6 +11,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
@@ -49,6 +52,15 @@
     <script src="js/d3/d3.min.js"></script>
     <script src="js/d3pie.min.js"></script>
     <script src="js/autocomplete.js"></script>
+    
+    <!-- Bootstrap core JavaScript  
+    ================================================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    
+    <!-- include custom js for page functionality -->
+    <script src="js/custom.js"></script>
 
     <link rel="stylesheet" href="css/default.css">
   </head>
@@ -140,8 +152,9 @@
                 <p class="list-group-item-text">Programming, Genetics Domain Expert, D3-developer</p>
               </ul>
               <ul class="list-group-item">
-                <h5 class="list-group-item-heading">Andrew Cates</h5>
-                <p class="list-group-item-text">Information Technology Systems Architect @ BMIC; Layout Design</p>
+                <h5 class="list-group-item-heading">Seth Russell</h5>
+                <p class="list-group-item-text">Software Engineer, Layout Design</p>
+                <a class="list-group-item-text" href="www.linkedin.com/in/russellseth">www.linkedin.com/in/russellseth</a>
               </ul>
             </div>
           </div>
@@ -152,15 +165,18 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="page_content">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-4" id="about">
           <h2>Clinical Variants Visualizations</h2>
-          <p>These are the voyages of the Starship Enterprise. Its continuing mission, to explore strange new worlds,
-            to seek out new life and new civilizations, to boldly go where no one has gone before. We need to neutralize
-            the homing signal. Each unit has total environmental control, gravity, temperature, atmosphere, light, in a
-            protective field. Sensors show energy readings in your area. We had a forced chamber explosion in the resonator
-            coil. Field strength has increased by 3,000 percent.</p>
+          <p>Currently, we are gearing up for public release.
+              The graphs that you see are examples of visualizations which can be performed. 
+              We would like to give your vision a visual. Please email us!</p>
+          <p>This page is specialized in delivering visualizations of genetic variant-based data of the ClinVar repository.
+              Our resource uses the <a href="http://d3js.org">d3.js</a> library. d3 stands for Data-Driven Documents.
+              If you like what you see, the data did it!</p>
         </div>
         <div class="col-md-2" id="historyGraphic">
           <h4>Total Number of Variants</h4>
@@ -177,9 +193,11 @@
       </div>
 
       <div class="row">
+        <div class="col-md-1">
+        </div>
         <div class="col-md-2" id="geneBubbleIc">
           <h4>Gene Bubbles</h4>
-          <script src="js/geneBubble.js"></script>
+          <script async src="js/geneBubble.js"></script>
         </div>
         <div class="col-md-2" id="RadialsPhenoTermoIC">
           <h4>Phenotype Terminology Radials</h4>
@@ -195,24 +213,23 @@
           <div id="pieChart"></div>
           <script src="js/varType.js"></script>
         </div>
-        <div class="col-md-2" id="chromoCountIC">
+        <div class="col-md-2" id="chromoRaceIC">
           <h4>Variants per Chromosome</h4>
-          <script src="js/chromoCountIt.js"></script>
+          <script src="js/chromoCountRaceIt.js"></script>
         </div>
 
       </div>
 
       <div class="row">
-        <div class="col-md-2" id="chromoRaceIC">
-          <h4>Variants per Chromosome another Look</h4>
-          <script src="js/chromoCountRaceIt.js"></script>
+        <div class="col-md-1">
         </div>
-        <div class="col-md-5" id="starNum">
+        
+        <div class="col-md-4" id="starNum">
           <h4>StarNum History</h4>
           <script src="js/starNum.js"></script>
         </div>
         <div class="col-md-2" id="starNumCurrentgraphic">
-        <h4>Current Star Num</h4>
+        <h4>Annotation of Evidence</h4>
         <script src="js/starNumCurrent.js"></script>
         </div>
       </div>
@@ -224,11 +241,6 @@
     </div> <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script language='javascript'>
@@ -253,6 +265,8 @@
       });
 
     </script>
+
+<!--
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -263,5 +277,6 @@
   ga('send', 'pageview');
 
 </script>
+-->
   </body>
 </html>

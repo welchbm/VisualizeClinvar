@@ -3,7 +3,7 @@ if(window.onload) {
         var curronload = window.onload;
         var newonload = function() {
             curronload();
-            varType();
+            varStarNumCurrent();
         };
         window.onload = newonload;
 } else {

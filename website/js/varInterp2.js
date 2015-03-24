@@ -3,7 +3,7 @@ if(window.onload) {
         var curronload = window.onload;
         var newonload = function() {
             curronload();
-            varType();
+            varInterp();
         };
         window.onload = newonload;
 } else {
@@ -33,11 +33,9 @@ var var_Interp_tsv = ["varInterp", pageName].join('') // this takes care of null
 			color: data.color
 		};
 		}, function(error, data) {
-		console.log(data);
 	//d3.tsv.parse("data/varType/"+var_interp_tsv+".tsv", function(error, data) { //pageName comes from the page: see html
 	//	console.log(data);
 	//	console.log("what is going on?");
-console.log("width: " + parseInt(d3.select("#varInterpGraphic").style("width"),0));
 var pie = new d3pie("varInterpGraphic", {
   "header": {
       "subtitle": {

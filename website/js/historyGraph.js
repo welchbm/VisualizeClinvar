@@ -30,9 +30,10 @@ var addEvent = function(elem, type, eventHandle) {
 //would need a 'loader' script function for each page...hmm, would be faster but lets not complicate things at the moment
 
 function historyGraphIt(){ //hugely important. defines scope of variables 
+  console.log("called historyGraphIt()");
 var containerWidth = parseInt(d3.select("#historyGraphic").style("width"),10); //little trick
 
-var margin = {top: 20, right: 20, bottom: 30, left: (containerWidth/10)},
+var margin = {top: 20, right: 20, bottom: 30, left: (containerWidth/7)},
     width = containerWidth- margin.left - margin.right, //select and style give us access to the historyGraphic objects width - kinda of useful for sizing the graphic to fit historyGraphic container on html page
     height = containerWidth - margin.top - margin.bottom;
 

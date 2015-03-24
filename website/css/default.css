@@ -23,6 +23,19 @@ body {
 .shift-right {
     margin-left: 50px;
 }
+.shift-left {
+    margin-right: 50px;
+}
+.shift-down {
+    margin-top: 30vh;
+}
+
 .text-white {
     color: white;
+}
+.fa-9x {
+  font-size: 9em;
+}
+.text-grey {
+  color: grey;
 }

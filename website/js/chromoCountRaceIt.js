@@ -67,7 +67,7 @@ d3.tsv("data/chromoCount/ChromosomeCounts.tsv",function(myData) {
   //20	Lung cancer	2029	176	aug2014
 
   //d3.tsv("http://localhost:8080/ChromosomeCounts.tsv",function(myData) {
-  var svgWidth = parseInt(d3.select("#chromoCountIC").style("width"),0);
+  var svgWidth = parseInt(d3.select("#chromoRaceIC").style("width"),0);
   var width = parseInt(svgWidth * 1.1);
   var height = parseInt(svgWidth * 1.15);
   var margin = 50;

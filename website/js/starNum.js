@@ -3,7 +3,7 @@ if(window.onload) {
         var curronload = window.onload;
         var newonload = function() {
             curronload();
-            varType();
+            starNum();
         };
         window.onload = newonload;
 } else {
@@ -25,15 +25,11 @@ var addEvent = function(elem, type, eventHandle) {
 function starNum() {
   var colwidth = parseInt(d3.select("#starNum").style("width"),0);
   var margin = {top: parseInt(0.05 * colwidth, 0),
-                right: parseInt(0.8 * colwidth, 0),
+                right: parseInt(0.4 * colwidth, 0),
                 bottom: parseInt(0.05 * colwidth, 0),
                 left: parseInt(0.1 * colwidth, 0)};
-  var width = parseInt(0.75 * colwidth, 0);
-  var height = parseInt(0.5 * colwidth, 0);
-  console.log("margin.top: " + margin.top);
-  console.log("margin.right: " + margin.right);
-  console.log("margin.left: " + margin.left);
-  console.log("margin.bottom: " + margin.bottom);
+  var width = parseInt(0.5 * colwidth, 0);
+  var height = parseInt(0.40 * colwidth, 0);
 
 var parseDate = d3.time.format("%y-%b-%d").parse,
     formatPercent = d3.format(".0%");
@@ -62,6 +58,7 @@ var area = d3.svg.area()
 
 var stack = d3.layout.stack()
     .values(function(d) { return d.values; });
+
 
 var svg = d3.select("#starNum").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -121,14 +118,16 @@ d3.tsv("data/starNum/starNum.tsv", function(error, data) {
 
 	legend.append("rect")
       .attr("x", width + 5)
-      .attr("width", 18)
-      .attr("height", 18)
+      .attr("width", 14)
+      .attr("height", 14)
       .style("fill", color);
 
+  leg_font_size = 
   legend.append("text")
       .attr("x", width + 28)
       .attr("y", 9)
       .attr("dy", ".35em")
+      .attr("font-size", ".7em")
       .style("text-anchor", "start")
       .text(function(d) { return d; });
 });
