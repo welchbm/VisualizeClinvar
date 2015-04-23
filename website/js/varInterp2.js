@@ -24,9 +24,9 @@ var addEvent = function(elem, type, eventHandle) {
 
 
 function varInterp() {
-
+//data/varInterp/
 var var_Interp_tsv = ["varInterp", pageName].join('') // this takes care of null pageName
-	d3.tsv("data/varInterp/"+var_Interp_tsv+".tsv", function(data) {
+	d3.tsv("http://localhost:8080/"+var_Interp_tsv+".tsv", function(data) {
 		return {
 			label: data.label,
 			value: +data.value,

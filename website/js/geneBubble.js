@@ -29,8 +29,8 @@ function geneBubbleIt(){ //hugely important. defines scope of variables
 //d3.tsv("quickStats"+pageName+".tsv", type, function(error, data) {
 //d3.select("body").append("text").text("I wrote on your page");
 
-//d3.tsv("http://localhost:8080/geneBubbleBig.tsv",function(myData) {
-d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
+d3.tsv("http://localhost:8080/geneBubbleBig.tsv",function(myData) {
+//d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 
   var width = parseInt(d3.select("#geneBubbleIc").style("width"),0);
   var	height = parseInt(d3.select("#geneBubbleIc").style("width"),0); // item should be mostly square, only works based off width
@@ -102,7 +102,8 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 		}
 		uniqueInterpretations[myData[i].MostFrequentInterpretation] = 0;
 	}
-	var c=d3.scale.category20().domain(distinctInterpretations);//names to grab colors
+	var c=d3.scale.ordinal().domain(distinctInterpretations).range("#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779");
+	//.category20().domain(distinctInterpretations);//names to grab colors
 
   //x and y for placement....hmmm
 	var x=d3.scale.log().domain([1,maxPhenotypes]).range([margin,width-margin]);

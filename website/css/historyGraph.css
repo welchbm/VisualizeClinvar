@@ -1,18 +1,38 @@
+.line {
+  fill: none;
+  stroke: #F73A18;
+  stroke-width: 0.2em;
+}
 
+.axis {
+	fill:#999999;
+	stroke-width: 0.2em;
+}
 
 .axis path,
 .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    fill:#999999;
+    stroke: #999999;
+   # stroke-width: 1;
+    shape-rendering: crispEdges;
+	
 }
 
-.x.axis path {
-  display: none;
+.grid .tick {
+    stroke: #999999;
+	stroke-width: 1px;
+    shape-rendering: crispEdges;
+
 }
 
-.line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+.x.grid .tick {
+	stroke-dasharray:5,5;
+}
+.grid path {
+     stroke-width: 1px;
+}
+
+.area {
+    fill: lightsteelblue;
+      stroke-width: 1.5;
 }

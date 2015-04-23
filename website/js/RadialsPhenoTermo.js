@@ -78,8 +78,8 @@ function dragged(d) {
 function dragended(d) {
   d3.select(this).classed("dragging", false);
 }
-
-d3.csv('data/radials/stats.csv', function(error, data) {
+//data/radials/
+d3.csv('http://localhost:8080/stats.csv', function(error, data) {
 
   var headers = d3.keys(data[0]); //headers collected
   //now select the ones we want
