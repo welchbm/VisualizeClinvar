@@ -3,7 +3,7 @@ if(window.onload) {
         var curronload = window.onload;
         var newonload = function() {
             curronload();
-            varType();
+            varInterp();
         };
         window.onload = newonload;
 } else {
@@ -24,16 +24,15 @@ var addEvent = function(elem, type, eventHandle) {
 
 
 function varInterp() {
-
+//data/varInterp/
 var var_Interp_tsv = ["varInterp", pageName].join('') // this takes care of null pageName
-	d3.tsv("data/varInterp/"+var_Interp_tsv+".tsv", function(data) {
+	d3.tsv("http://localhost:8080/"+var_Interp_tsv+".tsv", function(data) {
 		return {
 			label: data.label,
 			value: +data.value,
 			color: data.color
 		};
 		}, function(error, data) {
-		console.log(data);
 	//d3.tsv.parse("data/varType/"+var_interp_tsv+".tsv", function(error, data) { //pageName comes from the page: see html
 	//	console.log(data);
 	//	console.log("what is going on?");
@@ -53,7 +52,8 @@ var pie = new d3pie("varInterpGraphic", {
       "location": "bottom-left"
   },
   "size": {
-      "canvasWidth": 550,
+      "canvasWidth": parseInt(d3.select("#varInterpGraphic").style("width"),0),
+      "canvasHeight": parseInt(d3.select("#varInterpGraphic").style("width"),0),
       "pieInnerRadius": "0%",
       "pieOuterRadius": "90%"
   },

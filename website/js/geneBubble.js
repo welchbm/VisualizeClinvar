@@ -24,21 +24,21 @@ var addEvent = function(elem, type, eventHandle) {
     }
 };
 
-function geneBubbleIt(){ //hugely important. defines scope of variables 
+function geneBubbleIt(){ //hugely important. defines scope of variables
 //http://localhost:8080/quickStats
 //d3.tsv("quickStats"+pageName+".tsv", type, function(error, data) {
 //d3.select("body").append("text").text("I wrote on your page");
 
-//d3.tsv("http://localhost:8080/geneBubbleBig.tsv",function(myData) {
-d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
+d3.tsv("http://localhost:8080/geneBubbleBig.tsv",function(myData) {
+//d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 
-	var width = 300,
-		height = 250, 
-		margin = 50;
+  var width = parseInt(d3.select("#geneBubbleIc").style("width"),0);
+  var	height = parseInt(d3.select("#geneBubbleIc").style("width"),0); // item should be mostly square, only works based off width
+  var margin = 50;
 
-	var svg=d3.select("#geneBubbleIc").append("svg").attr("width",width).attr("height",height);
+  var svg=d3.select("#geneBubbleIc").append("svg").attr("width",width).attr("height",height);
 
-	
+
 	//dropdown for selecting CLinvar release
 	var uniqueDates = {};
 	var datesDropDown = [];
@@ -51,7 +51,7 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 		uniqueDates[myData[i].Date] = 0;
 	}
 	//datesDropDown.sort(function(a,b) {return b-a;});
-	d3.select("#geneBubbleIc").append("select").attr("id","geneBubblesDates").append("option").text("Please select a date");
+	d3.select("#geneBubbleIc").append("select").attr("id","geneBubblesDates").attr("class", "form-control").append("option").text("Please select a date");
 	//d3.select("body")
 		//.append("select")
 	d3.select("#geneBubblesDates")
@@ -62,13 +62,13 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
     // Provide available text for the dropdown options
 		.attr("value",function(d) {return d;})
 		.text(function(d) {return d;});
-	
+
 	//myData = myData.filter(function(d) { return (+d.numVariant) > 500 ; });
-	
+
 	 // we sort the data to make it easier to have big circles in back and small ones overlaid in front
 	myData.sort(function(a,b) {return b.numVariant-a.numVariant;});
-	
-//Gene	MostFrequentPhenotype	numVariant	numPhenotypes	Date	MostFrequentInterpretation	
+
+//Gene	MostFrequentPhenotype	numVariant	numPhenotypes	Date	MostFrequentInterpretation
 	//We are scaling everything by the total number of max and min number of varients occurring over all Genes for every version of Clinvar
 	//this ensures that showing data for each year will be comparable
 	//That means that as the years progress circles will move up and to the left
@@ -89,7 +89,7 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 	//use only the top 101
 //	var nestMyData = d3.nest().key(function(d) {return d.Date}).entries(myData);
 	//myData = myData.slice(0,100); //done here so that radius scaling as already been done
-	
+
 //PARSE myData.selectAll(MostFrequentInterpretation) for unique and put array below
 //also include legend somewhere for the Interpretation types
 	var uniqueInterpretations = {};
@@ -102,8 +102,9 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 		}
 		uniqueInterpretations[myData[i].MostFrequentInterpretation] = 0;
 	}
-	var c=d3.scale.category20().domain(distinctInterpretations);//names to grab colors
-	
+	var c=d3.scale.ordinal().domain(distinctInterpretations).range("#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779","#DAE9F2", "#FF9380","#B08996","#A9DF93","#F3E779");
+	//.category20().domain(distinctInterpretations);//names to grab colors
+
   //x and y for placement....hmmm
 	var x=d3.scale.log().domain([1,maxPhenotypes]).range([margin,width-margin]);
 	var y=d3.scale.linear().domain([1,maxVariants]).range([height-margin,margin]);
@@ -132,7 +133,7 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
     .text("Number of Distinct Phenotypes")
 	.attr("x", x((maxPhenotypes/20)))
 	.attr("y",margin-15);
-	
+
 	svg.append("g")
 	.attr("class", "axis")
 	.attr("id","y-axis")
@@ -143,25 +144,25 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 	.text("Number of Variants")
 	.attr("transform","rotate(-90)") //changes x to y and y to x
 	.attr("x",-125)
-	.attr("y",-margin);
+	.attr("y",margin - 90);
 
 	svg.selectAll(".h").data(d3.range(-8,10,2)).enter()
 	.append("line").classed("h",1)
 	.attr("x1",margin).attr("x2",height-margin)
 	.attr("y1",y).attr("y2",y)
-  
+
 	svg.selectAll(".v").data(d3.range(1,5)).enter()
 	.append("line").classed("v",1)
 	.attr("y1",margin).attr("y2",width-margin)
 	.attr("x1",x).attr("x2",x)
-	
+
 	//svg.legend().data(distinctInterpretations)
 	 // .enter()
 	 // .append("text")
 	 // .text(function(d) {return;})
 	 // .style("fill",function(d) { //COLOR pulled in here
-	//	return c(d);}) 
-		
+	//	return c(d);})
+
   // then we create the marks, which we put in an initial position
   //with radius Zero - you cannot see Zero. I think that is why some Greek's despised zero.
   //I think it is zen.
@@ -173,7 +174,7 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 	.append("g")
 	.attr("id","circles")
 	.attr("transform", function(d) { return "translate("  +x(0)+ "," +y(0)+ ")"; })
-	
+
 	.append("circle")
     //.attr("cx",function(d) {return x(0);}) you will learn something if you uncomment these two lines - everything is relative
     //.attr("cy",function(d) {return y(0);})
@@ -182,23 +183,23 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
     .style("fill",function(d) {
 		return c(d.MostFrequentInterpretation);}) //COLOR pulled in here
     .style("opacity",function(d) {return o(+d.numVariant);});
-	
+
 	svg.selectAll("#circles").append("title")
 		.attr("font-size","10px") //making the text smaller!
 		.text(function(d) {return " Gene: "+d.Gene+", Number of Variants is "+d.numVariant+", Most Frequent Phenotype is "+d.MostFrequentPhenotype+", Most Frequent Interpretation is "+d.MostFrequentInterpretation;});
-	
-	
-	
+
+
+
 	//controls what happens when drop-down is used
 	d3.select('select')
       .on("change", function() {
 		var key = this.value;
-	
+
 		graphData = myData.filter(function(d) { return d.Date == key ; });//current data to graph, a little trick
 		graphData.sort(function(a,b) {return b.numVariant-a.numVariant;});
 		//to explain. we have only totalCircles circles. so by filtering by date and sorting by numVariant we will only be displaying the top totalCircles of the date set
 		//we take advantage that function(d,i) has the index for #circles from 0 to totalCircles...he he. talk about obfuscation
-	
+
 		//while were at it lets do bubble sizes in relation to the size of the top totalCircles number of variants for the specific date
 		var maxVariants = d3.max(graphData.slice(0,100), function(d){return +d.numVariant;});
 		var minVariants = d3.min(graphData.slice(0,100), function(d){return +d.numVariant;});
@@ -210,14 +211,14 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 			.scale(y)
 			.orient("left")
 			.ticks(3);
-			
+
 		svg.select("#y-axis")
 		.attr("transform", "translate(" + margin + ",0)")
 		.call(yAxisChange);
-	
+
 		//change titles first
 		svg.selectAll("#circles").select("title").text(function(d,i) {return " Gene: "+graphData[i].Gene+", Number of Variants is "+graphData[i].numVariant+", Most Frequent Phenotype is "+graphData[i].MostFrequentPhenotype+", Most Frequent Interpretation is "+graphData[i].MostFrequentInterpretation;});
-		
+
 		svg.selectAll("#circles")
 			.transition().duration(4500)
 			.attr("transform", function(d,i) { return "translate(" + x(+graphData[i].numPhenotypes) + "," + y(+graphData[i].numVariant) + ")"; })//SEE HOLY MOLE above!
@@ -238,9 +239,9 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 				return c(graphData[i].MostFrequentInterpretation);}) //COLOR pulled in here
 			.style("opacity",function(d,i) {return o(+graphData[i].numVariant);});
 
-		
+
 			//we play a little hide and seek.
-			svg.selectAll(".geneNameText").style("visibility","hidden");			
+			svg.selectAll(".geneNameText").style("visibility","hidden");
 			svg.selectAll("#circles").append("text")
 			.attr("class","geneNameText")
 			.attr("dateId",key)
@@ -249,7 +250,7 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 			.style("text-anchor", "middle")
 			.style("fill","Black")
 			.text(function(d,i) { return graphData[i].Gene; })
-			.style("visibility",function(d,i) { 
+			.style("visibility",function(d,i) {
 			  if (graphData[i].Date == key) {//but this works too...see holy mole
 				if (myData.length == 1) { //when accessing non-Gene page
 					return "show";
@@ -258,17 +259,17 @@ d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 				}
 			  }
 			  else{ return "hidden";}
-			});			
+			});
 		//.on("click",function(){d3.select(this).style("opacity",0);});// PLAY WITH THIS LATER
-	  });	
-	 
+	  });
+
 	svg.append("g")
 	.append("text")
 	.style("text-anchor", "middle")
-	.text("Colour indicates Interpretation")
+	.text("Color indicates Interpretation")
 	.attr("transform","rotate(90)") //changes x to y and y to x
 	.attr("x",125)
-	.attr("y",-300);
+	.attr("y", parseInt(-0.9 * width));
 });
 
 }

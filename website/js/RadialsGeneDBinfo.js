@@ -69,7 +69,7 @@ d3.csv('data/radials/stats.csv', function(error, data) {
 		"GHR_CODE"
 	];
 	for( i = 0; i < dbToCheck.length; i++) {
-	
+
 		if (element == dbToCheck[i]) {
 			return true;
 		}
@@ -78,10 +78,13 @@ d3.csv('data/radials/stats.csv', function(error, data) {
   }
   headers = headers.filter(isInGeneDBinfoList);		//gets column headers and choose which to show
   var diameterRadial = 80;
+  var width = parseInt(d3.select("#RadialsGeneDBinfoIC").style("width"), 0) + "px";
+  var height = parseInt(0.70 * parseInt(d3.select("#RadialsGeneDBinfoIC").style("width"), 0), 0) + "px";
 
- d3.select("#RadialsGeneDBinfoIC").append("div").style("overflow","scroll").style("height","440px").style("width","440px").attr("class","RadialsInner");
+  d3.select("#RadialsGeneDBinfoIC").append("div").style("overflow","hidden").style("height",height).style("width", width).attr("class","RadialsInner");
+
   for (var i = 0; i < headers.length; i++) { //iterates
-  
+
 	data[0][headers[i]] = +data[0][headers[i]];
 	if (!(isNaN(data[0][headers[i]]) )){
 		d3.select("#RadialsGeneDBinfoIC").select(".RadialsInner").append("div").style("float","left").attr("id","radialGeneDBInfo-div"+headers[i]).call(drag).call(zoom); //make target div
@@ -96,4 +99,3 @@ d3.csv('data/radials/stats.csv', function(error, data) {
 
 });
 }
-							 

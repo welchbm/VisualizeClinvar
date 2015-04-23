@@ -5,7 +5,7 @@ if(window.onload) {
         var curronload = window.onload;
         var newonload = function() {
             curronload();
-            historyGraphIt();
+            quickStatic();
         };
         window.onload = newonload;
 } else {
