@@ -1,0 +1,14 @@
+label	value	color
+protein only	77	#2482c1
+inversion	3	#0c6197
+Deletion	10519	#4daa4b
+copy number gain	1927	#90c469
+single nucleotide variant	106208	#daca61
+Microsatellite	52	#e4a14b
+copy number loss	2208	#e98125
+Variation	583	#cb2121
+Structural variant	1	#830909
+fusion	8	#923e99
+Indel	706	#ae83d5
+Insertion	1431	#bf27e3
+Duplication	2475	#ce2aeb
