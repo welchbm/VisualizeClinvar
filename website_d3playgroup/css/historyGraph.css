@@ -1,3 +1,34 @@
+
+
+
+/*for visual-bytes that use words and numbers*/
+.graphicWords {
+	fill: #999999;
+	font-weight:normal;
+}
+.graphicNumber {
+	fill: #142E40;
+	font-weight:bold;
+}
+
+
+/*blueish background rectangle*/
+svg {
+margin: 0 auto;
+display: block;
+}
+/*deprecated already
+g.rect {
+	fill: pink;
+	margin: 0 auto;
+}*/
+div.d3visualbyte {
+  background: #DAE9F2;
+  padding: 10px;
+}
+
+
+/*all things charts*/
 .line {
   fill: none;
   stroke: #F73A18;
@@ -17,7 +48,7 @@
     shape-rendering: crispEdges;
 	
 }
-
+/*grid is for the lines on the graph*/
 .grid .tick {
     stroke: #999999;
 	stroke-width: 1px;

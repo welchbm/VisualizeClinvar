@@ -37,13 +37,13 @@ d3.tsv("http://localhost:8080/"+quick_stats_tsv+".tsv", type, function(error, da
     var color = d3.scale.linear() //scaling and colors for a little
             .domain([0,1,2,3,4,5,6,10,15,20,100])
             .range(["#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222","#111","#000"]);
-
+			
 	var i = 0;
 	var svg = d3.select("#quickStats").append("svg")
 				//.attr("style","border:1px solid black;")
 				.attr("xmlns","http://www.w3.org/2000/svg")
 	                .attr("width", containerWidth) //hey, I made it fit the container
-                .attr("height",(2.1*(data.length)*containerWidth*30/320));//hey, I made it fit the container with a little lazy coding
+                .attr("height",(10.5*containerWidth*20/320));//hey, I made it fit the container with a little lazy coding
 				
         //background rectangle        
 		//	svg.append("g").attr("class","rect")
@@ -60,19 +60,19 @@ d3.tsv("http://localhost:8080/"+quick_stats_tsv+".tsv", type, function(error, da
 					.selectAll("text")
 						.data(data)
 						.enter().append("text")
-						.style("font-size", function(d) { return (containerWidth*30/320) + "px";})
+						.style("font-size", function(d) { return (containerWidth*20/320) + "px";})
 				//.style("fill", function(d, i) { return color(i); })
 						//from observation I have 48 characters of size '(2/3)*(containerWidth*20/320)' in width to play with for containerWidth of 375
 						//about 33 Big font size containerWidth*20/320 in width
 						//about 6.5 Big font size containerWidth*20/320 in height
 						//about 9 characters of size '(2/3)*(containerWidth*20/320)' in height
 						.attr("transform", function(d) {
-							i = i +(2*(containerWidth*30/320)); //adjust position for font size
+							i = i +(2*(containerWidth*20/320)); //adjust position for font size
 							//d.text.length gives us the length of the string so we can adjust for this length to keep from going to far to the left
 							//overhang = d.text.length - 5;//close approximation
 							//if (i 
 							//return "translate(" + [i, i] + ")";
-							return "translate(" + [(2*(containerWidth*30/320)), i] + ")";
+							return "translate(" + [(2*(containerWidth*20/320)), i] + ")";
 						})
 						.append("tspan")
 						.attr("class","graphicNumber")
@@ -86,7 +86,7 @@ d3.tsv("http://localhost:8080/"+quick_stats_tsv+".tsv", type, function(error, da
 							//.attr("dy",(1/2)*(containerWidth*20/320)+"px")	
 							//and here is where we can put it wherever want! control is good
 							//.attr("dx",-1*(containerWidth*20/320)+"px") //HEREHERE hERE
-							.attr("dx",0.5*(containerWidth*30/320)+"px")
+							.attr("dx",0.5*(containerWidth*20/320)+"px")
 							//.attr("dy","10 20 40 10") for fun... 
 							.text(function(d) {return d.text;}); //d.text is contains a value from the tsv column called text
 							

@@ -33,7 +33,8 @@ function historyGraphIt(){ //hugely important. defines scope of variables
   console.log("called historyGraphIt()");
 var containerWidth = parseInt(d3.select("#historyGraphic").style("width"),10); //little trick
 
-var margin = {top: 20, right: 20, bottom: 30, left: (containerWidth/6)},
+//margin = {top: 20, right: 20, bottom: 30, left: (containerWidth/6)}
+var margin = {top: 0, right: 0, bottom: 0, left: 0 },
     width = containerWidth- margin.left - margin.right, //select and style give us access to the historyGraphic objects width - kinda of useful for sizing the graphic to fit historyGraphic container on html page
     height = (0.62*containerWidth) - margin.top - margin.bottom;
 
@@ -111,62 +112,53 @@ d3.tsv("http://localhost:8080/"+history_tsv+".tsv", function(error, data) {
 	})]); //adding a year
  y.domain([d3.min(data,function(d) { return d.number; }), d3.max(data,function(d) { return d.number; }) + (d3.max(data,function(d) { return d.number; })/10)]);
 
-if(containerWidth > 300) { //for switching to viewable for small view
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
-	  .selectAll("text")
-	  .style("font-size", function() {
-			if ((width/15) > 25) {
-				return 25+"px";
-			}
-			return (width/15)+"px";
-		});
+ // svg.append("g")
+  //    .attr("class", "x axis")
+ //     .attr("transform", "translate(0," + height + ")")
+//      .call(xAxis)
+//	  .selectAll("text")
+//	  .style("font-size", function() {
+//			if ((width/15) > 25) {
+//				return 25+"px";
+//			}
+//			return (width/15)+"px";
+//		});
 
 	  
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-	  .selectAll("g")
-	  .selectAll("text")
-	  .style("font-size", function() {
-			if ((width/15) > 25) {
-				return 25+"px";
-			}
-			return (width/15)+"px";
-		});
-}
+//  svg.append("g")
+//      .attr("class", "y axis")
+//      .call(yAxis)
+//	  .selectAll("g")
+//	  .selectAll("text")
+//	  .style("font-size", function() {
+//			if ((width/15) > 25) {
+//				return 25+"px";
+//			}
+//			return (width/15)+"px";
+//		});
 
   svg.append("path")
       .datum(data)
       .attr("class", "line")
-	  .attr("id","histryGraphPath")
       .attr("d", line);
-if(containerWidth < 300) { //flashy for small view
-svg.append("defs")
-	.append("marker".attr("id","markerArrow").attr("markerWidth","13").attr("markerHeight","13").attr("refx","2").attr("refy","6").attr("orient","auto").append("path").attr("class","arrowMarker").attr("d","M2,2 L2,11 L10,6 L2,2").style("fill","#000000");
-//d3.select("#historyGraphPath").attr("marker-end","url(#markerArrow)");
-}
-
- if(containerWidth > 300) { //for switching to viewable for small view
+ 
       // Draw the x Grid lines
-    svg.append("g")
-        .attr("class", "x grid")
-        .attr("transform", "translate(0," + height + ")")
-        .call(be_xAxis()
-            .tickSize(-height, 0, 0)
-            .tickFormat("")
-        );
+  //  svg.append("g")
+  //      .attr("class", "x grid")
+ //       .attr("transform", "translate(0," + height + ")")
+ //       .call(be_xAxis()
+ //           .tickSize(-height, 0, 0)
+ //           .tickFormat("")
+  //      );
 
     // Draw the y Grid lines
-    svg.append("g")            
-        .attr("class", "y grid")
-        .call(be_yAxis()
-            .tickSize(-width, 0, 0)
-            .tickFormat("")
-        );
-}	
+ //   svg.append("g")            
+ //       .attr("class", "y grid")
+ //       .call(be_yAxis()
+ //           .tickSize(-width, 0, 0)
+ //           .tickFormat("")
+ //       );
+	
 		
 });
 }
