@@ -145,7 +145,7 @@ if(containerWidth > 300) { //for switching to viewable for small view
       .attr("d", line);
 if(containerWidth < 300) { //flashy for small view
 svg.append("defs")
-	.append("marker".attr("id","markerArrow").attr("markerWidth","13").attr("markerHeight","13").attr("refx","2").attr("refy","6").attr("orient","auto").append("path").attr("class","arrowMarker").attr("d","M2,2 L2,11 L10,6 L2,2").style("fill","#000000");
+	.append("marker").attr("id","markerArrow").attr("markerWidth","13").attr("markerHeight","13").attr("refx","2").attr("refy","6").attr("orient","auto").append("path").attr("class","arrowMarker").attr("d","M2,2 L2,11 L10,6 L2,2").style("fill","#000000");
 //d3.select("#historyGraphPath").attr("marker-end","url(#markerArrow)");
 }
 
