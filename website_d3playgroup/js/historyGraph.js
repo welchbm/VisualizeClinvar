@@ -35,7 +35,7 @@ var containerWidth = parseInt(d3.select("#historyGraphic").style("width"),10); /
 
 var margin = {top: 20, right: 20, bottom: 30, left: (containerWidth/6)},
     width = containerWidth- margin.left - margin.right, //select and style give us access to the historyGraphic objects width - kinda of useful for sizing the graphic to fit historyGraphic container on html page
-    height = (0.62*containerWidth) - margin.top - margin.bottom;
+    height = (0.9*containerWidth) - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%d-%b-%y").parse;
 
@@ -71,6 +71,12 @@ function be_yAxis() {
 var line = d3.svg.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.number); });
+	
+var lineSmooth = d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.number); })
+	.interpolate("bundle")
+	.tension(0.5);
 
 var svg = d3.select("#historyGraphic").append("svg")
 	.attr("width", width + margin.left + margin.right)
@@ -100,7 +106,7 @@ d3.tsv("http://localhost:8080/"+history_tsv+".tsv", function(error, data) {
     d.date = parseDate(d.date);
     d.number = +d.number;
   });
-
+  
  // x.domain(d3.extent(data, function(d) { return d.date; }));
   //y.domain(d3.extent(data, function(d) { return d.number; }));
  x.domain( [d3.min(data,function(d) { return d.date; }), d3.max(data,function(d) {
@@ -111,7 +117,7 @@ d3.tsv("http://localhost:8080/"+history_tsv+".tsv", function(error, data) {
 	})]); //adding a year
  y.domain([d3.min(data,function(d) { return d.number; }), d3.max(data,function(d) { return d.number; }) + (d3.max(data,function(d) { return d.number; })/10)]);
 
-if(containerWidth > 300) { //for switching to viewable for small view
+if(containerWidth > 200) { //for switching to viewable for large view
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -138,18 +144,77 @@ if(containerWidth > 300) { //for switching to viewable for small view
 		});
 }
 
+if(containerWidth > 200) { //large view path
   svg.append("path")
       .datum(data)
       .attr("class", "line")
 	  .attr("id","histryGraphPath")
+	  //.attr("marker-end","url(#markerArrow)")
       .attr("d", line);
-if(containerWidth < 300) { //flashy for small view
-svg.append("defs")
-	.append("marker").attr("id","markerArrow").attr("markerWidth","13").attr("markerHeight","13").attr("refx","2").attr("refy","6").attr("orient","auto").append("path").attr("class","arrowMarker").attr("d","M2,2 L2,11 L10,6 L2,2").style("fill","#000000");
-//d3.select("#historyGraphPath").attr("marker-end","url(#markerArrow)");
+}
+if(containerWidth <= 200) { //flashy for small view
+
+  var numberFontSize = containerWidth/8;
+	
+  svg.append("path")
+      .datum(data)
+      .attr("class", "line")
+	  .attr("id","histryGraphPath")
+	  //make room for words
+	  .attr("transform","translate(0,"+ numberFontSize +")")
+	  .attr("marker-end","url(#markerArrow)")
+      .attr("d", lineSmooth);
+	  
+  svg.append("defs")
+	.append("marker")
+		.attr("id","markerArrow")
+		.attr("viewBox","0 -5 15 15")
+		.attr("markerWidth","6")
+		.attr("markerHeight","4.5")
+		.attr("refx","5")
+		.attr("refy","0")
+		.attr("orient","auto")
+		.attr("markerUnits","strokeWidth")
+		.attr("class","arrowMarker")
+		//.style("fill","#F73A18")
+		.append("svg:path")
+		.attr("d","M 0 0 L 10 5 L 0 10 z")
+		.attr("transform", "translate(0,-5)");
+  //number, first element of data only, and time
+  //Number
+  //increase in NAME
+  //In X Months
+
+    svg.append("g")
+		.selectAll("text")
+		.data(data.slice(-2,-1))//function(){return data[0];}) //only element 1
+		.enter().append("text")
+		.style("font-size",numberFontSize+ "px")
+		.append("tspan")
+			.style("fill","#F73A18")
+			.attr("class","graphicNumber")
+			.text(function(d) { //add some commas
+				//console.log(d);
+				return d.number.toLocaleString();//toLocaleString should be supported, from what I have read, by most browsers. Does not work for decimal numbers. 
+			})
+		.append("tspan") //tspan allows us to have multiple lines
+			.attr("class", "graphicWords")
+			.attr("dx",function(d){ return 0.5*(-(d.number.toLocaleString()).length)*numberFontSize+"px";})
+			.attr("dy",0.75*numberFontSize+"px")
+			.style("font-size", 0.5*numberFontSize + "px")
+			.text(function(d) {
+				var months = (d.date.getFullYear() - data[0].date.getFullYear())*12; //start by number of years
+				months = months + d.date.getMonth();
+				months = months - data[0].date.getMonth();
+				return "VARIANTS IN "+ months +" MONTHS" ;
+				});
+		//	.append("tspan") //tspan allows us to have multiple lines
+		//	.attr("class", "graphicWords")
+		//	.attr("dx",0.5*(containerWidth*30/320)+"px")
+		//	.text("IN "+90+" MONTHS")
 }
 
- if(containerWidth > 300) { //for switching to viewable for small view
+ if(containerWidth > 200) { //for switching to viewable for small view
       // Draw the x Grid lines
     svg.append("g")
         .attr("class", "x grid")

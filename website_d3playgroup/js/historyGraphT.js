@@ -106,6 +106,9 @@ d3.tsv("http://localhost:8080/"+history_tsv+".tsv", function(error, data) {
     d.date = parseDate(d.date);
     d.number = +d.number;
   });
+
+  var containerWidth = parseInt(d3.select("#quickStats").style("width"),0);//select and style give us access
+  console.log(containerWidth);
   
  // x.domain(d3.extent(data, function(d) { return d.date; }));
   //y.domain(d3.extent(data, function(d) { return d.number; }));
@@ -153,15 +156,10 @@ if(containerWidth > 200) { //flashy for small view
       .attr("d", line);
 }
 if(containerWidth <= 200) { //flashy for small view
-
-  var numberFontSize = containerWidth*20/320;
-	
   svg.append("path")
       .datum(data)
       .attr("class", "line")
 	  .attr("id","histryGraphPath")
-	  //make room for words
-	  .attr("transform","translate(0,"+ 3*numberFontSize +")")
 	  .attr("marker-end","url(#markerArrow)")
       .attr("d", lineSmooth);
 	  
@@ -176,7 +174,7 @@ if(containerWidth <= 200) { //flashy for small view
 		.attr("orient","auto")
 		.attr("markerUnits","strokeWidth")
 		.attr("class","arrowMarker")
-		//.style("fill","#F73A18")
+		.style("fill","#F73A18")
 		.append("svg:path")
 		.attr("d","M 0 0 L 10 5 L 0 10 z")
 		.attr("transform", "translate(0,-5)");
@@ -184,32 +182,27 @@ if(containerWidth <= 200) { //flashy for small view
   //Number
   //increase in NAME
   //In X Months
-
     svg.append("g")
 		.selectAll("text")
-		.data(data.slice(-2,-1))//function(){return data[0];}) //only element 1
+		.data(data[1]) //only element 1
 		.enter().append("text")
-		.style("font-size",numberFontSize+ "px")
+		.style("font-size", function(d) { return (containerWidth*30/320) + "px";})
 		.append("tspan")
 			.style("fill","#F73A18")
 			.attr("class","graphicNumber")
 			.text(function(d) { //add some commas
-				//console.log(d);
 				return d.number.toLocaleString();//toLocaleString should be supported, from what I have read, by most browsers. Does not work for decimal numbers. 
-			})
-		.append("tspan") //tspan allows us to have multiple lines
-			.attr("class", "graphicWords")
-			.attr("dx",function(d){ return (-(d.number.toLocaleString()).size)*numberFontSize+"px";})
-			.attr("dy",1*numberFontSize+"px")
-			.style("font-size", 0.75*numberFontSize + "px")
-			.text(function(d) {
-				var months = (d.date.getFullYear() - data[0].date.getFullYear())*12;
-				return "VARIANTS IN "+ months +" MONTHS" ;
-				});
+			});
+		//	.append("tspan") //tspan allows us to have multiple lines
+		//	.attr("class", "graphicWords")
+		//	.attr("dx",0.5*(containerWidth*30/320)+"px")
+		//	.text("INCREASE IN VARIANTS")
 		//	.append("tspan") //tspan allows us to have multiple lines
 		//	.attr("class", "graphicWords")
 		//	.attr("dx",0.5*(containerWidth*30/320)+"px")
 		//	.text("IN "+90+" MONTHS")
+		//	; //d.text is contains a value from the tsv column called text
+
 }
 
  if(containerWidth > 200) { //for switching to viewable for small view
