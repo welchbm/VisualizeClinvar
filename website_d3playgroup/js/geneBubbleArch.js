@@ -90,7 +90,7 @@ d3.tsv("http://localhost:8080/geneBubbleBig.tsv",function(myData) {
 	}
 	for( i in datesDropDown) {
 		datesDropDown[i] = datesDropDown[i].replace(/(\w+) 1, (\d\d\d\d)/,'$1 $2');
-		//console.log(datesDropDown[i]);
+		console.log(datesDropDown[i]);
 	}
 	
 	d3.select("#geneBubbleIc").append("select").attr("id","geneBubblesDates").attr("class", "form-control").append("option").text("Please select a date");

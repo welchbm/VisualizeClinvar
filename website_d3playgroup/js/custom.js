@@ -70,7 +70,15 @@ var infographics = {
     short_description: "Distribution of evidence annotations.",
     description: "ClinVar uses several categories to indicate the evidence of assertions such as phenotype.",
     callback: "varStarNumCurrent"
-  }};
+  },
+  phenoJungle: {
+	title: "Test",
+    type: "Test",
+    short_description: "Test",
+    description: "Test",
+    callback: "phenoJungle"
+  }
+  };
 
 
 var setup = false;
