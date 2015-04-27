@@ -40,7 +40,7 @@ function geneBubbleIt(){ //hugely important. defines scope of variables
   var height = parseInt(d3.select("#geneBubbleIc").style("width"),0) - 100; // item should be mostly square, only works based off width
   var margin = 50;
 
-d3.tsv("../tsv/geneBubbleBig.tsv",function(myData) {
+d3.tsv("tsv/geneBubbleBig.tsv",function(myData) {
 //d3.tsv("data/geneBubble/geneBubble.tsv",function(myData) {
 
   myData.forEach(function(d) {

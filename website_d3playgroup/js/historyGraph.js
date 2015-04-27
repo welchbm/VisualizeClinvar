@@ -101,7 +101,7 @@ var svg = d3.select("#historyGraphic").append("svg")
 	
 //http://localhost:8080/history data/history/
 var history_tsv = ["history", pageName].join('') // this takes care of null pageName
-d3.tsv("http://localhost:8080/"+history_tsv+".tsv", function(error, data) {
+d3.tsv("tsv/"+history_tsv+".tsv", function(error, data) {
   data.forEach(function(d) {
     d.date = parseDate(d.date);
     d.number = +d.number;

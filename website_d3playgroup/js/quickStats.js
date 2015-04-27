@@ -28,7 +28,7 @@ function quickStatic(){ //hugely important. defines scope of variables
 
 //http://localhost:8080/quickStats data/quickStats/
 var quick_stats_tsv = ["quickStats", pageName].join('') // this takes care of null pageName
-d3.tsv("http://localhost:8080/"+quick_stats_tsv+".tsv", type, function(error, data) {
+d3.tsv("tsv/"+quick_stats_tsv+".tsv", type, function(error, data) {
 //NOTE gene specific TSV file does not have number of genes, for obvious reasons
 
 	var containerWidth = parseInt(d3.select("#quickStats").style("width"),0);//select and style give us access to the historyGraphic objects width - kinda of useful for sizing the graphic to fit historyGraphic container on html page
