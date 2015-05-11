@@ -61,7 +61,7 @@ button.cvbtn{
 	padding: 3px;
 	text-align:center;
 	vertical-align:middle;
-	cursor:pointer;
+	÷/*cursor:pointer;*/
 	background-image:none;
 	background-color:#54BF26;
 	color:#FFFFFF;
@@ -116,7 +116,7 @@ a {
 	text-decoration: underline;
 	color: #54BF26;
 	cursor: pointer;
-	float:right;
+	vertical-align: middle;
 }
 a:hover {
 	color: #327317;
@@ -127,6 +127,7 @@ a:focus {
 }
 a.nav {
 	display:inline-block;
+	float:right;
 	text-transform:uppercase;
 	font-size:1.2rem;
 	font-weight:bold;
@@ -254,18 +255,24 @@ ul.footer{
 	padding-bottom:5px;
 }
 .square {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
 	background-color: #FFFFFF;
 	padding: 10px;
 	vertical-align: middle;
 }
-.innerSquare{
+.d3visualbyte{
 	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #DAE9F2;
 	height: 400px;
 	vertical-align: middle;
 }
-.innerSquare:hover {
+.d3visualbyte:hover {
 	text-decoration: none;
 	background-color: rgba(0,0,0,0.5);
 }
@@ -273,14 +280,10 @@ ul.footer{
 
 /* Graph & Charts */
 .graph{
-/*	background:#DAE9F2;*/	
-	vertical-align: middle;
-	position: relative;
-	margin: auto;
-	padding: 20px;
+    padding: 20px;
 	width: 100%;
 	max-height: 400px;
-	cursor:pointer;
+	max-width: 500px
 }
 .graph:hover{
 	background-color: #000000;
