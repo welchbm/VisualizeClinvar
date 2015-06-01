@@ -77,7 +77,7 @@ d3.csv('data/radials/stats.csv', function(error, data) {
 	return false;
   }
   headers = headers.filter(isInGeneDBinfoList);		//gets column headers and choose which to show
-  var diameterRadial = 80;
+  var diameterRadial = 135;
   var width = parseInt(d3.select("#RadialsGeneDBinfoIC").style("width"), 0) + "px";
   var height = parseInt(0.70 * parseInt(d3.select("#RadialsGeneDBinfoIC").style("width"), 0), 0) + "px";
 

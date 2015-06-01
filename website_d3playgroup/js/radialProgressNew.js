@@ -28,8 +28,8 @@ function radialProgress(parent) {
         _duration= 1000,
         _selection,
         _margin = {top:10, right:10, bottom:10, left:10},
-        __width = 85,
-        __height = 70,
+        __width = 130,
+        __height = 130,
         _diameter = 50,
         _label="",
         _fontSize=12;
@@ -113,14 +113,14 @@ function radialProgress(parent) {
             enter.append("g").attr("class", "labels");
             var label = svg.select(".labels").selectAll(".label").data(data);
             label.enter().append("text")
-                .attr("class","label")
-                .attr("y",_width/2+_fontSize/3)
+                .attr("class","label centerlabel")
+                .attr("y",_width/2+_fontSizeCenter/3)
                 .attr("x",_width/2)
                 .attr("cursor","pointer")
                 .attr("width",_width)
                 // .attr("x",(3*_fontSize/2))
                 .text(function (d) { return Math.round((_value-_minValue)/(_maxValue-_minValue)*100) + "%" })
-                .style("font-size",_fontSize+"px")
+                .style("font-size",_fontSizeCenter+"px")
                 .on("click",onMouseClick);
 
             path.exit().transition().duration(500).attr("x",1000).remove();
@@ -190,11 +190,12 @@ function radialProgress(parent) {
     function measure() {
         _width=_diameter - _margin.right - _margin.left - _margin.top - _margin.bottom;
         _height=_width;
-        _fontSize=_width*.2;
+        _fontSize=_width*.15;
+        _fontSizeCenter=_width*.21;
         _arc.outerRadius(_width/2);
-        _arc.innerRadius(_width/2 * .85);
-        _arc2.outerRadius(_width/2 * .85);
-        _arc2.innerRadius(_width/2 * .85 - (_width/2 * .15));
+        _arc.innerRadius(_width/2 * .50);
+        _arc2.outerRadius(_width/2 * .50);
+        _arc2.innerRadius(_width/2 * .50 - (_width/2 * .15));
     }
 
 

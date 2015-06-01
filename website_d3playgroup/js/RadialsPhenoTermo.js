@@ -96,7 +96,7 @@ d3.csv('http://localhost:8080/stats.csv', function(error, data) {
   headers = headers.filter(isInPhenoTermoList);		//gets column headers and choose which to show
 
 
-  var diameterRadial = 80;
+  var diameterRadial = 135;
   var width = parseInt(d3.select("#RadialsPhenoTermoIC").style("width"), 0) + "px";
   var height = parseInt(0.70 * parseInt(d3.select("#RadialsPhenoTermoIC").style("width"), 0), 0) + "px";
 
