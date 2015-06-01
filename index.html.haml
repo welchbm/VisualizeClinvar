@@ -1,0 +1,96 @@
+%tag.class#id{name: 'this', value: 'that'}
+
+<!doctype html>
+%html
+  %head
+    %meta{:charset => "utf-8"}
+      %title Test CSS
+      = stylesheet_link_tag 'application', media: 'all'
+      
+  %body
+  .container-fluid
+    .row
+      .col-lg-12
+        =image_tag "visualizeClinvarLogo.png", width: '35%', :class => "logo"
+        %button.dnbtn Donate Now
+        %a.nav{:href => "#feedback"} Feedback
+        %a.nav{:href => "#about"} About
+
+    .row
+      .col-lg-12
+        %h1.land
+          Welcome to
+          %b VisualizeClinvar!
+        %p.land We help you make sense of the data in ClinVar <br/> so you can make sense of discoveries
+    .row
+      .col-lg-12 
+        %form.col-lg-10
+        .form-group
+          %input#exampleSearchBar.cvform-control{:placeholder => "Enter a gene", :type => "text"}
+          %button.cvbtn Search
+
+    .row
+      .col-md-4.square
+        .d3visualbyte
+          =link_to(image_tag("graph1.png", :class => "graph"), "http://www.google.com")
+          / %h2.squaretxt Heading
+          / %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      .col-md-4.square
+        .d3visualbyte
+          =link_to(image_tag("graph2.png", :class => "graph"), "http://www.google.com")
+          / %h2.squaretxt Heading
+          / %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      .col-md-4.square
+        .d3visualbyte
+          =link_to(image_tag("graph3.png", :class => "graph"), "http://www.google.com")
+          / %h2.squaretxt Heading
+          / %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    .row
+      .col-md-4.square
+        .d3visualbyte
+          =link_to(image_tag("graph4.png", :class => "graph"), "http://www.google.com")
+          / %h2.squaretxt Heading
+          / %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      .col-md-4.square
+        .d3visualbyte
+          =link_to(image_tag("graph5.png", :class => "graph"), "http://www.google.com")
+          / %h2.squaretxt Heading
+          / %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      .col-md-4.square
+        .d3visualbyte
+          =link_to(image_tag("graph6.png", :class => "graph"), "http://www.google.com")
+          / %h2.squaretxt Heading
+          / %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        
+
+    / .col-lg-2
+    /   %h1.teamname Lance Pflieger
+    /   %p.teamtitle Programming, Genetics Domain Expert, D3-developer
+    /   %p.teamextra Anything extra can go here about the individual.
+    /   %a LinkedIn 
+    / %form.col-lg-12
+    /   %h1.form Feedback
+    /   .form-group
+    /     %input#exampleInputEmail1.cvform-control{:placeholder => "Enter Email", :type => "email"}
+    /   .col-lg-2
+    /     %button.cvbtn Submit
+    / .col-lg-4.graph
+    /   %h1.important Important Text
+    /   %p.graph Secondary Text
+
+    =image_tag "bottomLogo2.png", width: "100%"
+    .col-md-12.footer
+      / %a.foot{:href => "#about"} About 
+      / %a.foot{:href => "#feedback"} Feedback 
+      / %a.foot{:href => "#donate"} Donate 
+   
+      %ul.footer
+        %li
+          %a.foot{:href => "#donate"} Donate
+        %li
+          %a.foot{:href => "#feedback"} Feedback
+        %li
+          %a.foot{:href => "#about"} About
+
+    .col-md-1.footer
+      %p.footer © Visualize ClinVar 2015
