@@ -29,18 +29,18 @@
 }
 
 .component {
-    fill: #e1e1e1;
+    fill: rgb(162,171,176);
 }
 
 .component .label {
     font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
     text-anchor: middle;
-    fill: #0000FF;
+    fill: #224663;
 }
 
 .arc {
     stroke-weight:0.1;
-    fill: #4e8fff;
+    fill: rgb(22,46,63);
 }
 
 
@@ -53,6 +53,7 @@
 .label {
     font-family:  Myriad, "Helvetic Neue", Helvetica, Arial;
     text-anchor: middle;
+    color: #f73a18;
 }
 
 .radial-svg {
@@ -108,4 +109,8 @@
     background: #FFFFFF;
     color: #000;
 
+}
+
+.centerlabel {
+    fill: #f73a18;
 }
