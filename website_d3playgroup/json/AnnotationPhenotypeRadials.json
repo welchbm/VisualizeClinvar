@@ -1,0 +1,17 @@
+{
+  "graph": {
+    "text": {
+      "title": "Annotation of phenotype with Gene/database information",
+      "short": "Percent of variants annotated by specific external resources.",
+      "long": ""
+    },
+    "metadata": {
+      "id": "1006"
+      "type": "radial"
+      "created": "2/28/2014"
+      "updated": "6/1/2015",
+      "author": "Bret Heale"
+      "notes": ""
+    }
+  }
+}
