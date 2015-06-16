@@ -25,14 +25,12 @@ var addEvent = function(elem, type, eventHandle) {
 
 function varStarNumCurrent() {
 
-var color = d3.scale.category20();
 
 var star_Num_tsv = ["starNumCurrent", pageName].join('') // this takes care of null pageName
 	d3.tsv("data/starNum/"+star_Num_tsv+".tsv", function(data) {
 		return {
 			label: data.label,
 			value: +data.value,
-			color: data.color
 		};
 		}, function(error, data) {
 
@@ -91,10 +89,20 @@ var pie = new d3pie("starNumCurrentgraphic", {
       }
   },
   "misc": {
+		"colors":{
+			"background": "#dae9f2",
+			"segments": ["#F73A18","#142E40","#142E40","#142E40","#142E40","#142E40"],
+		},
       "gradient": {
           "enabled": true,
           "percentage": 100
       }
+	  "canvasPadding": {
+		"top":10,
+		"right":10,
+		"bottom":10,
+		"left":10,
+		}
   }
 })
 })

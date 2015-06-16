@@ -30,7 +30,6 @@ var var_Interp_tsv = ["varInterp", pageName].join('') // this takes care of null
 		return {
 			label: data.label,
 			value: +data.value,
-			color: data.color
 		};
 		}, function(error, data) {
 	//d3.tsv.parse("data/varType/"+var_interp_tsv+".tsv", function(error, data) { //pageName comes from the page: see html
@@ -91,10 +90,23 @@ var pie = new d3pie("varInterpGraphic", {
       }
   },
   "misc": {
+		"colors":{
+			"background": "#dae9f2",
+			"segments": [
+			"#142E40","#F73A18","#61142D","#F3DC00","#54BF26","#B5DBF2", "#142E40","#F73A18","#61142D","#F3DC00","#54BF26","#B5DBF2","#142E40","#F73A18","#61142D","#F3DC00","#54BF26","#B5DBF2",
+			],
+
+		},
       "gradient": {
           "enabled": true,
           "percentage": 100
       }
+	  "canvasPadding": {
+		"top":10,
+		"right":10,
+		"bottom":10,
+		"left":10,
+		}
   }
 })
 })
