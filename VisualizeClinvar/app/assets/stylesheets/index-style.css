@@ -80,7 +80,7 @@ button.cvbtn:hover{
   text-decoration:none
   }
 
-button.dnbtn{
+/*button.dnbtn{
   width: 87px;
   height:  36px;
   padding: 3px;
@@ -100,7 +100,7 @@ button.dnbtn{
   -moz-user-select:none;
   -ms-user-select:none;
   user-select:none;
-  }
+  }*/
 
 button.dnbtn:hover{
   background-color:#A6980F;
@@ -199,7 +199,7 @@ body, p{
   cursor:pointer;
 }
 
-.paypal{
+/*.paypal{
   display:inline-block;
   min-width: 50px;
   height:  36px;
@@ -207,7 +207,7 @@ body, p{
   position:  relative;
   right:  -651px;
   margin-top:  69px;
-}
+}*/
 
 
 h1.land{
@@ -255,7 +255,7 @@ h2.squaretxt:hover {
   text-align:left;
   vertical-align: middle;
 }
-p.footer {
+.copyright {
   font-size: 1.2rem;
   color: #B5DBF2;
   margin: 0 auto;
@@ -288,6 +288,12 @@ ul.footer{
   width: 100%;
   padding-bottom:5px;
 }
+
+.footer a {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .square {
   display: block;
   margin-left: auto;

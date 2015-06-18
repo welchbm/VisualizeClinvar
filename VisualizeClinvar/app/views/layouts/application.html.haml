@@ -1,0 +1,30 @@
+%html
+  %head
+    %title VisualizeClinvar
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container-fluid
+      .row
+        .col-lg-12
+          = image_tag "visualizeClinvarLogo.jpg", width: '35%', :class => "logo"
+          .btn-group
+            %button.btn
+              = image_tag "paypal.gif", width: '20%', :class => "paypal"
+            %button.btn Donate Now
+          %a.nav-feedback{:href => "#feedback"} Feedback
+          %a.nav-about{:href => "#about"} About
+
+    = yield
+
+    / = image_tag "bottomLogo2.png", width: "100%"
+    %nav.footer.navbar.navbar-default
+      .container-fluid
+        .row
+          .col-lg-12.text-center.navbar-text
+            %a.foot{ href: "#donate" } Donate
+            %a.foot{ href: "#feedback" } Feedback
+            %a.foot{ href: "#about" } About
+        .row
+          %p.copyright © Visualize ClinVar 2015
