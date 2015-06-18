@@ -125,46 +125,25 @@ a:hover {
 a:focus {
   outline: none;
 }
-a.nav-feedback {
+a.nav {
   display:inline-block;
-  position:  relative;
-  right:  -564px;
+  float:right;
   text-transform:uppercase;
-  font-size:1.8rem;
+  font-size:1.2rem;
   font-weight:bold;
   text-align: right;
   text-decoration: none;
-  margin-top: 0px;
-  margin-right: 2%;
+  margin-top: 20px;
+  margin-right: 5%;
   color: #142E40;
+  padding-top: 35px;
 }
-a.nav-about {
-  display:inline-block;
-  position:  relative;
-  right:  -345px;
-  text-transform:uppercase;
-  font-size:1.8rem;
-  font-weight:bold;
-  text-align: right;
-  text-decoration: none;
-  margin-top: 0px;
-  margin-right: 2%;
-  color: #142E40;
-}
-a.nav-feedback:hover {
+a.nav:hover {
   color: #142E40;
   text-decoration: none;
   border-bottom: 2px solid #142E40;
 }
-a.nav-feedback:focus {
-  outline: none;
-}
-a.nav-about:hover {
-  color: #142E40;
-  text-decoration: none;
-  border-bottom: 2px solid #142E40;
-}
-a.nav-about:focus {
+a.nav:focus {
   outline: none;
 }
 a.foot {
