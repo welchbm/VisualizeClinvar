@@ -125,7 +125,7 @@ a:hover {
 a:focus {
   outline: none;
 }
-a.nav {
+a.head {
   display:inline-block;
   float:right;
   text-transform:uppercase;
@@ -133,17 +133,16 @@ a.nav {
   font-weight:bold;
   text-align: right;
   text-decoration: none;
-  margin-top: 20px;
   margin-right: 5%;
   color: #142E40;
-  padding-top: 35px;
+  line-height: 156px;
 }
-a.nav:hover {
+a.head:hover {
   color: #142E40;
   text-decoration: none;
   border-bottom: 2px solid #142E40;
 }
-a.nav:focus {
+a.head:focus {
   outline: none;
 }
 a.foot {
@@ -173,8 +172,6 @@ body, p{
   margin: 0 auto;
 }
 .logo{
-  display:inline-block;
-  min-width: 250px;
   cursor:pointer;
 }
 

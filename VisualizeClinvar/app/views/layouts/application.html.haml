@@ -8,10 +8,10 @@
     .container-fluid
       .row
         .col-lg-12
-          = image_tag "visualizeClinvarLogo.jpg", width: '35%', :class => "logo"
-          %a.nav{:href => "#donate"} Donate
-          %a.nav{:href => "#feedback"} Feedback
-          %a.nav{:href => "#about"} About
+          = image_tag "visualizeClinvarLogo.jpg", :class => "logo pull-left"
+          %a.head{:href => "#donate"} Donate
+          %a.head{:href => "#feedback"} Feedback
+          %a.head{:href => "#about"} About
 
     = yield
 
