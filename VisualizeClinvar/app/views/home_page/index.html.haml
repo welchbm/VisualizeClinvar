@@ -1,5 +1,5 @@
 %tag.class#id{name: 'this', value: 'that'}
-.container-fluid
+.container-fluid#page_content
   .row
     .col-lg-12
       %h1.land
@@ -14,49 +14,19 @@
         %button.cvbtn Search
 
   .row
-    .col-md-4.square
-      .d3visualbyte
-        =image_tag("cat.jpg", :class => "graph")
-        %br
-        %a.text{ href: '#' }
-          %h2.squaretxt Heading
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    .col-md-4.square
-      .d3visualbyte
-        =image_tag("graph2.png", :class => "graph")
-        %br
-        %a.text{ href: '#' }
-          %h2.squaretxt Heading
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    .col-md-4.square
-      .d3visualbyte
-        =image_tag("graph3.png", :class => "graph")
-        %br
-        %a.text{ href: '#' }
-          %h2.squaretxt Heading
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    = render 'graph', id: 'historyGraphic'
+
+    = render 'graph', id: 'quickStats'
+
+    = render 'graph', id: 'varInterpGraphic'
+
   .row
-    .col-md-4.square
-      .d3visualbyte
-        =image_tag("graph4.png", :class => "graph")
-        %br
-        %a.text{ href: '#' }
-          %h2.squaretxt Heading
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    .col-md-4.square
-      .d3visualbyte
-        =image_tag("graph5.png", :class => "graph")
-        %br
-        %a.text{ href: '#' }
-          %h2.squaretxt Heading
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    .col-md-4.square
-      .d3visualbyte
-        =image_tag("graph6.png", :class => "graph")
-        %br
-        %a.text{ href: '#' }
-          %h2.squaretxt Heading
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    = render 'graph', id: 'geneBubbleIc'
+
+    = render 'graph', id: 'graph5'
+
+    = render 'graph', id: 'graph6'
+
 .container-fluid
   .row
     =image_tag "footer_design.jpg", :class => "footer_design"
@@ -75,5 +45,3 @@
   / .col-lg-4.graph
   /   %h1.important Important Text
   /   %p.graph Secondary Text
-
-

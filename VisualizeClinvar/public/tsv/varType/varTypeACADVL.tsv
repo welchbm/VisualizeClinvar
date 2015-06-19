@@ -1,0 +1,7 @@
+label	value	color
+copy number gain	1	#2482c1
+single nucleotide variant	51	#0c6197
+copy number loss	3	#4daa4b
+Variation	1	#90c469
+Deletion	7	#daca61
+Duplication	1	#e4a14b

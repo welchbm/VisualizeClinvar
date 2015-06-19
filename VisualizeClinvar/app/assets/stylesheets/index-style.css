@@ -329,13 +329,9 @@ ul.footer{
   margin-left: auto;
   margin-right: auto;
   background-color: #DAE9F2;
-  height: 400px;
+  /*height: 400px;*/
   vertical-align: middle;
 }
-/*.d3visualbyte:hover {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0.5);
-}*/
 /* END Containers */
 
 /* Graph & Charts */
@@ -356,6 +352,7 @@ ul.footer{
   font-weight: bold;
   position: absolute;
   top: 0;
+  left: 0;
   background-color:rgba(0,0,0,0.5);
   width: 100%;
   height: 100%;
@@ -383,9 +380,6 @@ h1.important{
   color:#F73A18;
   font-weight:bold;
 }
-/*p.graph{
-  color:#999999;
-}*/
 /* END Graph & Charts */
 
 
