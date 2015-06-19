@@ -179,8 +179,8 @@ a.head:focus {
 }
 a.foot {
   text-transform:uppercase;
-  width: 33%;
-  font-size:1.4rem;
+  width: 15%;
+  font-size:1.8rem;
   font-weight:bold;
   text-align: center;
   text-decoration: none;
@@ -294,24 +294,19 @@ ul.footer{
 }
 
 .footer a {
-  padding-left: 100px;
-  padding-right: 20px;
   padding-top:  20px;
   position: relative;
-  left: -37px;
   display:  inline-block;
-  float:  right;
-  /*margin-top: 100px;*/
 }
 
 
 .footer_design {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 10;
   top:32px;
-  left: -545px;
-  display:inline-block;
-  float: right;
+  display:block;
 }
 
 .square {
