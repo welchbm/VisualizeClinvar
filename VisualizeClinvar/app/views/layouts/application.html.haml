@@ -9,7 +9,8 @@
       .row
         .col-lg-12
           = image_tag "visualizeClinvarLogo.jpg", :class => "logo pull-left"
-          %a.head{:href => "#donate"} Donate
+          %button.btn
+            = image_tag "donate_now.jpg", :class => "paypal"
           %a.head{:href => "#feedback"} Feedback
           %a.head{:href => "#about"} About
 
@@ -19,9 +20,8 @@
     %nav.footer.navbar.navbar-default
       .container-fluid
         .row
-          .col-lg-12.text-center.navbar-text
-            %a.foot{ href: "#donate" } Donate
-            %a.foot{ href: "#feedback" } Feedback
-            %a.foot{ href: "#about" } About
+          %a.foot{ href: "#donate" } Donate
+          %a.foot{ href: "#feedback" } Feedback
+          %a.foot{ href: "#about" } About
         .row
           %p.copyright © Visualize ClinVar 2015
