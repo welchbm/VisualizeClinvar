@@ -319,16 +319,14 @@ ul.footer{
   margin-right: auto;
   position: relative;
   background-color: #FFFFFF;
-  padding: 10px;
   vertical-align: middle;
+  margin: 10px;
 }
 .d3visualbyte{
   position: relative;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #DAE9F2;
-  /*height: 400px;*/
+  overflow: hidden;
   vertical-align: middle;
 }
 /* END Containers */
