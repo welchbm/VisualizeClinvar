@@ -31,7 +31,7 @@ header {
   padding-right: 1px;
 }
 .col-md-4{
-  position:  relative;
+  border: 50px;
 }
 
 .cvform-control{
@@ -159,7 +159,7 @@ a.head {
   display:inline-block;
   float:right;
   text-transform:uppercase;
-  font-size:1.8rem;
+  font-size:2.0rem;
   font-weight:bold;
   text-align: right;
   text-decoration: none;
@@ -167,8 +167,8 @@ a.head {
   color: #142E40;
   line-height: 156px;
   position: relative;
-  top: -23px;
-  left: 93px;
+  top: -25px;
+  left: 111px;
 }
 a.head:hover {
   color: #142E40;
@@ -206,7 +206,8 @@ body, p{
   cursor:pointer;
   width: 430px;
   position: relative;
-  margin: 29px;
+  margin-top: 30px;
+  margin-left: -10px;
 }
 
 .paypal{
@@ -294,8 +295,10 @@ ul.footer{
 }
 
 .footer a {
-  padding-top:  20px;
+  padding-top:  36px;
+  padding-bottom:  18px;
   position: relative;
+  font-size: 2.0rem;
   display:  inline-block;
 }
 
@@ -305,7 +308,8 @@ ul.footer{
   margin-left: auto;
   margin-right: auto;
   z-index: 10;
-  top:32px;
+  width:130px;
+  top:36px;
   display:block;
 }
 
