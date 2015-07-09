@@ -1,6 +1,30 @@
 .container-fluid
   .row
-    = link_to "<- Back to dashboard", root_url
+    .col-md-12
+      = link_to "<- Back to dashboard", root_url
   .row
-    .page-header.text-center
-      .h1= @page_title
+    .col-md-12
+      .page-header.text-center
+        %h1
+          = @graph.title
+          %br
+          %small= @graph.short_description
+  .row
+    .col-md-12
+      .d3-graph
+  .row
+    .col-md-12
+      %p= @graph.long_description
+  .row.text-center
+    .col-md-2.col-md-offset-3.graph-info
+      Last updated:
+      %br
+      %strong= @graph.last_updated
+    .col-md-2.graph-info
+      Primary author:
+      %br
+      %strong= @graph.author
+    .col-md-2.graph-info
+      Graph type:
+      %br
+      %strong= @graph.type

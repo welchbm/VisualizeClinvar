@@ -1,5 +1,6 @@
 class GraphsController < ApplicationController
   def show
-    @page_title = params[:id].titleize
+    @graph = Graph.new(params[:id])
+    redirect_to root_url if @graph.error
   end
 end
