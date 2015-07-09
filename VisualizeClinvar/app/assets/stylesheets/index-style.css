@@ -29,6 +29,11 @@ header {
 .col-lg-12{
   padding-left: 1px;
   padding-right: 1px;
+  padding-top:15px;
+}
+
+.welcome{
+  padding-top: 45px;
 }
 .col-md-4{
   border: 50px;
@@ -163,12 +168,13 @@ a.head {
   font-weight:bold;
   text-align: right;
   text-decoration: none;
-  margin-right: 1%;
   color: #142E40;
-  line-height: 156px;
+  line-height: 10px;
   position: relative;
-  top: -25px;
-  left: 111px;
+  top: 50px;
+  left: -29px;
+  height: 10px;
+  padding-right: 10px;
 }
 a.head:hover {
   color: #142E40;
