@@ -38,7 +38,7 @@ header {
   display:inline-block;
   width:59%;
   height: 50px;
-  padding: 15px;
+  padding: 9px;
   margin-left: 17%;
   margin-right: 10px;
   font-size:2.5rem;
@@ -309,7 +309,7 @@ ul.footer{
   margin-right: auto;
   z-index: 10;
   width:130px;
-  top:36px;
+  top:48px;
   display:block;
 }
 
