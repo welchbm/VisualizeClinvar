@@ -1,5 +1,79 @@
-graph1:
-  title: Graph One
+-
+  id: gene-bubble
+  title: Gene Bubble
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: bubble graph?
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph2
+  title: Graph Two
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph3
+  title: Graph Three
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph4
+  title: Graph Four
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph5
+  title: Graph Five
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph6
+  title: Graph Six
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph7
+  title: Graph Seven
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+
+-
+  id: graph8
+  title: Graph Eight
+  short_description: This is the short description.
+  long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+  type: Line graph
+  author: J
+  last_updated: mm/dd/yy
+
+-
+  id: graph9
+  title: Graph Nine
   short_description: This is the short description.
   long_description: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
   type: Line graph

@@ -1,13 +1,14 @@
 class Graph
-  attr_reader :error
-
-  def initialize(id)
-    @config = YAML::load(ERB.new(IO.read(
-                                  File.join(Rails.root, 'config', 'graphs.yml'))).result)[id]
-    @error = @config.nil?
+  # find graph by id
+  def self.find(id)
+    YAML::load(ERB.new(IO.read(
+                        File.join(Rails.root, 'config', 'graphs.yml'))).result).select { |g| g["id"] == id }.first
   end
 
-  def method_missing(name, *args, &block)
-    @config[name.to_s]
+  # return all items in graphs.yml in the order
+  # in which they are listed there
+  def self.all
+    YAML::load(ERB.new(IO.read(
+                        File.join(Rails.root, 'config', 'graphs.yml'))).result)
   end
 end

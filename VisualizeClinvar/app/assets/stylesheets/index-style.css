@@ -338,13 +338,6 @@ ul.footer{
 /* END Containers */
 
 /* Graph & Charts */
-.graph{
-  padding: 20px;
-  width: 100%;
-  max-height: 400px;
-  max-width: 500px;
-  z-index: 1;
-}
 /*.graph:hover{
   background-color: #000000;
   opacity: 0.1;
