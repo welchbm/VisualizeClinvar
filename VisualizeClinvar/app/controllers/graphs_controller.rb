@@ -1,6 +1,12 @@
 class GraphsController < ApplicationController
+
+  # home page
+  def index
+    @graphs = Graph.all_in_gene('global')
+  end
+
+  # show interactive graph
   def show
-    @graph = Graph.find(params[:id])
-    redirect_to root_url if @graph.nil?
+    @graph = Graph.new(params[:gene], params[:graph])
   end
 end

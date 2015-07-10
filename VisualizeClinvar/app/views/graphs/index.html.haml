@@ -16,7 +16,7 @@
   - @graphs.each_slice(3) do |row|
     .row
       - row.each do |graph|
-        = render 'graph', id: graph["id"]
+        = render 'static_graph', graph: graph
 
   / .col-lg-2
   /   %h1.teamname Lance Pflieger
