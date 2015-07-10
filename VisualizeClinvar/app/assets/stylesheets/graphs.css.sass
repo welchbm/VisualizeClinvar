@@ -1,16 +1,80 @@
 // Place all the styles related to the graphs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.graph-info
-  color: #999999
+body.graphs
+  .graph-info
+    color: #999999
 
-.graph
-  margin: auto
+  .graph
+    margin: auto
+    background: #DAE9F2
+    padding: 10px
 
-.graph-container
-  margin-bottom: 25px
+  .graph-container
+    margin-bottom: 25px
 
-.description-container
-  margin-bottom: 25px
+  .description-container
+    margin-bottom: 25px
 
-.graph-info-container
+  .graph-info-container
+
+  /* phenoJungle */
+  .node circle
+    fill: #fff
+    stroke: steelblue
+    stroke-width: 3px
+
+  .node text
+    font: 12px sans-serif
+
+  .link
+    fill: none
+    stroke: #ccc
+    stroke-width: 2px
+
+  /* for visual-bytes that use words and numbers */
+  .graphicWords
+    fill: #999999
+    font-weight: normal
+
+  .graphicNumber
+    fill: #142E40
+    font-weight:bold
+
+
+
+  /* blueish background rectangle */
+  svg
+    margin: 0 auto
+    display: block
+
+  /* all things charts */
+  .line
+    fill: none
+    stroke: #F73A18
+    stroke-width: 0.2em
+
+  .axis
+    fill: #999999
+    stroke-width: 0.2em
+
+  .axis path, .axis line
+    fill: #999999
+    stroke: #999999
+    shape-rendering: crispEdges
+
+  /* grid is for the lines on the graph */
+  .grid .tick
+    stroke: #999999
+    stroke-width: 1px
+    shape-rendering: crispEdges
+
+  .x.grid .tick
+    stroke-dasharray: 5, 5
+
+  .grid path
+    stroke-width: 1px
+
+  .area
+    fill: lightsteelblue
+    stroke-width: 1.5
