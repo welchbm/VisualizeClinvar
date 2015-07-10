@@ -18,4 +18,3 @@
 //= require d3
 //= require d3pie
 //= require url
-//= require geneBubble

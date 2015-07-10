@@ -60,6 +60,11 @@ GEM
     execjs (2.5.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gon (5.2.3)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     haml (4.0.6)
       tilt
     haml-rails (0.9.0)
@@ -125,6 +130,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    request_store (1.1.0)
     ruby_parser (3.7.0)
       sexp_processor (~> 4.1)
     sass (3.4.14)
@@ -170,6 +176,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.1.0)
   d3-rails
+  gon
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails

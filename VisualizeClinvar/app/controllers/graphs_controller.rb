@@ -8,5 +8,6 @@ class GraphsController < ApplicationController
   # show interactive graph
   def show
     @graph = Graph.new(params[:gene], params[:graph])
+    gon.tsv_path = @graph.tsv_path
   end
 end

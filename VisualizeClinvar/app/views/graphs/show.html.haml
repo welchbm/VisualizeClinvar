@@ -1,3 +1,4 @@
+- provide(:graph_js, @graph.js_path)
 .container-fluid
   .row
     .col-md-12
@@ -6,27 +7,27 @@
     .col-md-12
       .page-header.text-center
         %h1
-          = @graph["title"]
+          = @graph.title
           %br
-          %small= @graph["short_description"]
+          %small= @graph.short_description
   .row.graph-container
     .col-md-6.col-md-offset-3
-      .graph{ id: "#{@graph['id']}-graph" }
+      .graph
 
   .row.description-container
     .col-md-6.col-md-offset-3
-      %p= @graph["long_description"]
+      %p= @graph.long_description
 
   .row.text-center.graph-info-container
     .col-md-2.col-md-offset-3.graph-info
       Last updated:
       %br
-      %strong= @graph["last_updated"]
+      %strong= @graph.updated
     .col-md-2.graph-info
       Primary author:
       %br
-      %strong= @graph["author"]
+      %strong= @graph.author
     .col-md-2.graph-info
       Graph type:
       %br
-      %strong= @graph["type"]
+      %strong= @graph.type
