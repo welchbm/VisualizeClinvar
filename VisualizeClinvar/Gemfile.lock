@@ -73,6 +73,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    high_voltage (2.3.0)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -178,6 +179,7 @@ DEPENDENCIES
   d3-rails
   gon
   haml-rails
+  high_voltage
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
@@ -191,4 +193,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.4
+   1.10.5

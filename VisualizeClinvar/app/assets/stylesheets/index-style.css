@@ -176,6 +176,41 @@ a.head {
   height: 10px;
   padding-right: 10px;
 }
+
+.head_links a{
+  text-decoration: none;
+  font-size:1.4rem;
+  color: #54BF26;
+  cursor: pointer;
+  display:inline-block;
+  float:right;
+  text-transform:uppercase;
+  font-size:2.0rem;
+  font-weight:bold;
+  text-align: right;
+  text-decoration: none;
+  color: #142E40;
+  line-height: 10px;
+  position: relative;
+  top: 50px;
+  left: -29px;
+  height: 10px;
+  padding-right: 10px;
+}
+
+.head_links a:hover{
+  color: #142E40;
+  text-decoration: underline;
+}
+
+.head_links a:focus{
+  outline: none;
+}
+
+.box{
+  margin-bottom: 50px;
+}
+
 a.head:hover {
   color: #142E40;
   text-decoration: underline;
