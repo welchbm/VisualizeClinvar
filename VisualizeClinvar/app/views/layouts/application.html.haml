@@ -14,8 +14,10 @@
           = image_tag "visualizeClinvarLogo.png", :class => "logo pull-left"
           / %button.btn
           /   = image_tag "donate_now.jpg", :class => "paypal"
-          %a.head.feedback{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
-          %a.head.about{:href => "#about"} About
+          .head_links
+            %a.head.feedback{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
+            / %a.head{:href => "#about"} About
+            = link_to 'About', page_path('about')
 
     = yield
 
