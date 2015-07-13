@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :graphs, only: [:index]
   get 'graphs/:gene/:graph' => 'graphs#show', as: :graph
 
+  resources :feedback, only: [:create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

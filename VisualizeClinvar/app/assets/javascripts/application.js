@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require feedback
 //= require d3
 //= require d3pie
 //= require url
