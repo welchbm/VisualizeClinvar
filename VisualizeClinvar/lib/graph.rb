@@ -4,23 +4,26 @@ class Graph
               :tsv_path, :static_image_path, :js_path
 
   def initialize(gene, graph)
-    root = File.join(Rails.root, "public/visualize/#{gene}/#{graph}")
+    root1   = File.join(Rails.root, "public/visualize/#{gene}/#{graph}")
     @graph = graph
-    @gene = gene
-    puts "parsing: #{File.join(root, 'description.json')}"
-    description = JSON.parse(File.read(File.join(root, "description.json")))
-    @title = description["graph"]["text"]["title"]
+    @gene  = gene
+    description = JSON.parse(File.read(File.join(root1, "description.json")))
+    @title             = description["graph"]["text"]["title"]
     @short_description = description["graph"]["text"]["short"]
-    @long_description = description["graph"]["text"]["long"]
-    @type = description["graph"]["metadata"]["type"]
-    @updated = description["graph"]["metadata"]["updated"]
-    @author = description["graph"]["metadata"]["author"]
+    @long_description  = description["graph"]["text"]["long"]
+    @type              = description["graph"]["metadata"]["type"]
+    @updated           = description["graph"]["metadata"]["updated"]
+    @author            = description["graph"]["metadata"]["author"]
 
     # now make root relative to public directory
-    root = "/visualize/#{gene}/#{graph}/"
-    @tsv_path = "#{root}/data.tsv"
-    @static_image_path = "#{root}/static.jpg"
-    @js_path = "#{root}/view.js"
+    root2 = "/visualize/#{gene}/#{graph}/"
+    @tsv_path = "#{root2}/data.tsv"
+    @static_image_path = "#{root2}/static.jpg"
+    # if no view.js exists in gene's directory,
+    # use view from global/
+    @js_path = File.exists?("#{root1}/view.js") ?
+                 "#{root2}/view.js" :
+                 "/visualize/global/#{graph}/view.js"
   end
 
   def self.all_in_gene(gene)

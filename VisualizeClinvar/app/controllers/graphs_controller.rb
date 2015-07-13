@@ -1,8 +1,8 @@
 class GraphsController < ApplicationController
 
-  # home page
+  # show graphs for a gene
   def index
-    @graphs = Graph.all_in_gene('global')
+    @graphs = Graph.all_in_gene(params[:gene] || 'global')
   end
 
   # show interactive graph

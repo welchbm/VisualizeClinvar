@@ -7,7 +7,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag yield(:graph_js), 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body{ class: "#{controller.controller_name}" }
+  %body{ class: "#{controller.controller_name} #{action_name}" }
     .container-fluid
       .row
         .col-lg-12
