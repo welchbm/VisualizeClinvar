@@ -211,6 +211,21 @@ a.head {
   margin-bottom: 50px;
 }
 
+.img-responsive{
+  display: block;
+  max-width: 90%;
+  height: auto;
+}
+
+.top{
+  width: 100%;
+}
+
+.col-md-3 h4 p{
+  font-size: 19px;
+  font-weight: 300;
+}
+
 a.head:hover {
   color: #142E40;
   text-decoration: underline;
@@ -271,10 +286,8 @@ h1.form{
 }
 h1.teamname{
   color:#142E40;
-  font-size: 1.8rem;
+  font-size: 4.8rem;
   font-weight:bold;
-  margin: 0 auto;
-  text-align:left;
   margin-bottom:1.6rem;
 }
 p.land{
@@ -341,6 +354,10 @@ ul.footer{
   position: relative;
   font-size: 2.0rem;
   display:  inline-block;
+}
+
+.container{
+  width: 100%;
 }
 
 

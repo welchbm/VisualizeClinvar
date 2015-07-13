@@ -1,45 +1,76 @@
 <!DOCTYPE html>
 %html
-	%h1.text-center 
-		The Team
-	%h4.text-center
-		Blerb about the team if you want one. It can go here.
-	.box
-	.row
-		.col-md-1
-		.col-md-1.text-center
-			= image_tag "individual_photo.png"
-		.vertical-box
-		.col-md-1
-		.col-md-3
-			%h4
-				Brandon Welch
-			%h5
-				Project Lead, Genetics
-		.col-md-1.text-center
-			= image_tag "individual_photo.png"
-		.col-md-1
-		.col-md-3
-			%h4
-				Brandon Welch
-			%h5
-				Project Lead, Genetics
-	.box
-	.row
-		.col-md-1
-		.col-md-1.text-center
-			= image_tag "individual_photo.png"
-		.col-md-1
-		.col-md-3
-			%h4
-				Brandon Welch
-			%h5
-				Project Lead, Genetics
-		.col-md-1.text-center
-			= image_tag "individual_photo.png"
-		.col-md-1
-		.col-md-3
-			%h4
-				Brandon Welch
-			%h5
-				Project Lead, Genetics
+.box
+.row
+	= link_to "<- Back to dashboard", root_url
+	.top.text-center
+		%h1.teamname
+			%strong The Team
+		%h2
+			Blerb about the team if you want one. It can go here.
+		.box
+	.container
+		.row
+			.col-md-1
+			.col-md-2.text-right
+				= image_tag "individual_photo.png", :class => "img-responsive"
+			.col-md-3
+				%h4
+					%strong Brandon Welch
+					%p
+						%br
+						Project Lead, Genetics 
+						%br
+						Domain Expert, Database
+						%br
+						Design
+				%p.small
+					Anything extra can go here about the individual.
+					%br
+					%u LinkedIn Address
+			.col-md-2.text-right
+				= image_tag "individual_photo.png", :class => "img-responsive"
+			.col-md-3
+				%h4
+					%strong Bret Heale
+					%p
+						%br
+						Data-modeling, Genetics
+						%br
+						Domain Expert, D3-developer
+				%p.small
+					Anything extra can go here about the individual.
+					%br
+					%u LinkedIn Address
+			.col-md-1
+		.box
+		.row
+			.col-md-1
+			.col-md-2.center-block
+				= image_tag "individual_photo.png", :class => "img-responsive"
+			.col-md-3
+				%h4
+					%strong Lance Pflieger
+					%p
+						%br
+						Programming, Genetics
+						%br
+						Domain Expert, D3-developer
+				%p.small
+					Anything extra can go here about the individual.
+					%br
+					%u LinkedIn Address
+			.col-md-2.center-block
+				= image_tag "individual_photo.png", :class => "img-responsive"
+			.col-md-3
+				%h4
+					%strong Seth Russell
+					%p
+						%br
+						Software engineer, Layout Design
+						%br
+				%p.small
+					Anything extra can go here about the individual.
+					%br
+					%u LinkedIn Address
+			.col-md-1
