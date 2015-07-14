@@ -11,12 +11,10 @@
     .container-fluid
       .row
         .col-lg-12
-          = image_tag "visualizeClinvarLogo.png", :class => "logo pull-left"
-          / %button.btn
-          /   = image_tag "donate_now.jpg", :class => "paypal"
+          .logo
+            = link_to image_tag( 'visualizeClinvarLogo.png'), root_url, class: 'pull-left'
           .head_links
             %a.head.feedback{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
-            / %a.head{:href => "#about"} About
             = link_to 'About', page_path('about')
 
     = yield
@@ -27,8 +25,8 @@
     %nav.footer.navbar.navbar-default.text-center
       .container-fluid
         .row
-          %a.foot{ href: "#about" } About
-          %a.foot{ href: "#feedback" } Feedback
+          = link_to 'About', page_path('about'), class: 'foot'
+          %a.foot{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
           %a.foot{ href: "#donate" } Donate
         .row
           %p.copyright © Visualize ClinVar 2015
