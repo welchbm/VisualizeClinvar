@@ -5,7 +5,7 @@
     = include_gon
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = javascript_include_tag yield(:graph_js), 'data-turbolinks-track' => true
+    = content_for :graph_js
     = csrf_meta_tags
   %body{ class: "#{controller.controller_name} #{action_name}" }
     .container-fluid

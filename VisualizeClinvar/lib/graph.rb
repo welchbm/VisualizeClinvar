@@ -18,7 +18,6 @@ class Graph
     # now make root relative to public directory
     root2 = "/visualize/#{gene}/#{graph}/"
     @tsv_path = "#{root2}/data.tsv"
-    @static_image_path = "#{root2}/static.jpg"
     # if no view.js exists in gene's directory,
     # use view from global/
     @js_path = File.exists?("#{root1}/view.js") ?

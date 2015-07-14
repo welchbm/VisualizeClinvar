@@ -1,6 +1,9 @@
+- content_for :graph_js do
+  = javascript_include_tag graph.js_path, 'data-turbolinks-track' => true
+
 .col-lg-4
-  .square.d3visualbyte{ id: "#{graph.graph}" }
-    = image_tag("#{graph.static_image_path}", class: "graph")
+  .square.d3visualbyte
+    .graph{ class: "#{graph.graph}" }
     = link_to graph_url(gene: graph.gene, graph: graph.graph), class: 'text' do
       %h2.squaretxt= graph.title
       %p= graph.short_description

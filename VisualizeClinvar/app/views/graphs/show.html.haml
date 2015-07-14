@@ -1,4 +1,7 @@
-- provide(:graph_js, @graph.js_path)
+/- provide(:graph_js, @graph.js_path)
+- content_for :graph_js do
+  = javascript_include_tag @graph.js_path, 'data-turbolinks-track' => true
+
 .container-fluid
   .box
   .row
@@ -12,7 +15,7 @@
           %small= @graph.short_description
   .row.graph-container
     .col-md-6.col-md-offset-3
-      .graph
+      .graph{ class: "#{@graph.graph}" }
 
   .row.description-container
     .col-md-6.col-md-offset-3
