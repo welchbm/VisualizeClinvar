@@ -18,9 +18,16 @@ header {
   float:right;
 }
 /* Forms and Dialog CSS */
-.row{
-  padding-left:30px;
-  padding-right:30px;
+.row.graph-row {
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }
 
 .col-lg-12{
@@ -369,7 +376,8 @@ ul.footer{
   position: relative;
   background-color: #FFFFFF;
   vertical-align: middle;
-  margin: 10px;
+  /* margin: 10px; */
+  height: 100%;
 }
 .d3visualbyte{
   position: relative;
@@ -389,6 +397,11 @@ ul.footer{
   background-color: #000000;
   opacity: 0.1;
 }*/
+
+.graph-row .col-lg-4 {
+  padding: 7.5px;
+}
+
 .text {
   padding: 10px;
   font-size: 24px;

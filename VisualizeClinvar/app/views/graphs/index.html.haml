@@ -14,7 +14,7 @@
         %button.cvbtn Search
 
   - @graphs.each_slice(3) do |row|
-    .row
+    .row.row-eq-height.graph-row
       - row.each do |graph|
         = render 'static_graph', graph: graph
 
