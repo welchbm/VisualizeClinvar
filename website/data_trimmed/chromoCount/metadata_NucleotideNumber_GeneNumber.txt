@@ -1,8 +1,0 @@
-Gene numbers are approximates from: http://www.ncbi.nlm.nih.gov/books/NBK22266/
-
-Nucleotides per chromosome as of build 38p1 from:
-http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/human/data/
-
-Mitochondrial information from: http://www.nature.com/nature/journal/v290/n5806/abs/290457a0.html
-
-

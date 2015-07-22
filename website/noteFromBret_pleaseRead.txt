@@ -1,9 +1,0 @@
-The data folder dataComplete12142014 has well over 30,000 files. This is why it has been zipped. Please unzip locally or use the trimmed folder data_trimmed for data.
-These files contain the data for the d3 scripts we have used. To use, locally you will need to rename the folder to data.
-
-On the current website indec.html is the forward facing page.
-indextest.html has historically been used to pre-test shortly before making changes to index.html
-
-
-Feel free to contact me with questions - Wellcome Aboard!
-Bret bheale@gmail.com
