@@ -22,7 +22,7 @@ require 'capistrano/rvm'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
-require 'capistrano/delayed-job'
+#require 'capistrano/delayed-job'
 require 'capistrano/rails'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
