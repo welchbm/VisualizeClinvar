@@ -369,6 +369,16 @@ ul.footer{
   display:block;
 }
 
+.blue-mother {
+  background-color: #DAE9F2;
+  margin: 10px;
+}
+
+.white-mother {
+  background-color: #FFFFFF;
+  margin: 10px;
+}
+
 .square {
   display: block;
   margin-left: auto;
