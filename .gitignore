@@ -20,3 +20,8 @@
 .ruby-version
 .ruby-gemset
 .env
+
+config/database.yml
+public/visualize
+public/visualize.zip
+.DS_Store
