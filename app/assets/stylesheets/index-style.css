@@ -23,17 +23,30 @@ header {
   padding-right: 2.5px;
 }
 
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+ul {         
+  padding:0 0 0 0;
+  margin:0 0 0 0;
+}
+ul li {     
+  list-style:none;
+  margin-bottom:25px;         
+}
+
+.graph{
+  position: relative;
+  height: 400px;
+  width: 400px;
+}
+
+.graph img{
+  position: absolute;
 }
 
 .col-lg-12{
   padding-left: 1px;
   padding-right: 1px;
   padding-top:15px;
+  height: 100%;
 }
 
 .col-md-4{
@@ -151,8 +164,7 @@ a {
   cursor: pointer;
 }
 a:hover {
-  color: #327317;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .d3visualbyte a:hover {
@@ -160,7 +172,7 @@ a:hover {
 }
 
 a:focus {
-  outline: none;
+  text-decoration: none;
 }
 a.head {
   display:inline-block;
@@ -201,12 +213,12 @@ a.head {
 }
 
 .head_links a:hover{
-  color: #142E40;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .head_links a:focus{
   outline: none;
+  text-decoration: none;
 }
 
 .box{
@@ -358,6 +370,10 @@ ul.footer{
   width: 100%;
 }
 
+.text a{
+  text-decoration: none;
+}
+
 
 .footer_design {
   position: relative;
@@ -369,12 +385,7 @@ ul.footer{
   display:block;
 }
 
-.blue-mother {
-  background-color: #DAE9F2;
-  margin: 10px;
-}
-
-.white-mother {
+.white-placeholder {
   background-color: #FFFFFF;
   margin: 10px;
 }

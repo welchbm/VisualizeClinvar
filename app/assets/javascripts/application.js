@@ -19,3 +19,4 @@
 //= require d3
 //= require d3pie
 //= require url
+//= require normalize_graph_heights
