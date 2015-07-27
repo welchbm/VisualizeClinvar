@@ -32,16 +32,6 @@ ul li {
   margin-bottom:25px;         
 }
 
-.graph{
-  position: relative;
-  height: 400px;
-  width: 400px;
-}
-
-.graph img{
-  position: absolute;
-}
-
 .col-lg-12{
   padding-left: 1px;
   padding-right: 1px;
