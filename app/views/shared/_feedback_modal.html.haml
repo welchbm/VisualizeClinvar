@@ -1,0 +1,25 @@
+.modal.fade#feedback-modal{ tabindex: "-1", role: "dialog", "aria-labelledby" => "Feedback" }
+  .modal-dialog{ role: "document" }
+    .modal-content
+      = form_tag("/feedback", method: "post", remote: "true") do
+        .modal-header
+          %button.close{ type: "button", data: { dismiss: "modal" }, "aria-label" => "Close" }
+            %span{ aria: { hidden: 'true' }} &times
+          %h4.modal-title
+            Feedback
+        .modal-body
+          .row.form-group
+            .col-sm-6
+              = text_field_tag "feedback[name]", "", placeholder: "Name", class: "form-control"
+            .col-sm-6
+              = email_field_tag "feedback[email]", "", placeholder: "example@email.com", class: "form-control"
+          .row.form-group
+            .col-sm-6
+              = text_field_tag "feedback[institution]", "", placeholder: "Institution (optional)", class: "form-control"
+            .col-sm-6
+              = telephone_field_tag "feedback[phone]", "", placeholder: "Phone (optional)", class: "form-control"
+          .row.form-group
+            .col-sm-12
+              = text_area_tag "feedback[comment]", "", placeholder: "Your feedback", rows: 5, class: "form-control"
+        .modal-footer
+          %input.btn.btn-success{ type: "submit", value: "Submit" }

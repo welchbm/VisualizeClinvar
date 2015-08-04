@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+%html
+  %head
+    %meta{ content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+  %body
+    %p= "Name: #{@params[:name]}"
+    %p= "Email: #{@params[:email]}"
+    %p= "Phone: #{@params[:phone].present? ? @params[:phone] : 'not specified'}"
+    %p= "Institution: #{@params[:institution].present? ? @params[:institution] : 'not specified'}"
+    %p= "Feedback: #{@params[:comment]}"

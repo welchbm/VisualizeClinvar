@@ -1,5 +1,0 @@
-This is a record of all downloads from ClinVar:
-Jan 2 17:11
-Feb 13 18:34
-Mar 7 15:54
-Apr  3 20:55

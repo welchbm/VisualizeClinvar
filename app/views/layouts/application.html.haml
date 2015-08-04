@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title VisualizeClinvar
+    = include_gon
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = content_for :graph_js
+    = csrf_meta_tags
+  %body{ class: "#{controller.controller_name} #{action_name}" }
+    .container-fluid
+      .row
+        .col-lg-12
+          .logo
+            = link_to image_tag( 'visualizeClinvarLogo.png'), root_url, class: 'pull-left'
+          .head_links
+            %a.head.feedback{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
+            = link_to 'About', page_path('about')
+
+    = yield
+
+    .row
+      =image_tag "footer_design.png", :class => "footer_design"
+
+    %nav.footer.navbar.navbar-default.text-center
+      .container-fluid
+        .row
+          = link_to 'About', page_path('about'), class: 'foot'
+          %a.foot{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
+          %a.foot{ href: "#donate" } Donate
+        .row
+          %p.copyright © Visualize ClinVar 2015
+    = render 'shared/feedback_modal'

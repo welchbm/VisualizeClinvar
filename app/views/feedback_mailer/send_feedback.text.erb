@@ -1,0 +1,5 @@
+Name: <%= @params[:name] %>
+Email: <%= @params[:email] %>
+Phone: <%= @params[:phone].present? ? @params[:phone] : 'not specified' %>
+Institution: <%= @params[:institution].present? ? @params[:institution] : 'not specified' %>
+Feedback: <%= @params[:comment] %>
