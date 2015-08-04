@@ -1,0 +1,18 @@
+{
+  "graph": {
+    "text": {
+      "title": "Variant Interpretation",
+      "short": "Current percentage of each interpretation",
+	  "long": "ClinVar variants are annotated with an interpretation. Categories include: confers sensitivity, drug response, protective, Uncertain significance, Likely pathogenic, Pathogenic, conflicting data from submitters, not provided, Likely benign, Benign, other, risk factor association
+."
+		},
+    "metadata": {
+	  "id": "1007"      
+	  "type": "Pie chart"
+	  "created": "2/28/2014"
+	  "updated": "6/16/2015",
+      "author": "Lance Pflieger"
+	  "notes": "TSV is based on current version. Needs changed into a bar chart - possible animation."
+		}
+	}
+}
