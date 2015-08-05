@@ -366,12 +366,10 @@ ul.footer{
 }
 /* END Containers */
 
-/* Graph & Charts */
-/*.graph:hover{
-  background-color: #000000;
-  opacity: 0.1;
-}*/
-
+.graph-row {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
 .text {
   padding: 10px;
