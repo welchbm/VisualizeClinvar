@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'visualize_clinvar'
-set :repo_url, 'git@github.com:HSSC/VisualizeClinvar.git'
+set :repo_url, 'git@github.com:welchbm/VisualizeClinvar.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
