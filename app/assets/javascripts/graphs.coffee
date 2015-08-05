@@ -5,8 +5,14 @@ $ ->
   if $('body.graphs.index').length > 0
     squareUp = ->
       $graphs = $('.blue-mother')
+      height = 0
       $graphs.each (index, elt) ->
-        $(this).height($(this).width())
+        $this = $(this)
+        if $this.parent().hasClass('col-md-4')
+          height = $this.parent().width()
+
+      $graphs.each (index, elt) ->
+        $(this).height(height)
 
     squareUp()
     $(window).resize(squareUp)
