@@ -39,6 +39,12 @@ ul li {
   margin: 1%;
 }
 
+.col-md-8 {
+  padding: 0px;
+  width: 64%;
+  margin: 1%
+}
+
 .cvform-control{
   display:inline-block;
   width:59%;
