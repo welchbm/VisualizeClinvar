@@ -1,0 +1,20 @@
+{
+  "graph": {
+    "text": {
+      "title": "Mapping of Top Ten most Frequently used Diseases to Common Coding Systems",
+      "short": "Provides a visual to show which code systems are used with disease annotations.",
+	  "long": "The paths change colour upon highlighting and display the number of variants mapped from the Disease to the Code System. The circles show the frequency of annotation across all the variants. Not all disease annotations are shown, only the top 10, thus the total number of variants mapped into the Code Systems is larger than the number of variants annotated with the diseases shown. "
+		},
+    "metadata": {
+	  "id": "1004",     
+	  "type": "Modified Two-way Tree Diagram",
+	  "created": "2/28/2014",
+	  "updated": "4/24/2015",
+      "author": "Bret Heale",
+	  "notes": "TSV is based on most recent release."
+		}
+	}
+}
+ 
+
+

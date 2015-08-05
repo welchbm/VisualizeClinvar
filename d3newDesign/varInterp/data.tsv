@@ -1,0 +1,14 @@
+﻿label	value	color
+confers sensitivity	1	#2482c1
+drug response	46	#0c6197
+protective	45	#4daa4b
+Uncertain significance	36191	#90c469
+Likely pathogenic	2640	#daca61
+Pathogenic	35487	#e4a14b
+conflicting data from submitters	1284	#e98125
+not provided	31014	#cb2121
+Likely benign	4645	#830909
+Benign	10988	#923e99
+other	2801	#ae83d5
+risk factor	943	#bf27e3
+association	113	#ce2aeb
