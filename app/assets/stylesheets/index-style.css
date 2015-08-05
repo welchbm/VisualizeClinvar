@@ -197,6 +197,10 @@ a:focus {
   height: auto;
 }
 
+.blurb{
+  padding-bottom: 3%;
+}
+
 .top{
   width: 100%;
 }

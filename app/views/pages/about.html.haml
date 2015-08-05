@@ -3,14 +3,13 @@
 	.top.text-center
 		%h1.teamname
 			%strong The Team
-		%h2
-			Blerb about the team if you want one. It can go here.
-		.box
+		%h2.blurb
+			We believe in the visualization of data to support discovery
 	.container
 		.row
 			.col-md-1
 			.col-md-2.text-right
-				= image_tag "individual_photo.png", :class => "img-responsive"
+				= image_tag "welch.png", :class => "img-responsive"
 			.col-md-3
 				%h4
 					%strong Brandon Welch
@@ -18,15 +17,11 @@
 						%br
 						Project Lead, Genetics 
 						%br
-						Domain Expert, Database
-						%br
-						Design
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
+						Domain Expert, Database Design
+					%a 
+						= link_to 'Linkedin', 'https://www.linkedin.com/in/welchbm', :target => "_blank"
 			.col-md-2.text-right
-				= image_tag "individual_photo.png", :class => "img-responsive"
+				= image_tag "heale.png", :class => "img-responsive"
 			.col-md-3
 				%h4
 					%strong Bret Heale
@@ -35,39 +30,7 @@
 						Data-modeling, Genetics
 						%br
 						Domain Expert, D3-developer
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
+					%a
+						= link_to 'Linkedin', 'https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab', :target => "_blank"
 			.col-md-1
-		.box
-		.row
-			.col-md-1
-			.col-md-2.center-block
-				= image_tag "individual_photo.png", :class => "img-responsive"
-			.col-md-3
-				%h4
-					%strong Lance Pflieger
-					%p
-						%br
-						Programming, Genetics
-						%br
-						Domain Expert, D3-developer
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
-			.col-md-2.center-block
-				= image_tag "individual_photo.png", :class => "img-responsive"
-			.col-md-3
-				%h4
-					%strong Seth Russell
-					%p
-						%br
-						Software engineer, Layout Design
-						%br
-				%p.small
-					Anything extra can go here about the individual.
-					%br
-					%u LinkedIn Address
-			.col-md-1
+		

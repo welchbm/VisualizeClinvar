@@ -27,7 +27,7 @@
         .row
           = link_to 'About', page_path('about'), class: 'foot'
           %a.foot{href: "#", data: { toggle: "modal", target: "#feedback-modal" }} Feedback
-          %a.foot{ href: "#donate" } Donate
+          %a.foot.hidden{ href: "#donate" } Donate
         .row
           %p.copyright © Visualize ClinVar 2015
     = render 'shared/feedback_modal'
