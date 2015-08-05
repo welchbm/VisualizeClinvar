@@ -13,16 +13,12 @@
         %input#exampleSearchBar.cvform-control{:placeholder => "Enter a gene", :type => "text"}
         %button.cvbtn Search
   .container
-  / Finds the total number of rows needed based on the number of graphs 
-  - (@graphs.size/3.0).ceil.times do 
-    %ul.row
-      / Want three graphs per row every time
-      - 3.times do
-        / If there are no graphs, add a placeholder
-        / Otherwise populate with graphs
-        - if @graphs.empty?
-          .col-lg-4.white-placeholder
-        - else
-          %li.col-lg-4.col-md-4.col-xs-6
-            - graph = @graphs.pop
-            = render 'static_graph', graph: graph
+    - (@graphs.size/3.0).ceil.times do
+      .row.row-eq-height.graph-row
+        - 3.times do
+          .col-md-4
+            - if @graphs.empty?
+              .white-mother
+            - else
+              .blue-mother
+                = render 'static_graph', graph: @graphs.pop
