@@ -35,7 +35,6 @@ ul li {
 .col-lg-12{
   padding-left: 1px;
   padding-right: 1px;
-  padding-top:15px;
   height: 100%;
 }
 
@@ -203,16 +202,12 @@ a.head {
 }
 
 .head_links a:hover{
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .head_links a:focus{
   outline: none;
   text-decoration: none;
-}
-
-.box{
-  margin-bottom: 50px;
 }
 
 .img-responsive{
@@ -266,7 +261,6 @@ body, p{
   cursor:pointer;
   width: 75%;
   position: relative;
-  margin-top: 30px;
   margin-left: -10px;
 }
 
