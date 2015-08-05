@@ -3,8 +3,12 @@
 	.top.text-center
 		%h1.teamname
 			%strong The Team
-		%h2.blurb
-			We believe in the visualization of data to support discovery
+		%h4.blurb
+			%strong
+				%i ClinVar is a free variant knowledge-base service provided by the NCBI.
+			%br
+			%strong 
+				%i We provide visualizations of the data to support discovery.
 	.container
 		.row
 			.col-md-1
@@ -18,8 +22,8 @@
 						Project Lead, Genetics 
 						%br
 						Domain Expert, Database Design
-					%a 
-						= link_to 'Linkedin', 'https://www.linkedin.com/in/welchbm', :target => "_blank"
+					%a
+						= link_to image_tag("https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png"), 'https://www.linkedin.com/in/welchbm', :target => "_blank", :alt => "View Brandon Welch's profile on LinkedIn", :class => "linkedin" 
 			.col-md-2.text-right
 				= image_tag "heale.png", :class => "img-responsive"
 			.col-md-3
@@ -31,6 +35,6 @@
 						%br
 						Domain Expert, D3-developer
 					%a
-						= link_to 'Linkedin', 'https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab', :target => "_blank"
+						= link_to image_tag("https://static.licdn.com/scds/common/u/img/webpromo/btn_profile_bluetxt_80x15.png"), 'https://www.linkedin.com/pub/bret-heale-phd/26/53b/7ab', :target => "_blank", :alt => "View Bret Heale's profile on LinkedIn", :class => "linkedin" 
 			.col-md-1
 		
