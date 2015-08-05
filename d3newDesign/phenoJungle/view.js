@@ -19,11 +19,16 @@ $(function phenoJungle(){ //hugely important. defines scope of variables
   //Graph title: Mapping Phenotypes to Code systems
   //
   ////////////////////////////
+  
+ //var containerWidth = parseInt(d3.select(".graph.phenoJungle").style("width"),10); //little trick
+//var containerHeight = parseInt(d3.select(".graph.phenoJungle").style("height"),10); //little trick
+  
   var margin = {top: 20, right: 120, bottom: 20, left: 120},
       width = 1000 - margin.right - margin.left,
       height = 900 - margin.top - margin.bottom;
 
-  var svg = d3.select(".graph.phenoJungle").append("svg")
+  var svg = d3.select(".graph.phenoJungle") //.append("svg").attr("viewBox", "0 0 "+containerHeight+" "+containerWidth )
+	.append("svg")
       .attr("viewBox","0 0 "+(width + margin.right + margin.left)+" "+(height + margin.top + margin.bottom))
       .style("width","auto")
   //.style("height",height)

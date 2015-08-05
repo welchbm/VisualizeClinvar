@@ -8,6 +8,7 @@ $(
   function historyGraphIt(){ //hugely important. defines scope of variables
     console.log("called historyGraphIt()");
     var containerWidth = parseInt(d3.select(".graph.historyGraph").style("width"),10); //little trick
+	var containerHeight = parseInt(d3.select(".graph.historyGraph").style("height"),10); //little trick
 
     var margin = {top: 20, right: 20, bottom: 30, left: (containerWidth/6)},
         width = containerWidth- margin.left - margin.right, //select and style give us access to the historyGraphic objects width - kinda of useful for sizing the graphic to fit historyGraphic container on html page
@@ -54,7 +55,7 @@ $(
 	.interpolate("bundle")
 	.tension(0.5);
 
-    var svg = d3.select(".graph.historyGraph").append("svg")
+    var svg = d3.select(".graph.historyGraph").append("svg").attr("viewBox", "0 0 "+containerHeight+" "+containerWidth )
 	.attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
 	.append("g")
@@ -92,7 +93,7 @@ $(
       })]); //adding a year
       y.domain([d3.min(data,function(d) { return d.number; }), d3.max(data,function(d) { return d.number; }) + (d3.max(data,function(d) { return d.number; })/10)]);
 
-      if(containerWidth > 2000) { //for switching to viewable for large view
+      if(containerWidth > 200) { //for switching to viewable for large view
         svg.append("g")
           .attr("class", "x axis")
           .attr("transform", "translate(0," + height + ")")
@@ -119,15 +120,39 @@ $(
 	  });
       }
 
-      if(containerWidth > 2000) { //large view path
-        svg.append("path")
+      if(containerWidth > 200) { //large view path
+     //   svg.append("path")
+     //     .datum(data)
+      //    .attr("class", "line")
+	 // .attr("id","histryGraphPath")
+	// //.attr("marker-end","url(#markerArrow)")
+     //     .attr("d", line);
+	 
+	        svg.append("path")
           .datum(data)
           .attr("class", "line")
 	  .attr("id","histryGraphPath")
-	//.attr("marker-end","url(#markerArrow)")
-          .attr("d", line);
+	  .attr("marker-end","url(#markerArrow)")
+          .attr("d", lineSmooth);
+
+        svg.append("defs")
+	  .append("marker")
+	  .attr("id","markerArrow")
+	  .attr("viewBox","0 -5 15 15")
+	  .attr("markerWidth","6")
+	  .attr("markerHeight","4.5")
+	  .attr("refx","5")
+	  .attr("refy","0")
+	  .attr("orient","auto")
+	  .attr("markerUnits","strokeWidth")
+	  .attr("class","arrowMarker")
+	  .append("svg:path")
+	  .attr("d","M 0 0 L 10 5 L 0 10 z")
+	  .attr("transform", "translate(0,-5)");	  
+		  
+
       }
-      if(containerWidth <= 2000) { //flashy for small view
+      if(containerWidth <= 200) { //flashy for small view
 
         var numberFontSize = containerWidth/8;
 
@@ -189,7 +214,7 @@ $(
 	//	.text("IN "+90+" MONTHS")
       }
 
-      if(containerWidth > 2000) { //for switching to viewable for small view
+      if(containerWidth > 200) { //for switching to viewable for small view
         // Draw the x Grid lines
         svg.append("g")
           .attr("class", "x grid")

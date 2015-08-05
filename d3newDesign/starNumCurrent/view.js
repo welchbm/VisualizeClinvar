@@ -13,7 +13,7 @@ $( function varStarNumCurrent() {
 		};
 		}, function(error, data) {
 var starPieLocation = document.querySelectorAll(".graph.starNumCurrent");
-var pie = new d3pie( starPieLocation, {
+var pie = new d3pie( starPieLocation[0], {
   "header": {
       "subtitle": {
           "color": "#999999",

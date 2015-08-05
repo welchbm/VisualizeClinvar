@@ -15,10 +15,15 @@ $(function quickStatic(){ //hugely important. defines scope of variables
         .range(["#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222","#111","#000"]);
 
     var i = 0;
+	
+	
+	    var containerWidth = parseInt(d3.select(".graph.quickStats").style("width"),10); //little trick
+	var containerHeight = parseInt(d3.select(".graph.quickStats").style("height"),10); //little trick
+	
     var svg = d3.select(".graph.quickStats").append("svg")
     //.attr("style","border:1px solid black;")
 	.attr("xmlns","http://www.w3.org/2000/svg")
-	.
+	.attr("viewBox", "0 0 "+containerHeight+" "+containerWidth )
 	.attr("width", containerWidth) //hey, I made it fit the container
         .attr("height",(2.1*(data.length)*containerWidth*30/320));//hey, I made it fit the container with a little lazy coding
 

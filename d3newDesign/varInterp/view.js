@@ -1,6 +1,11 @@
 //gives browser instruction to run on load and adds it as a procedure so that other scripts will also run
 
 $( function varInterp() {
+	
+    var containerWidth = parseInt(d3.select(".graph.varInterp").style("width"),10); //little trick
+	var containerHeight = parseInt(d3.select(".graph.varInterp").style("height"),10); //little trick	
+	
+	
 //data/varInterp/
 //var var_Interp_tsv = ["varInterp", pageName].join('') // this takes care of null pageName
 //	d3.tsv("http://localhost:8080/"+var_Interp_tsv+".tsv", function(data) {

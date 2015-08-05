@@ -25,10 +25,12 @@ $(function geneBubbleIt(){ //hugely important. defines scope of variables
       //console.log(d.Date);
     });
 
-
+    var containerWidth = parseInt(d3.select(".graph.geneBubble").style("width"),10); //little trick
+	var containerHeight = parseInt(d3.select(".graph.geneBubble").style("height"),10); //little trick
 
     var svg=d3.select(".graph.geneBubble").append("svg")
-	.attr("viewBox","0 0 "+(width)+" "+(height))
+	.attr("viewBox", "0 0 "+containerHeight+" "+containerWidth )
+	//.attr("viewBox","0 0 "+(width)+" "+(height))
 	.style("overflow","hidden")
 	.attr("preserveAspectRatio","xMidYMin slice")
 	.attr("width",width)

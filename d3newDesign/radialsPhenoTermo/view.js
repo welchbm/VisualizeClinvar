@@ -101,7 +101,7 @@ d3.tsv(gon.tsv_paths['radialsPhenoTermo'],function(error, data) {
   var width = parseInt(d3.select(".graph.radialsPhenoTermo").style("width"), 0) + "px";
   var height = parseInt(0.70 * parseInt(d3.select(".graph.radialsPhenoTermo").style("width"), 0), 0) + "px";
 
-  d3.select(".graph.radialsPhenoTermo").append("div").style("overflow","hidden").style("height",height).style("width",width).attr("class","RadialsInner");
+  d3.select(".graph.radialsPhenoTermo").append("div").attr("class","RadialsInner");
 
   for (var i = 0; i < headers.length; i++) { //iterates
 

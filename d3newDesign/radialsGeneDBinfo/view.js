@@ -81,7 +81,7 @@ d3.tsv(gon.tsv_paths['radialsGeneDBinfo'],function(error, data) {
   var width = parseInt(d3.select(".graph.radialsGeneDBinfo").style("width"), 0) + "px";
   var height = parseInt(0.70 * parseInt(d3.select(".graph.radialsGeneDBinfo ").style("width"), 0), 0) + "px";
 
-  d3.select(".graph.radialsGeneDBinfo ").append("div").style("overflow","hidden").style("height",height).style("width", width).attr("class","RadialsInner");
+  d3.select(".graph.radialsGeneDBinfo ").append("div").attr("class","RadialsInner");
 
   for (var i = 0; i < headers.length; i++) { //iterates
 
