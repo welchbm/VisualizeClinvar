@@ -18,6 +18,7 @@ $(function quickStatic(){ //hugely important. defines scope of variables
     var svg = d3.select(".graph.quickStats").append("svg")
     //.attr("style","border:1px solid black;")
 	.attr("xmlns","http://www.w3.org/2000/svg")
+	.
 	.attr("width", containerWidth) //hey, I made it fit the container
         .attr("height",(2.1*(data.length)*containerWidth*30/320));//hey, I made it fit the container with a little lazy coding
 
