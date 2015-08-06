@@ -1,0 +1,41 @@
+* Directory structure of Dropbox/visualize:
+
+  visualize
+  |
+  |-<gene1>
+  | |-<graph-type1>
+  | | |-view.js
+  | | |-data.tsv
+  | | |-description.json
+  | |
+  | |-<graph-type2>
+  |   |-...
+  |
+  |-<gene2>
+  | |-...
+  |
+  |-<global>
+    |-<graph-type1>
+      |-...
+
+  Global will hold the graphs+data that are displayed on the home page.
+
+* D3 code should run when the script is loaded (surround with $(document).ready(...), or $(function () {...}), etc.)
+
+* Use the following CSS selector to select where to insert the graph:
+    .graph.graph-type,
+  where graph-type is the name of the directory under which the script resides. For example:
+
+  var svg = d3.select(".graph.geneBubble").append("svg");
+
+* If view.js is absent from a graph-type directory, the view.js will be pulled from the global directory. This is to prevent redundancy,
+  while allowing for a special cases necessitating special javascript.
+
+* data.tsv and description.json must be present though.
+
+* To prevent hardcoding of paths in the javascripts, use gon.tsv_paths['graph-type'] to get the path
+  to the tsv data. For example:
+
+  d3.tsv(gon.tsv_paths['geneBubble'], function(myData) {
+    ...
+  }

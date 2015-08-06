@@ -1,0 +1,17 @@
+{
+  "graph": {
+    "text": {
+      "title": "Current Star Number",
+      "short": "Current percentage of each star num",
+	  "long": "ClinVar variants are associated with a star number representing strength of finding. Categories include: not classified, single submitter, expert panel, multiple submitters, professional society."
+		},
+    "metadata": {
+	  "id": "1008",      
+	  "type": "Doughnut chart",
+	  "created": "2/28/2014",
+	  "updated": "6/16/2015",
+      "author": "Lance Pflieger",
+	  "notes": "TSV is based on current version. Needs changed into a bar chart - possible animation. The categories in the clinvarDB have changed, need to update metadata with new categories. "
+		}
+	}
+}
