@@ -19,15 +19,15 @@
       .row.row-eq-height.graph-row
         - 3.times do
           - if @graphs.empty?
-            .col-md-4
+            .col-md-4.col-xs-4
               .white-mother
           - else
             - graph = @graphs.pop
             - if graph.graph == 'phenoJungle'
-              .col-md-8
+              .col-md-8.col-xs-8
                 .blue-mother
                   = render 'static_graph', graph: graph
             - else
-              .col-md-4
+              .col-md-4.col-xs-4
                 .blue-mother
                   = render 'static_graph', graph: graph
