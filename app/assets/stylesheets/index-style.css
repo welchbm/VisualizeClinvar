@@ -204,6 +204,9 @@ a:focus {
 
 .blurb{
   padding-bottom: 3%;
+  color: #777;
+  font-size: 2.0rem;
+  font-weight: normal;
 }
 
 .top{
