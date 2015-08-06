@@ -1,0 +1,17 @@
+{
+  "graph": {
+    "text": {
+      "title": "Variants per Gene per database version",
+      "short": "Attempts to capture gene-level changes in the database over Release dates",
+      "long": "Each bubble is one gene. The Y-axis and bubble size represent the number of variants. Thus, genes with more annotated variants 'float' to the top. The X-axis is the number of distinct phenotypes on a Logarithmic scale. The colour of the bubble indicates the most common interpretation of variants for a given gene."
+    },
+    "metadata": {
+      "id": "1003",
+      "type": "multi-dimensional bubble-motion",
+      "created": "2/28/2014",
+      "updated": "4/24/2015",
+      "author": "Bret Heale",
+      "notes": "TSV is based on aggregation of release dates. For each release date the 100 genes with the most variants is reported. NOTE: Release Date and Submission dates are different. Future releases can have variants with submissions that even pre-date ClinVar itself. So, this graph and the HistoryGraph and QuickStats graph only agree on the most current version data."
+    }
+  }
+}
