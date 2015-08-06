@@ -13,12 +13,21 @@
         %input#exampleSearchBar.hidden.cvform-control{:placeholder => "Enter a gene", :type => "text"}
         %button.hidden.cvbtn Search
   .container
+    - @graphs.insert(0, @graphs.delete_at(@graphs.find_index { |g| g.graph == 'phenoJungle' }))
+    / Apologies for the hack to get phenoJungle to use two columns.
     - (@graphs.size/3.0).ceil.times do
       .row.row-eq-height.graph-row
         - 3.times do
-          .col-md-4
-            - if @graphs.empty?
+          - if @graphs.empty?
+            .col-md-4
               .white-mother
+          - else
+            - graph = @graphs.pop
+            - if graph.graph == 'phenoJungle'
+              .col-md-8
+                .blue-mother
+                  = render 'static_graph', graph: graph
             - else
-              .blue-mother
-                = render 'static_graph', graph: @graphs.pop
+              .col-md-4
+                .blue-mother
+                  = render 'static_graph', graph: graph
