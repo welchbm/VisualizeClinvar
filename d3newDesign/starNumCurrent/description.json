@@ -1,9 +1,9 @@
 {
   "graph": {
     "text": {
-      "title": "Current Star Number",
-      "short": "Current percentage of each star num",
-	  "long": "ClinVar variants are associated with a star number representing strength of finding. Categories include: not classified, single submitter, expert panel, multiple submitters, professional society."
+      "title": "Evidence Levels",
+      "short": "Current percentage of each level of evidence",
+	  "long": "ClinVar variants are associated with a level of evidence representing the strength of the finding. Categories include: not classified, single submitter, expert panel, multiple submitters, professional society."
 		},
     "metadata": {
 	  "id": "1008",      
